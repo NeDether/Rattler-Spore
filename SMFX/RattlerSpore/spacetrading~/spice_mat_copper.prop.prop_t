@@ -1,0 +1,28 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00a34f00
+texts spaceToolDescription
+	(rattlercargo!0x00000001) "PLACEHOLDER"
+end
+texts spaceToolDetailDescription
+	(rattlercargo!0x00000002) "PLACEHOLDER"
+end
+uint32s spaceToolImageColors
+	0xffa34f00
+end
+key spaceToolImageID ufotools~!spg_cargopas_mineral.png
+float spaceTradingBaseCost 3375
+float spaceTradingChanceBlueEasy 0.0
+float spaceTradingChanceBlueHard 0.0
+float spaceTradingChanceRedEasy 0.0
+float spaceTradingChanceRedHard 0.0
+float spaceTradingChanceYellowEasy 0.0
+float spaceTradingChanceYellowHard 0.0
+texts spaceTradingNeed
+	(rattlercargo!0x00000003) "im horny for some copper."
+end
+texts spaceTradingNoNeed
+	(rattlercargo!0x00000004) "Please take a look at our fine goods available."
+end
+key spaceTradingType spice

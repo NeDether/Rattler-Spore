@@ -1,0 +1,10 @@
+keys materialSpice
+	spice_mat_copper
+	spice_mat_gold
+	spice_mat_titanium
+	spice_mat_latticine
+end
+keys particlez
+	SG_mining_laser_beam
+end
+#uint32 numRareSpices 9
