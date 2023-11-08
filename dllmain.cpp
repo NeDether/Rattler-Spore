@@ -1,5 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
+#include <Spore/Simulator/SubSystem/SpaceTrading.h>
 
 // This is in dllmain.cpp
 
