@@ -24,14 +24,15 @@ bool MiningBeam:: OnHit(Simulator::cSpaceToolData* pTool, const Vector3& positio
         }
        
 
-        if (Math::rand(2) == 0) {
+        if (Math::rand(5) <= 2) {
             return success;
         }
         //Loottable
         
         const Simulator::PlanetID mario = Simulator::GetActivePlanetRecord()->GetID();
         uint32_t greg = mario.internalValue;
-        int chud = (int)((greg >> 24) & 0x3F);
+        RandomNumberGenerator rng(greg);
+        int chud = rng.RandomInt(16);
         if (Math::rand(9)!=0) {
             if ((Simulator::GetActivePlanetRecord()->mTemperatureScore) >= 0.75) {
                 SpaceTrading.ObtainTradingObject({ id("spice_drt_kamacite"), TypeIDs::prop, 0x034D97FA }, 1);
@@ -54,13 +55,13 @@ bool MiningBeam:: OnHit(Simulator::cSpaceToolData* pTool, const Vector3& positio
         }
         else {
             //App::ConsolePrintF(to_string(chud).c_str()); Millions must debug
-            if (chud >= 0 && chud <= 3) {
+            if (chud >= 0 && chud <= 4) {
                 SpaceTrading.ObtainTradingObject({ id("spice_mat_copper"), TypeIDs::prop, 0x034D97FA }, 1);
             }
-            else if (chud >= 4 && chud <= 7) {
+            else if (chud >= 5 && chud <= 8) {
                 SpaceTrading.ObtainTradingObject({ id("spice_mat_titanium"), TypeIDs::prop, 0x034D97FA }, 1);
             }
-            else if (chud >= 8 && chud <= 9) {
+            else if (chud >= 9 && chud <= 12) {
                 SpaceTrading.ObtainTradingObject({ id("spice_mat_gold"), TypeIDs::prop, 0x034D97FA }, 1);
             }
             else {
