@@ -36,14 +36,14 @@ bool MiningBeam:: OnHit(Simulator::cSpaceToolData* pTool, const Vector3& positio
             if ((Simulator::GetActivePlanetRecord()->mTemperatureScore) >= 0.75) {
                 SpaceTrading.ObtainTradingObject({ id("spice_drt_kamacite"), 0, 0 }, 1);
             }
-            else if ((Simulator::GetActivePlanetRecord()->mAtmosphereScore) <= 0.20) {
-                SpaceTrading.ObtainTradingObject({ id("spice_drt_sulphide"), 0, 0 }, 1);
-            }
             else if ((Simulator::GetActivePlanetRecord()->mTemperatureScore) <= 0.25) {
                 SpaceTrading.ObtainTradingObject({ id("spice_drt_ice"), 0, 0 }, 1);
             }
-            else if ((Simulator::GetActivePlanetRecord()->mAtmosphereScore) >= 0.90 ) {
+            else if ((Simulator::GetActivePlanetRecord()->mAtmosphereScore) <= 0.20) {
                 SpaceTrading.ObtainTradingObject({ id("spice_drt_silica"), 0, 0 }, 1);
+            }
+            else if ((Simulator::GetActivePlanetRecord()->mAtmosphereScore) >= 0.90 ) {
+                SpaceTrading.ObtainTradingObject({ id("spice_drt_sulphide"), 0, 0 }, 1);
             }
             else {
                 SpaceTrading.ObtainTradingObject({ id("spice_drt_carbon"), 0, 0 }, 1);
