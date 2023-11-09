@@ -20,7 +20,7 @@ float spaceToolMaxRange 300
 float spaceToolMinDamage 5
 key spaceToolPanelKey TravelAbilityPanel
 bool spaceToolShowCollectedOrUnlockedText false
-key spaceToolStrategy DefaultBeam
+key spaceToolStrategy mining_beam1
 key spaceToolType special
 int32 spaceToolUseCost 0
 bool toolDestroysFloraAndFauna true

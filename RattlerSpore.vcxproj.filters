@@ -11,6 +11,9 @@
     <Filter Include="Internal">
       <UniqueIdentifier>{d62ad12d-69d8-4933-8342-03043c9adc22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Tools">
+      <UniqueIdentifier>{586285c2-7c35-4c11-aa71-5a32450799ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -19,6 +22,9 @@
     <ClInclude Include="stdafx.h">
       <Filter>Internal</Filter>
     </ClInclude>
+    <ClInclude Include="MiningBeam.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -26,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningBeam.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

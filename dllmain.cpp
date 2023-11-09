@@ -1,11 +1,15 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
-#include <Spore/Simulator/SubSystem/SpaceTrading.h>
+#include "Spore/Simulator/SubSystem/SpaceTrading.h"
+#include <Spore/Simulator/cToolStrategy.h>
+#include "MiningBeam.h"
+#include <Spore/Simulator/cDefaultBeamTool.h>
 
 // This is in dllmain.cpp
 
 using namespace ArgScript;
 using namespace ArgScript;
+
 
 class PlanetBusterCheat
     : public ICommand
@@ -15,7 +19,8 @@ public:
         if (Simulator::IsSpaceGame()) {
             cSpaceToolDataPtr tool;
             ToolManager.LoadTool({ id("mining_beam1"), 0, 0 }, tool);
-            SpaceTrading.ObtainTradingObject({ id("spice_mat_copper"), TypeIDs::prop, GroupIDs::SpaceTrading }, 3);
+
+            
             size_t numArgs;
             auto args = line.GetArgumentsRange(&numArgs, 0, 1);
             if (numArgs == 1) {
@@ -23,6 +28,7 @@ public:
             }
 
             auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+            SpaceTrading.ObtainTradingObject({ id("spice_mat_copper"), TypeIDs::prop, 0x034D97FA }, 3);
             inventory->AddItem(tool.get());
         }
     }
@@ -34,6 +40,7 @@ public:
 
 void Initialize() {
     CheatManager.AddCheat("planetBuster", new PlanetBusterCheat());
+    ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
 }
 
 void Dispose()
