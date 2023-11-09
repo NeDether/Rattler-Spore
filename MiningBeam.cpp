@@ -24,7 +24,7 @@ bool MiningBeam:: OnHit(Simulator::cSpaceToolData* pTool, const Vector3& positio
         }
        
 
-        if (Math::rand(5) <= 2) {
+        if (Math::rand(2) == 0) {
             return success;
         }
         //Loottable
@@ -33,7 +33,7 @@ bool MiningBeam:: OnHit(Simulator::cSpaceToolData* pTool, const Vector3& positio
         uint32_t greg = mario.internalValue;
         RandomNumberGenerator rng(greg);
         int chud = rng.RandomInt(16);
-        if (Math::rand(9)!=0) {
+        if (Math::rand(5)!=0) {
             if ((Simulator::GetActivePlanetRecord()->mTemperatureScore) >= 0.75) {
                 SpaceTrading.ObtainTradingObject({ id("spice_drt_kamacite"), TypeIDs::prop, 0x034D97FA }, 1);
             }
