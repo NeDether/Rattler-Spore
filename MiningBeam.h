@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "Spore/Simulator/SubSystem/SpaceTrading.h"
 #include <Spore\BasicIncludes.h>
+#include <Spore/CommonIDs.h>
 #include <Spore/Simulator/cSpaceToolData.h>
 #include <Spore/Simulator/cDefaultBeamTool.h>
 #include <Spore/Swarm/IEffectsWorld.h>

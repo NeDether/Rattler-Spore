@@ -12,4 +12,4 @@ end
 keys particlez
 	SG_mining_laser_beam
 end
-#uint32 numRareSpices 9
+#uint32 numRareSpices 12
