@@ -4,6 +4,16 @@
 #include <Spore\BasicIncludes.h>
 #include <Spore/Simulator/cSpaceToolData.h>
 #include <Spore/Simulator/cDefaultBeamTool.h>
+#include <Spore/Swarm/IEffectsWorld.h>
+#include <Spore/Swarm/IEffectsManager.h>
+#include <Spore/Swarm/EffectDirectory.h>
+#include <Spore/Swarm/cEffectsManager.h>
+#include <Spore/Swarm/cVisualEffect.h>
+#include <Spore/Swarm/IVisualEffect.h>
+#include <Spore/Simulator/StarID.h>
+#include <Spore/Simulator/SubSystem/StarManager.h>
+#include <Spore/Simulator/cPlanetRecord.h>
+
 
 #define MiningBeamPtr intrusive_ptr<MiningBeam>
 

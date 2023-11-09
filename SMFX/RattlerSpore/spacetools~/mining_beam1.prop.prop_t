@@ -1,7 +1,7 @@
 key parent spacetools~!ToolTemplate.prop
 string16 description "Laser"
 float spaceToolAutoFireRate 0.1
-int32 spaceToolBuyCost 500
+int32 spaceToolBuyCost 2
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
 texts spaceToolDescription
@@ -13,7 +13,11 @@ end
 float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0.25
+float spaceToolEnergyCost 0.85
+bool spaceToolHide false
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
 key spaceToolImageID ufotools~!tooliconDrillMK1.png
 float spaceToolMaxDamage 10
 float spaceToolMaxRange 300
@@ -26,7 +30,7 @@ int32 spaceToolUseCost 0
 bool toolDestroysFloraAndFauna true
 key toolBeamEffectID SG_mining_laser_beam
 key toolHitCombatantEffectID SG_ufo_mind_erase_HitCombatant
-key toolHitGroundEffectID SG_ufo_mind_erase_HitGround
+key toolHitGroundEffectID 0x19D7E754
 bool toolHitOrientsToTerrain true
 key toolHitWaterEffectID SG_ufo_mind_erase_HitWater
 key toolMuzzleEffectID SG_ufo_mind_erase_muzzle

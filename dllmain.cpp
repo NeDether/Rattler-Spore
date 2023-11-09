@@ -11,35 +11,8 @@ using namespace ArgScript;
 using namespace ArgScript;
 
 
-class PlanetBusterCheat
-    : public ICommand
-{
-public:
-    void ParseLine(const Line& line) {
-        if (Simulator::IsSpaceGame()) {
-            cSpaceToolDataPtr tool;
-            ToolManager.LoadTool({ id("mining_beam1"), 0, 0 }, tool);
-
-            
-            size_t numArgs;
-            auto args = line.GetArgumentsRange(&numArgs, 0, 1);
-            if (numArgs == 1) {
-                tool->mCurrentAmmoCount = mpFormatParser->ParseInt(args[0]);
-            }
-
-            auto inventory = SimulatorSpaceGame.GetPlayerInventory();
-            SpaceTrading.ObtainTradingObject({ id("spice_mat_copper"), TypeIDs::prop, 0x034D97FA }, 3);
-            inventory->AddItem(tool.get());
-        }
-    }
-
-    const char* GetDescription(DescriptionMode mode) const {
-        return "Call the cheat. Drop the bomb. BOOM!";
-    }
-};
 
 void Initialize() {
-    CheatManager.AddCheat("planetBuster", new PlanetBusterCheat());
     ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
 }
 

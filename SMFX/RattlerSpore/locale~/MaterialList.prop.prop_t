@@ -3,6 +3,11 @@ keys materialSpice
 	spice_mat_gold
 	spice_mat_titanium
 	spice_mat_latticine
+	spice_drt_ice
+	spice_drt_kamacite
+	spice_drt_silica
+	spice_drt_sulphide
+	spice_drt_carbon
 end
 keys particlez
 	SG_mining_laser_beam

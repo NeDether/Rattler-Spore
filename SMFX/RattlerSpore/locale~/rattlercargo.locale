@@ -10,7 +10,16 @@
 0x0000000A An uncommon mineral that is used for gravity plating inside ships and orbital stations, thanks to its absurd molecular mass. (Geological Scanner MK-1 required.)
 0x0000000B Minor Mining Beam
 0x0000000C A beam that will harvest different crust-based resources based on the planet. Simply hold the beam at the ground to start mining. Though it may take a while...
-0x0000000D
-0x0000000E
-0x0000000F
-0x00000010
+0x0000000D Carbon
+0x0000000E Found on hospitible planets, carbon is an unmeltable material great for ship plating and armor repair.
+0x0000000F Ice
+0x00000010 Found on frozen rocks, ice can be converted into drinking water or hydrogen fuel.
+0x00000011 Kamacite
+0x00000012 Found on molten worlds, Kamacite is an iron rich material with enough nickel for industrial purposes.
+0x00000013 Sulfide
+0x00000014 Found on intoxicating planets, sulfide is a higly corrosive material that is used in Plasma and Chemical based weaponry.
+0x00000015 Silica
+0x00000016 Found on barren moons, silica is a material that is used for mass construction and scientific purposes.
+0x00000017
+0x00000018
+0x00000019
