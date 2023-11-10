@@ -40,7 +40,7 @@ float spaceTradingCostMultiplierWarrior 1.25
 float spaceTradingCostMultiplierZealot 1.50
 uint32 spaceTradingQuantityToOffer 0
 key spaceTradingExchangeFor mineral_scanner1.prop
-int32 spaceTradingRequiresTier 0
+int32 spaceTradingRequiresTier 1
 int32 spaceTradingToolReofferRate 50
 key spaceTradingToolClass special
 key spaceTradingType upgrade

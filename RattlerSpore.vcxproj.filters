@@ -25,6 +25,9 @@
     <ClInclude Include="MiningBeam.h">
       <Filter>RattlerSpore\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="MiningScanner.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -34,6 +37,9 @@
       <Filter>Internal</Filter>
     </ClCompile>
     <ClCompile Include="MiningBeam.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningScanner.cpp">
       <Filter>RattlerSpore\Tools</Filter>
     </ClCompile>
   </ItemGroup>

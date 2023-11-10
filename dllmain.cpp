@@ -3,6 +3,7 @@
 #include "Spore/Simulator/SubSystem/SpaceTrading.h"
 #include <Spore/Simulator/cToolStrategy.h>
 #include "MiningBeam.h"
+#include "MiningScanner.h"
 #include <Spore/Simulator/cDefaultBeamTool.h>
 
 // This is in dllmain.cpp
@@ -14,6 +15,7 @@ using namespace ArgScript;
 
 void Initialize() {
     ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
+	ToolManager.AddStrategy(new MiningScanner(), id("mineral_scanner1"));
 }
 
 void Dispose()

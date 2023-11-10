@@ -1,5 +1,6 @@
 key parent spacetools~!ToolTemplate.prop
 string16 description "Minor Mineral Scanner"
+int32 spaceToolBuyCost 2
 key spaceToolContext space
 texts spaceToolDescription
 	(rattlercargo!0x00000017) "PLACEHOLDER"
@@ -18,8 +19,9 @@ key spaceToolImageID ufotools~!toolScanIconMK1.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey TravelAbilityPanel
 float spaceToolRechargeRate 5
+int32 spaceToolUseCost 0
 float spaceToolEnergyCost 0.5
-key spaceToolStrategy DefaultToolStrategy
+key spaceToolStrategy mineral_scanner1
 key spaceToolType special
 bool toolDeselectsAfterUse true
 bool toolIsSuperWeapon false
