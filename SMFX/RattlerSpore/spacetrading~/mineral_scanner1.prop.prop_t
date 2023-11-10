@@ -1,0 +1,46 @@
+texts spaceToolDescription
+	"Mineral Scanner MKI"
+end
+texts spaceToolDetailDescription
+	"Use this in space to geologically index the mineral composition of the selected planet's crust."
+end
+key spaceToolImageID ufotools~!toolScanIconMK1.png
+float spaceTradingAbundance 15
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 150000
+float spaceTradingChance 75
+float spaceTradingChanceBard 25
+float spaceTradingChanceDiplomat 25
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 75
+float spaceTradingChancePlayerDiplomat 75
+float spaceTradingChancePlayerEcologist 75
+float spaceTradingChancePlayerKnight 75
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 75
+float spaceTradingChancePlayerTrader 75
+float spaceTradingChancePlayerWanderer 75
+float spaceTradingChancePlayerWarrior 75
+float spaceTradingChancePlayerZealot 15
+float spaceTradingChanceScientist 100
+float spaceTradingChanceShaman 45
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 45
+float spaceTradingChanceZealot 15
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierGrob 0.25
+float spaceTradingCostMultiplierTrader 1.03
+float spaceTradingCostMultiplierUserCul 1.2
+float spaceTradingCostMultiplierUserEco 0.9
+float spaceTradingCostMultiplierUserMil 1.2
+float spaceTradingCostMultiplierScientist 1.05
+float spaceTradingCostMultiplierWarrior 1.25
+float spaceTradingCostMultiplierZealot 1.50
+uint32 spaceTradingQuantityToOffer 0
+key spaceTradingExchangeFor mineral_scanner1.prop
+int32 spaceTradingRequiresTier 0
+int32 spaceTradingToolReofferRate 50
+key spaceTradingToolClass special
+key spaceTradingType upgrade
