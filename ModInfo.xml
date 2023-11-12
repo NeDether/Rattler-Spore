@@ -1,0 +1,5 @@
+<mod displayName="Rattler SPORE" unique="RattlerSPORE" description="A mod for SPORE aimed to make the game loops more enjoyable."  installerSystemVersion="1.0.1.2" hasCustomInstaller="true" isExperimental="true" dllsBuild="2.5.285">
+<component unique="RattlerIndustry" displayName="RattlerIndustry" description="Currently adds a mining scanner and a mining beam to the space stage. You can use the mining scanner by reading the cheat menu currently as it's gui isn't implemented yet." defaultChecked="true">RattlerIndustry.package</component>
+<prerequisite>RattlerSpore.dll</prerequisite>
+<remove>RattlerSpore.dll</remove>
+</mod>
