@@ -22,4 +22,5 @@
 0x00000016 Found on barren moons, silica is a material that is used for mass construction and scientific purposes.
 0x00000017 Minor Mineral Scanner
 0x00000018 Use this in space to geologically index the mineral composition of the selected planet's crust.
-0x00000019
+0x00000019 RATTLER Fabricator
+0x0000001A Constructs tools and items using harvested resources.

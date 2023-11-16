@@ -1,27 +1,27 @@
 key parent spacetools~!ToolTemplate.prop
-string16 description "Minor Mineral Scanner"
+string16 description "Rattler Forge"
 int32 spaceToolBuyCost 2
 key spaceToolContext always
 texts spaceToolDescription
-	(rattlercargo!0x00000017) "PLACEHOLDER"
+	(rattlercargo!0x00000019) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000018) "PLACEHOLDER"
+	(rattlercargo!0x0000001A) "PLACEHOLDER"
 end
-bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOn201Ruins false
 bool spaceToolDisableOnHomeworld false
-bool spaceToolDisableOnSaveGames true
+bool spaceToolDisableOnSaveGames false
 bool spaceToolHide false
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-key spaceToolImageID ufotools~!toolScanIconMK1.png
+key spaceToolImageID ufotools~!toolForge.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey TravelAbilityPanel
-float spaceToolRechargeRate 5
+float spaceToolRechargeRate 1
 int32 spaceToolUseCost 0
-float spaceToolEnergyCost 0.5
-key spaceToolStrategy mineral_scanner1
+float spaceToolEnergyCost 0.0
+#key spaceToolStrategy 
 key spaceToolType special
 bool toolDeselectsAfterUse true
 bool toolIsSuperWeapon false

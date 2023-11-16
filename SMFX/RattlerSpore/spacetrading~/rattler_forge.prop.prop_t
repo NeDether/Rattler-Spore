@@ -1,17 +1,17 @@
 texts spaceToolDescription
-	"Mineral Scanner MKI"
+	"RATTLER Fabricator"
 end
 texts spaceToolDetailDescription
-	"Use this in space to geologically index the mineral composition of the selected planet's crust."
+	"An essential item for any empire looking to expand. This ship interior extension is able to create tools and goods without the use of colony factories. Harvest planetary resources and use them inside this machine."
 end
-key spaceToolImageID ufotools~!toolScanIconMK1.png
+key spaceToolImageID ufotools~!toolForge.png
 float spaceTradingAbundance 15
 bool spaceTradingAlliesOnly false
-float spaceTradingBaseCost 150000
+float spaceTradingBaseCost 5000
 float spaceTradingChance 100
 float spaceTradingChanceBard 100
 float spaceTradingChanceDiplomat 100
-float spaceTradingChanceEcologist 0
+float spaceTradingChanceEcologist 100
 float spaceTradingChanceGrob 100
 float spaceTradingChancePlayerBard 100
 float spaceTradingChancePlayerDiplomat 100
@@ -28,18 +28,18 @@ float spaceTradingChanceShaman 100
 float spaceTradingChanceTrader 100
 float spaceTradingChanceWarrior 100
 float spaceTradingChanceZealot 100
-float spaceTradingCostMultiplierDiplomat 1
-float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierDiplomat 1.25
+float spaceTradingCostMultiplierBard 1.1
 float spaceTradingCostMultiplierGrob 0.25
 float spaceTradingCostMultiplierTrader 1.03
-float spaceTradingCostMultiplierUserCul 1.2
-float spaceTradingCostMultiplierUserEco 0.9
-float spaceTradingCostMultiplierUserMil 1.2
-float spaceTradingCostMultiplierScientist 1.05
+float spaceTradingCostMultiplierUserCul 2.0
+float spaceTradingCostMultiplierUserEco 2.0
+float spaceTradingCostMultiplierUserMil 2.0
+float spaceTradingCostMultiplierScientist 2.5
 float spaceTradingCostMultiplierWarrior 1.25
 float spaceTradingCostMultiplierZealot 1.50
 uint32 spaceTradingQuantityToOffer 0
-key spaceTradingExchangeFor mineral_scanner1.prop
+key spaceTradingExchangeFor rattler_forge.prop
 int32 spaceTradingRequiresTier 1
 int32 spaceTradingToolReofferRate 50
 key spaceTradingToolClass special

@@ -27,7 +27,7 @@ bool MiningScanner::Update(cSpaceToolData* pTool, bool showErrors, const char16_
         }
     }
 
-	if (GetCurrentContext() == SpaceContext::SolarSystem && pTool->mRechargeTimer.IsRunning() == false && GetActivePlanetRecord() != nullptr) {
+	if ((GetCurrentContext() == SpaceContext::Planet || GetCurrentContext() == SpaceContext::SolarSystem) && pTool->mRechargeTimer.IsRunning() == false && GetActivePlanetRecord() != nullptr) {
 		
 		return true; 
 	
