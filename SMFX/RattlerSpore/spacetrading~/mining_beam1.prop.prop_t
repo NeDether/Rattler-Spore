@@ -1,8 +1,8 @@
 texts spaceToolDescription
-	"Mining Beam MKI"
+	(store-mining!0x00000002) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	"Able to harvest minerals on a planet. Only can mine crust-based minerals."
+	(store-mining!0x00000003) "PLACEHOLDER"
 end
 key spaceToolImageID ufotools~!tooliconDrillMK1.png
 float spaceTradingAbundance 15

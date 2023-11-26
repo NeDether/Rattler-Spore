@@ -1,8 +1,8 @@
 texts spaceToolDescription
-	"RATTLER Fabricator"
+	(store-mining!0x00000004) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	"An essential item for any empire looking to expand. This ship interior extension is able to create tools and goods without the use of colony factories. Harvest planetary resources and use them inside this machine."
+	(store-mining!0x00000005) "PLACEHOLDER"
 end
 key spaceToolImageID ufotools~!toolForge.png
 float spaceTradingAbundance 15

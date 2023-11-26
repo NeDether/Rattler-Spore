@@ -1,0 +1,10 @@
+0x00000000 [D] Minimal Performance
+0x00000001 [C] Standard Performance 
+0x00000002 [B] Optimal Performance
+0x00000003 [A] Stellar Performance
+0x00000004 [S] Rattler Performance
+0x00000005 This machine is operating at 0.5x the desired output.
+0x00000006 This machine is operating at 1.0x the desired output.
+0x00000007 This machine is operating at 2.5x the desired output.
+0x00000008 This machine is operating at 5.0x the desired output.
+0x00000009 This machine is operating at 10.0x the desired output.

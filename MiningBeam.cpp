@@ -14,8 +14,7 @@ bool MiningBeam:: OnHit(Simulator::cSpaceToolData* pTool, const Vector3& positio
     bool success = Simulator::cDefaultBeamTool::OnHit(pTool, position, hitType, unk);
     if (hitType == 1) {
         IVisualEffectPtr effect;
-        if (EffectsManager.CreateVisualEffect(0x03fd5261, 0, effect)) {
-            // X and Y can go negative, but we will only use positive Z so it doesn't go below the ground
+        if (EffectsManager.CreateVisualEffect(0x03fd5261, 0, effect)) {        
             effect->SetRigidTransform(Transform()
                 .SetOffset(position)
                 .SetScale(1.1f));

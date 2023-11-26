@@ -1,8 +1,8 @@
 texts spaceToolDescription
-	"Mineral Scanner MKI"
+	(store-mining!0x00000000) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	"Use this in space to geologically index the mineral composition of the selected planet's crust."
+	(store-mining!0x00000001) "PLACEHOLDER"
 end
 key spaceToolImageID ufotools~!toolScanIconMK1.png
 float spaceTradingAbundance 15

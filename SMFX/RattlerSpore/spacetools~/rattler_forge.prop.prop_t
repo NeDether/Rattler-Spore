@@ -3,10 +3,10 @@ string16 description "Rattler Forge"
 int32 spaceToolBuyCost 2
 key spaceToolContext always
 texts spaceToolDescription
-	(rattlercargo!0x00000019) "PLACEHOLDER"
+	(rattlerforge!0x00000000) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x0000001A) "PLACEHOLDER"
+	(rattlerforge!0x00000001) "PLACEHOLDER"
 end
 bool spaceToolDisableOn201Ruins false
 bool spaceToolDisableOnHomeworld false
