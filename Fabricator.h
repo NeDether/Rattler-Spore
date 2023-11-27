@@ -8,13 +8,13 @@
 
 
 
-#define Fabricator intrusive_ptr<Fabricator>
+#define FabricatorPtr intrusive_ptr<Fabricator>
 
 class Fabricator
 	:public Simulator::cToolStrategy
 {
 public:
-
+	UTFWin::UILayout layout;
 	Fabricator();
 	~Fabricator();
 	bool OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position, Simulator::SpaceToolHit hitType, int);

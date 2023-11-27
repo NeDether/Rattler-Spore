@@ -21,7 +21,7 @@ key spaceToolPanelKey TravelAbilityPanel
 float spaceToolRechargeRate 1
 int32 spaceToolUseCost 0
 float spaceToolEnergyCost 0.0
-#key spaceToolStrategy 
+key spaceToolStrategy rattler_forge
 key spaceToolType special
 bool toolDeselectsAfterUse true
 bool toolIsSuperWeapon false

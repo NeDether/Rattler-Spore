@@ -17,6 +17,7 @@ using namespace ArgScript;
 void Initialize() {
     ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
 	ToolManager.AddStrategy(new MiningScanner(), id("mineral_scanner1"));
+	ToolManager.AddStrategy(new Fabricator(), id("rattler_forge"));
 }
 
 void Dispose()
