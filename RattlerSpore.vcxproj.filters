@@ -28,6 +28,9 @@
     <ClInclude Include="MiningScanner.h">
       <Filter>RattlerSpore\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="Fabricator.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -40,6 +43,9 @@
       <Filter>RattlerSpore\Tools</Filter>
     </ClCompile>
     <ClCompile Include="MiningScanner.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Fabricator.cpp">
       <Filter>RattlerSpore\Tools</Filter>
     </ClCompile>
   </ItemGroup>

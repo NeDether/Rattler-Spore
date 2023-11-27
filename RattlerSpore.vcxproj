@@ -98,6 +98,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Fabricator.h" />
     <ClInclude Include="MiningBeam.h">
       <SubType>
       </SubType>
@@ -115,6 +116,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Fabricator.cpp" />
     <ClCompile Include="MiningBeam.cpp">
       <SubType>
       </SubType>

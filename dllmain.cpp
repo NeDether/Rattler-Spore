@@ -3,6 +3,7 @@
 #include "Spore/Simulator/SubSystem/SpaceTrading.h"
 #include <Spore/Simulator/cToolStrategy.h>
 #include "MiningBeam.h"
+#include "Fabricator.h"
 #include "MiningScanner.h"
 #include <Spore/Simulator/cDefaultBeamTool.h>
 
