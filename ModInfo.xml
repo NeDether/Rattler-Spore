@@ -1,5 +1,5 @@
-<mod displayName="Rattler SPORE" unique="RattlerSPORE" description="A mod for SPORE aimed to make the game loops more enjoyable."  installerSystemVersion="1.0.1.2" hasCustomInstaller="true" isExperimental="true" dllsBuild="2.5.285">
-<component unique="RattlerCore" displayName="RattlerCore" description="Currently adds a mining scanner and a mining beam to the space stage. You can use the mining scanner by reading the cheat menu currently as it's gui isn't implemented yet. Now adds the RATTLER fabricator which can be used to convert 20 Ice and 5 Copper into 1 energy pack." defaultChecked="true">RattlerCore.package</component>
+<mod displayName="Rattler SPORE" unique="RattlerSPORE" description="A mod for SPORE aimed to make the game loops more enjoyable."  installerSystemVersion="1.0.1.2" hasCustomInstaller="true" isExperimental="true" dllsBuild="2.5.290">
+<component unique="Rattler_Core" displayName="Rattler SPORE Industry Core" description="Currently adds a mining scanner and a mining beam to the space stage. You can use the mining scanner by reading the cheat menu currently as it's gui isn't implemented yet. Now adds the RATTLER fabricator which can be used to convert 20 Ice and 5 Copper into 1 energy pack." game="GalacticAdventures" defaultChecked="true">RattlerIndustry_Core.package</component>
 <prerequisite>RattlerSpore.dll</prerequisite>
 <remove>RattlerSpore.dll</remove>
 </mod>
