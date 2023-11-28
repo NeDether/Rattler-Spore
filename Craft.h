@@ -1,6 +1,9 @@
 #pragma once
 
 #include <Spore\BasicIncludes.h>
+#include "Spore/Simulator/SubSystem/SpaceTrading.h"
+#include <Spore/CommonIDs.h>
+#include <Spore/Simulator/cSpaceToolData.h>
 
 #define CraftPtr intrusive_ptr<Craft>
 
