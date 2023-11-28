@@ -4,7 +4,10 @@
 #include "Spore/Simulator/SubSystem/SpaceTrading.h"
 #include <Spore/CommonIDs.h>
 #include <Spore/Simulator/cSpaceToolData.h>
-
+#include <Spore/Simulator/SimulatorEnums.h>
+#include <Spore/Simulator/cSimulatorSpaceGame.h>
+#include <Spore/Simulator/cPlayerInventory.h>
+#include <Spore/ResourceKey.h>
 #define CraftPtr intrusive_ptr<Craft>
 
 // To avoid repeating UTFWin:: all the time.
@@ -15,7 +18,6 @@ class Craft
 	, public DefaultRefCounted
 {
 public:
-	static const uint32_t TYPE = id("Craft");
 	
 	Craft();
 	~Craft();
@@ -27,5 +29,8 @@ public:
 	int GetEventFlags() const override;
 	// This is the function you have to implement, called when a window you added this winproc to received an event
 	bool HandleUIMessage(IWindow* pWindow, const Message& message) override;
+	bool UseMaterial(uint32_t WareID, int neededAmount);
+	bool GiveItem(uint32_t WareID, int givenAmount);
+	bool HasMaterial(uint32_t WareID, int neededAmount);
 	
 };
