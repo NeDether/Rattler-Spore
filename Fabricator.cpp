@@ -2,7 +2,7 @@
 #include "Fabricator.h"
 #include <Spore\UTFWin\WinTreeView.h>
 #include <Spore\UTFWin\IButton.h>
-
+#include "FabricatorSystem.h"
 
 using namespace Simulator;
 
@@ -38,14 +38,8 @@ bool Fabricator::Update(cSpaceToolData* pTool, bool showErrors, const char16_t**
 
 bool Fabricator::OnSelect(cSpaceToolData* pTool)
 {   
-    
+    FabricatorSystemA.OpenFab(true);
 
-    auto window = WindowManager.GetMainWindow();
-    layout.LoadByID(id("FabMenu"));
-    layout.SetVisible(true);
-    auto menuWindow = layout.FindWindowByID(id("FabMenu"));
-    layout.SetParentWindow(window);
-    
 
 
   //  if (window->GetFlags() & UTFWin::kWinFlagEnabled) {

@@ -4,6 +4,7 @@
 #include <Spore/Simulator/cToolStrategy.h>
 #include "MiningBeam.h"
 #include "Fabricator.h"
+#include "FabricatorSystem.h"
 #include "MiningScanner.h"
 #include <Spore/Simulator/cDefaultBeamTool.h>
 
@@ -18,6 +19,7 @@ void Initialize() {
     ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
 	ToolManager.AddStrategy(new MiningScanner(), id("mineral_scanner1"));
 	ToolManager.AddStrategy(new Fabricator(), id("rattler_forge"));
+	SimulatorSystem.AddStrategy(new FabricatorSystem(), FabricatorSystem::NOUN_ID);
 }
 
 void Dispose()

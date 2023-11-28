@@ -14,6 +14,9 @@
     <Filter Include="RattlerSpore\Tools">
       <UniqueIdentifier>{586285c2-7c35-4c11-aa71-5a32450799ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Function">
+      <UniqueIdentifier>{e9a6d353-a286-4af2-a322-db1bb9d964a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -31,6 +34,15 @@
     <ClInclude Include="Fabricator.h">
       <Filter>RattlerSpore\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="FabricatorSystem.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="xFabClose.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="xFabOpen.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -47,6 +59,15 @@
     </ClCompile>
     <ClCompile Include="Fabricator.cpp">
       <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FabricatorSystem.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="xFabClose.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="xFabOpen.cpp">
+      <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

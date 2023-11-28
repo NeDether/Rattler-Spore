@@ -1,0 +1,36 @@
+uint32 Recipe hash(rattler_forge)#Link to the spacetools~
+
+uint32s Blueprint #All of the required blueprints for this recipe.
+end
+
+uint32s Ingredients #A vector of each possible ingredient. 
+#kamacite - ni - [0]
+0
+#sulphide - s - [1]
+0
+#ice - h - [2]
+0
+#silica - si - [3]
+0
+#carbon - c - [4]
+0
+#copper - cu - [5]
+0
+#titanium - ti - [6]
+0
+#gold - au - [7]
+0
+#latticine - lt - [8]
+0
+end
+
+key CraftIconImage ufotools~!spg_cargopas_mineral.png
+
+texts CName 
+	"TestItem"
+end
+texts CDesc
+	"I flooded my pants with diharea."
+end
+
+bool SecretRecip false
