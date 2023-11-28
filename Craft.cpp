@@ -1,54 +1,62 @@
 #include "stdafx.h"
-#include "xFabClose.h"
-#include "FabricatorSystem.h"
-xFabClose::xFabClose()
+#include "Craft.h"
+
+Craft::Craft()
 {
 }
 
 
-xFabClose::~xFabClose()
+Craft::~Craft()
 {
 }
 
 // For internal use, do not modify.
-int xFabClose::AddRef()
+int Craft::AddRef()
 {
 	return DefaultRefCounted::AddRef();
 }
 
 // For internal use, do not modify.
-int xFabClose::Release()
+int Craft::Release()
 {
 	return DefaultRefCounted::Release();
 }
 
 // You can extend this function to return any other types your class implements.
-void* xFabClose::Cast(uint32_t type) const
+void* Craft::Cast(uint32_t type) const
 {
 	CLASS_CAST(Object);
 	CLASS_CAST(IWinProc);
-	CLASS_CAST(xFabClose);
+	CLASS_CAST(Craft);
 	return nullptr;
 }
 
 // This method returns a combinations of values in UTFWin::EventFlags.
 // The combination determines what types of events (messages) this window procedure receives.
 // By default, it receives mouse/keyboard input and advanced messages.
-int xFabClose::GetEventFlags() const
+int Craft::GetEventFlags() const
 {
 	return kEventFlagBasicInput | kEventFlagAdvanced;
 }
 
 // The method that receives the message. The first thing you should do is probably
 // checking what kind of message was sent...
-bool xFabClose::HandleUIMessage(IWindow* window, const Message& message)
+bool Craft::HandleUIMessage(IWindow* window, const Message& message)
 {
 	if (message.eventType == MessageType::kMsgButtonClick)
 	{
-		App::ConsolePrintF("your dirt is: carbon");
-		return FabricatorSystemA.CloseFab(false);
+		App::ConsolePrintF("energy");
+		cSpaceToolDataPtr tool;
+		ToolManager.LoadTool({ id("energypotion"), 0, 0 }, tool);
+		tool->mCurrentAmmoCount = 2;
+		auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+		inventory->AddItem(tool.get());
+		SpaceTrading.ObtainTradingObject({ id("spice_drt_ice"), 0, 0 }, -5);
 	}
 	// Return true if the message was handled, and therefore no other window procedure should receive it.
 	return false;
+	
+	// Return true if the message was handled, and therefore no other window procedure should receive it.
+	
 }
-//SpaceTrading.ObtainTradingObject({ id("spice_drt_ice"), 0, 0 }, 1);
+//

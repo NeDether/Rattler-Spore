@@ -43,6 +43,9 @@
     <ClInclude Include="xFabOpen.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
+    <ClInclude Include="Craft.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -67,6 +70,9 @@
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="xFabOpen.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Craft.cpp">
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
   </ItemGroup>

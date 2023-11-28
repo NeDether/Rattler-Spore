@@ -98,6 +98,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Craft.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Fabricator.h" />
     <ClInclude Include="FabricatorSystem.h">
       <SubType>
@@ -120,6 +124,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Craft.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

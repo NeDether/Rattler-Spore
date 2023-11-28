@@ -37,7 +37,8 @@ bool Fabricator::Update(cSpaceToolData* pTool, bool showErrors, const char16_t**
 
 
 bool Fabricator::OnSelect(cSpaceToolData* pTool)
-{   
+{
+    FabricatorSystemA.CloseFab(true);
     FabricatorSystemA.OpenFab(true);
 
 
