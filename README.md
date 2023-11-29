@@ -3,7 +3,9 @@
 </p>
 This is a mod for SPORE that adds a whole new line of progression as well as new tools, resources and features that will make the Space Stage more enjoyable.
 
-
+## Credits
+* Chocoice75 : Heavy reference usage from Solar Spore code.
+* [game-icons.net](https://game-icons.net/) : Provided base icons used for tools in which I modified.
 ## Special Thanks!
 * Chocice75 : Assistance
 * emd : Assistance
