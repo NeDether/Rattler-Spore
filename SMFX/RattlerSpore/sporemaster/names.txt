@@ -1,4 +1,6 @@
 animations~	0x0
+auto_Recipes_energypotion
+spg_main_energypotion
 auto_spacetrading~_rattler_forge
 auto_spacetools~_mineral_scanner1
 craft
@@ -12,6 +14,7 @@ GGETextEP1
 MaterialList
 spacegame_tools
 SG_ufo_mind_erase_HitWater
+2
 0
 auto_spacetrading~_spice_mat_copper
 SG_mining_laser_beam
@@ -41,11 +44,13 @@ Recipes
 rattler_forge
 city
 ufotools~	0x3064cb38
+toolenergypotion
 spice_mat_copper
 r
 upgrade
 auto_spacetrading~_spice_mat_latticine
 rattlerfor
+count
 spacetools~	0x30608f0b
 spice
 spice_mat_latticine
@@ -58,8 +63,10 @@ ep1_effects_3~	0x408a4302
 auto_spacetrading~_spice_drt_kamacite
 crafting
 vehicle
+sg_rare_geodes_08
 auto_spacetools~_mining_beam1
 TravelAbilityPanel
+energypotion
 world
 citizen
 rattl
@@ -69,6 +76,7 @@ colonyobject
 ufo
 spice_drt_kamacite
 spice_drt_ice
+sel
 auto_spacetrading~_spice_drt_ice
 mineral_scanner1
 auto_spacetrading~_spice_drt_carbon
@@ -82,10 +90,14 @@ ratt
 spice_mat_gold
 crapingMat
 rattlerf
+rollover
+icon
+recipeslot
 spice_drt_carbon
 en-us
 spice_mat_titanium
 planet
+bg
 rattler
 exit
 SG_ufo_mind_erase_muzzle
