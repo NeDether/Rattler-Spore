@@ -95,6 +95,7 @@ icon
 recipeslot
 spice_drt_carbon
 en-us
+crapingslot
 spice_mat_titanium
 planet
 bg

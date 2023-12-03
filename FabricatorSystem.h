@@ -80,7 +80,12 @@ public:
 	bool OpenFab(bool sex);
 	bool CloseFab(bool sex);
 
+	void RenderRecipies(int cat);
+
+	vector<UTFWin::IWindow*> mapUI;
 	bool ReadRecipes();
+
+
 
 private:
 	//
