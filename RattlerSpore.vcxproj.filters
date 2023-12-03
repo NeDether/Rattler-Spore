@@ -46,6 +46,9 @@
     <ClInclude Include="Craft.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
+    <ClInclude Include="RecipeIcon.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -73,6 +76,9 @@
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="Craft.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="RecipeIcon.cpp">
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
   </ItemGroup>

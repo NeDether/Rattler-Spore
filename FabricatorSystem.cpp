@@ -120,7 +120,7 @@ bool FabricatorSystem::OpenFab(bool sex) {
 		auto menuWindow = mpUIlayout->FindWindowByID(id("FabMenu"));
 		layout.SetParentWindow(window);
 
-
+		ReadRecipes();
 		return true;
 	}
 	return false;
@@ -144,5 +144,119 @@ bool FabricatorSystem::CloseFab(bool sex) {
 	return false;
 }
 
+bool FabricatorSystem::ReadRecipes()
+{
+
+	vector<uint32_t> recipeIDs;
+	PropManager.GetPropertyListIDs(id("Recipes"), recipeIDs);
+	App::ConsolePrintF("Reading Recipes...");
+
+	for (int i = 0; i < 5; i++)
+	{
+		for each (uint32_t resID in recipeIDs)
+		{
+			try
+			{
+				Recipe res = Recipe(resID);
+				App::ConsolePrintF((char*)res.CName.GetText());
+				bool SecretRecip;
+				if (App::Property::GetBool(res.mpPropList.get(), id("SecretRecip"), SecretRecip))
+				{
+					if (SecretRecip != true)
+						RecipeMap.emplace(res.CraftingID, res);
+				}
+				else
+				{
+					
+					RecipeMap.emplace(res.CraftingID, res);
+				}
+			}
+			catch (std::exception except)
+			{
+				const char* text = except.what();
+				wstring report;
+				report.assign_convert(text);
+				MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding recipe"), 0x00000010L);
+			}
+		}
+	}
+	return false;
+
+}
+
 
 FabricatorSystem* FabricatorSystem::sInstance;
+
+
+Recipe::Recipe(uint32_t propID) {
+
+	if (propID == 0)
+	{
+		CraftingID = 0;
+		mToolID = 0;
+		productAmount = 0;
+		return;
+	}
+
+	if (PropManager.GetPropertyList(propID, id("Recipes"), mpPropList))
+	{
+		CraftingID = propID;
+		App::Property::GetUInt32(mpPropList.get(), id("Recipe"), mToolID); //Gets .prop of the item it gives you.
+		App::Property::GetText(mpPropList.get(), id("CName"), CName);
+		App::Property::GetText(mpPropList.get(), id("CDesc"), CDesc);
+		if (!App::Property::GetUInt32(mpPropList.get(), id("productAmount"), productAmount))
+		{
+			string error = "Research property list " + to_string(propID) + " has no output amount!";
+			throw std::invalid_argument(error.c_str());
+		}
+
+		size_t count;
+		uint32_t* ids;
+		App::Property::GetArrayUInt32(mpPropList.get(), id("Ingredients"), count, ids);
+		if (count != 0)
+		{
+			for (int i = 0; i < count; i++)
+			{
+				Ingredients.push_back(ids[i]);
+			}
+		}
+
+		App::Property::GetArrayUInt32(mpPropList.get(), id("IngCount"), count, ids);
+		if (count != 0)
+		{
+			for (int i = 0; i < count; i++)
+			{
+				IngCount.push_back(ids[i]);
+			}
+		}
+
+		App::Property::GetArrayUInt32(mpPropList.get(), id("Blueprint"), count, ids);
+		if (count != 0)
+		{
+			for (int i = 0; i < count; i++)
+			{
+				Blueprint.push_back(ids[i]);
+			}
+		}
+
+	
+	}
+	else
+	{
+		string error = "Crafting property " + to_string(propID) + " is not valid!";
+		throw std::invalid_argument(error.c_str());
+	}
+
+
+}
+
+Recipe::Recipe(){
+	CraftingID = 0;
+	mToolID = 0;
+	productAmount = 0;
+}
+
+Recipe::operator bool() const
+{
+	return (CraftingID != 0);
+}

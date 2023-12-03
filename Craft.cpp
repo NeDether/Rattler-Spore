@@ -83,10 +83,11 @@ bool Craft::UseMaterial(uint32_t WareID, int neededAmount)
 		if (itemCount >= neededAmount) {
 
 			App::ConsolePrintF("The total ''Count'' in the inv: %d", H);
+			auto D = inventory->RemoveItem(H);
+			
+			if (itemCount != neededAmount) {
 
-			SpaceTrading.ObtainTradingObject({ WareID, 0, 0 }, (neededAmount*-1));
-			if (itemCount == neededAmount) {
-				auto D = inventory->RemoveItem(H);
+				SpaceTrading.ObtainTradingObject({ WareID, 0, 0 }, (itemCount - neededAmount));
 
 			}
 			return true;

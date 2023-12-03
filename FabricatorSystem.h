@@ -28,8 +28,6 @@ public:
 	Recipe();
 	//Recipe(PropertyListPtr propList, uint32_t toolID, vector<uint32_t> Blueprint, vector<uint32_t> Ingredients , uint32_t CraftingID);
 
-	const bool operator==(const Recipe other);
-	const bool operator!=(const Recipe other);
 	explicit operator bool() const;
 
 
@@ -37,6 +35,8 @@ public:
 	uint32_t mToolID;
 	vector<uint32_t> Blueprint;
 	vector<uint32_t> Ingredients;
+	vector<uint32_t> IngCount;
+	uint32_t productAmount;
 	uint32_t CraftingID;
 	LocalizedString CName;
 	LocalizedString CDesc;
@@ -71,12 +71,16 @@ public:
 	//
 	// You can add more methods here
 	//
-
+	map<uint32_t, Recipe> RecipeMap;
 	static Simulator::Attribute ATTRIBUTES[];
 	static FabricatorSystem* Get();
 
+
+
 	bool OpenFab(bool sex);
 	bool CloseFab(bool sex);
+
+	bool ReadRecipes();
 
 private:
 	//
