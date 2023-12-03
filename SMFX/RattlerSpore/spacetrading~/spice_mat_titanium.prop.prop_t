@@ -1,4 +1,4 @@
-key inventoryItemArtifactModel sg_crate_spice_06
+key inventoryItemArtifactModel sg_rare_geodes_08
 float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x00808aff
