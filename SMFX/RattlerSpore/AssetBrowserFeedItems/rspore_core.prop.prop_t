@@ -1,0 +1,11 @@
+key feedListItemIconKey graphics_misc_2~!feedlisticon_hammer.png
+keys feedListItemKeyList
+	mineral_scanner1
+	mining_beam1
+	rattler_forge
+	newline
+end
+texts feedListItemName
+	"Core Tools"
+end
+key feedListItemType FeedItemMessage

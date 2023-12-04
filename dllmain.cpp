@@ -6,6 +6,7 @@
 #include "Fabricator.h"
 #include "FabricatorSystem.h"
 #include "MiningScanner.h"
+#include "InjectCategories.h"
 #include <Spore/Simulator/cDefaultBeamTool.h>
 
 // This is in dllmain.cpp
@@ -16,6 +17,8 @@ using namespace ArgScript;
 
 
 void Initialize() {
+	InjectCategories::InjectHeader();
+	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
     ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
 	ToolManager.AddStrategy(new MiningScanner(), id("mineral_scanner1"));
 	ToolManager.AddStrategy(new Fabricator(), id("rattler_forge"));

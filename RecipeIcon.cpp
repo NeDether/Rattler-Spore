@@ -1,10 +1,19 @@
 #include "stdafx.h"
 #include "RecipeIcon.h"
 
-RecipeIcon::RecipeIcon()
-{
-}
 
+RecipeIcon::RecipeIcon(UTFWin::IWindow* window, Recipe juh)
+{
+	mapItemWindow = window;
+	mapRecipe = juh;
+	mapError = u"";
+
+	string16 products;
+	products.assign_convert(to_string(mapRecipe.productAmount));
+	products = u" x" + products;
+	mapItemWindow->FindWindowByID(id("count"))->SetCaption(products.c_str());
+
+}
 
 RecipeIcon::~RecipeIcon()
 {

@@ -1,0 +1,7 @@
+key parent AssetBrowserFeedCategories!Template.prop
+texts feedListCategoryName
+	"RattlerSpore"
+end
+keys feedListItems
+	rspore_ach
+end

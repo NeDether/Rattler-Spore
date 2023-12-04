@@ -1,7 +1,8 @@
 #pragma once
 
 #include <Spore\BasicIncludes.h>
-
+#include "FabricatorSystem.h"
+#include "Craft.h"
 #define RecipeIconPtr intrusive_ptr<RecipeIcon>
 
 // To avoid repeating UTFWin:: all the time.
@@ -14,7 +15,7 @@ class RecipeIcon
 public:
 	static const uint32_t TYPE = id("RecipeIcon");
 	
-	RecipeIcon();
+	RecipeIcon(UTFWin::IWindow* window, Recipe juh);
 	~RecipeIcon();
 
 	int AddRef() override;
@@ -24,5 +25,10 @@ public:
 	int GetEventFlags() const override;
 	// This is the function you have to implement, called when a window you added this winproc to received an event
 	bool HandleUIMessage(IWindow* pWindow, const Message& message) override;
-	
+
+private:
+	Recipe mapRecipe;
+	UTFWin::IWindow* mapItemWindow;
+	string16 mapError;
+	//UTFWin::Tooltip* mapTooltip;
 };

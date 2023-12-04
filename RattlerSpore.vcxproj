@@ -107,6 +107,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="InjectCategories.h" />
     <ClInclude Include="MiningBeam.h">
       <SubType>
       </SubType>
@@ -145,6 +146,7 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="InjectCategories.cpp" />
     <ClCompile Include="MiningBeam.cpp">
       <SubType>
       </SubType>

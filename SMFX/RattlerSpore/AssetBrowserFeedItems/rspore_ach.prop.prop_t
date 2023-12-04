@@ -1,0 +1,7 @@
+keys feedListItemKeyList
+	newline
+end
+texts feedListItemName
+	"Achievements"
+end
+key feedListItemType FeedItemMessage
