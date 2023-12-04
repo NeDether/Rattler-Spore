@@ -1,0 +1,54 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 2
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(rattlercargo!0x0000000B) "PLACEHOLDER"
+end
+texts spaceToolDetailDescription
+	(rattlercargo!0x0000000C) "PLACEHOLDER"
+end
+float spaceToolDetectableRange 15
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.85
+bool spaceToolHide false
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key spaceToolImageID ufotools~!tooliconDrillMK3.png
+float spaceToolMaxDamage 10
+float spaceToolMaxRange 300
+float spaceToolMinDamage 5
+key spaceToolPanelKey TravelAbilityPanel
+key spaceToolUpgradeFile mining_beam2.prop
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy mining_beam3
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool toolDestroysFloraAndFauna true
+key toolBeamEffectID SG_mining_laser_beam
+key toolHitCombatantEffectID SG_ufo_mind_erase_HitCombatant
+key toolHitGroundEffectID 0x19D7E754
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_ufo_mind_erase_HitWater
+key toolMuzzleEffectID SG_ufo_mind_erase_muzzle
+bool toolPicksFlora true
+bool toolIsHoming false
+float toolRelationshipDelta -0.02
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end

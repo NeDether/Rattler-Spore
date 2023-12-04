@@ -1,5 +1,5 @@
 key parent spacetools~!ToolTemplate.prop
-string16 description "Medium Mineral Scanner"
+string16 description "Major Mineral Scanner"
 int32 spaceToolBuyCost 2
 key spaceToolContext always
 texts spaceToolDescription
@@ -15,14 +15,14 @@ bool spaceToolHide false
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
-key spaceToolImageID ufotools~!toolScanIconMK2.png
+key spaceToolImageID ufotools~!toolScanIconMK3.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey TravelAbilityPanel
-key spaceToolUpgradeFile mineral_scanner1.prop
+key spaceToolUpgradeFile mineral_scanner2.prop
 float spaceToolRechargeRate 5
 int32 spaceToolUseCost 0
 float spaceToolEnergyCost 0.5
-key spaceToolStrategy mineral_scanner2
+key spaceToolStrategy mineral_scanner3
 key spaceToolType special
 bool toolDeselectsAfterUse true
 bool toolIsSuperWeapon false
