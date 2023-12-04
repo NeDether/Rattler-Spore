@@ -52,6 +52,9 @@
     <ClInclude Include="InjectCategories.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
+    <ClInclude Include="ResourceIcon.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -85,6 +88,9 @@
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="InjectCategories.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceIcon.cpp">
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
   </ItemGroup>

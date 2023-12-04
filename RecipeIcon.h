@@ -27,7 +27,7 @@ public:
 	bool HandleUIMessage(IWindow* pWindow, const Message& message) override;
 
 private:
-	Recipe mapRecipe;
+	Recipe myRecipe;
 	UTFWin::IWindow* mapItemWindow;
 	string16 mapError;
 	//UTFWin::Tooltip* mapTooltip;

@@ -7,6 +7,7 @@
 #include <Spore/CommonIDs.h>
 #include "xFabClose.h"
 #include <Spore/Simulator/cSpaceToolData.h>
+#include "FabricatorSystem.h"
 #include <exception>
 #include <stdexcept>
 #include <Spore\App\cJob.h>
@@ -38,8 +39,10 @@ public:
 	vector<uint32_t> IngCount;
 	uint32_t productAmount;
 	uint32_t CraftingID;
-	LocalizedString CName;
-	LocalizedString CDesc;
+	uint32_t Cat;
+	//LocalizedString CName;
+	//LocalizedString CDesc;
+	bool Secret;
 };
 ///kamacite - ni - [0]
 ///sulphide - s - [1]
@@ -75,17 +78,24 @@ public:
 	static Simulator::Attribute ATTRIBUTES[];
 	static FabricatorSystem* Get();
 
+	Recipe& GetRecipe(uint32_t resID);
+	Recipe Selected;
 
 
+	bool InCategory(uint32_t resID, uint32_t cat);
+	bool SelectRecipe(Recipe ThatRecipe);
+	bool IsSecret(uint32_t resID);
 	bool OpenFab(bool sex);
 	bool CloseFab(bool sex);
-
-	void RenderRecipies(int cat);
+	bool Fabricate(Recipe res);
+	void RenderRecipies(uint32_t cat);
 
 	vector<UTFWin::IWindow*> mapUI;
 	
-
-
+	bool UseMaterial(uint32_t WareID, int neededAmount);
+	bool GiveItem(uint32_t WareID, uint32_t givenAmount);
+	bool HasMaterial(uint32_t WareID, int neededAmount);
+	bool AbleToCraft(Recipe res);
 
 private:
 	//

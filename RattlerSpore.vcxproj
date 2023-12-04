@@ -117,6 +117,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="ResourceIcon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="xFabClose.h">
@@ -153,6 +157,10 @@
     </ClCompile>
     <ClCompile Include="MiningScanner.cpp" />
     <ClCompile Include="RecipeIcon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ResourceIcon.cpp">
       <SubType>
       </SubType>
     </ClCompile>

@@ -17,6 +17,7 @@ rattlerach
 rattlermenu
 special
 GGETextEP1
+button
 ach_core_geo1
 MaterialList
 spacegame_tools
@@ -88,6 +89,7 @@ graphics_misc_2~	0x354663b
 store-mining
 turret
 auto_spacetrading~_spice_drt_silica
+zurgtastic
 auto_animations~_MaterialList
 ra
 AssetBrowserGraphics
@@ -154,7 +156,6 @@ spice_mat_titanium
 planet
 bg
 FeedItemMessage
-
 rattler
 exit
 SG_ufo_mind_erase_muzzle
@@ -166,6 +167,7 @@ mining_beam2
 mining_beam3
 AssetBrowserFeedCategories
 mining_beam1
+req
 auto_AssetBrowserFeedItems_rspore_ach
 building
 rattlerfo
