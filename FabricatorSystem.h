@@ -83,7 +83,7 @@ public:
 	void RenderRecipies(int cat);
 
 	vector<UTFWin::IWindow*> mapUI;
-	bool ReadRecipes();
+	
 
 
 
@@ -94,5 +94,6 @@ private:
 
 	static FabricatorSystem* sInstance;
 	UTFWin::UILayout* mpUIlayout;
+	bool ReadRecipes();
 	float mWindowOffset;
 };

@@ -151,15 +151,17 @@ bool FabricatorSystem::CloseFab(bool sex) {
 
 void FabricatorSystem::RenderRecipies(int cat)
 {
-	auto inventoryWindow = mpUIlayout->FindWindowByID(id("Inventory"), true);
+	int g = cat;
+	g = g + g;
+	auto inventoryWindow = mpUIlayout->FindWindowByID(id("cat"), true);
 	int i = 0;
-
+	
 	vector<Recipe> validRecipes;
 	vector<Recipe> invalidRecipes;
 
 	for (auto it = RecipeMap.begin(); it != RecipeMap.end(); it++)
 	{
-		string error;
+		//string error;
 		if (true) //Replace this with cancraft later
 		{
 			validRecipes.push_back(it.mpNode->mValue.second);
@@ -170,7 +172,9 @@ void FabricatorSystem::RenderRecipies(int cat)
 		}
 
 	}
-	validRecipes.insert(validRecipes.end(), validRecipes.begin(), invalidRecipes.end());
+
+	//validRecipes.insert(validRecipes.end(), validRecipes.begin(), invalidRecipes.end());
+	
 
 
 	for each (Recipe zurg in validRecipes)
@@ -194,7 +198,6 @@ void FabricatorSystem::RenderRecipies(int cat)
 				if (auto itemWindow = layout->FindWindowByID(id("crapingslot")))
 				{
 					auto icon = itemWindow->FindWindowByID(id("icon"));
-
 					ResourceKey imgKey;
 					if (App::Property::GetKey(zurg.mpPropList.get(), id("CraftIconImage"), imgKey))
 					{
@@ -208,8 +211,8 @@ void FabricatorSystem::RenderRecipies(int cat)
 					}
 
 					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
-					itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new RecipeIcon(itemWindow, zurg));
-					itemWindow->SetLayoutLocation((65 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 75);
+					//itemWindow->FindWindowByID(id("itembutton"))->AddWinProc(new RecipeIcon(itemWindow, zurg));
+					itemWindow->SetLayoutLocation((55 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 75);
 
 					mapUI.push_back(itemWindow);
 				}
