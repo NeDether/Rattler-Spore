@@ -1,4 +1,4 @@
-uint32 Recipe hash(toolenergymegapotion)#Link to the spacetools~
+uint32 Recipe hash(asteroid)#Link to the spacetools~
 
 uint32s Blueprint #All of the required blueprints for this recipe. Currently unused
 end
