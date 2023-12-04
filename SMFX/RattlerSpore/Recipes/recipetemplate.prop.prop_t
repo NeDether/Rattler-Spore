@@ -23,4 +23,4 @@ texts CDesc
 	"Crafts two energy packs. An explorer's best friend."
 end
 
-bool SecretRecip false
+bool SecretRecip true

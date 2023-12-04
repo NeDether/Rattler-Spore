@@ -162,7 +162,8 @@ void FabricatorSystem::RenderRecipies(int cat)
 	for (auto it = RecipeMap.begin(); it != RecipeMap.end(); it++)
 	{
 		//string error;
-		if (true) //Replace this with cancraft later
+		
+		if (true) //Replace this with if secret later
 		{
 			validRecipes.push_back(it.mpNode->mValue.second);
 		}
