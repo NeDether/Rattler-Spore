@@ -1,7 +1,27 @@
 keys feedListItemKeyList
+	ach_core_geo1
+	ach_core_geo2
+	ach_core_geo3
+	newline
+	ach_core_cr1
+	ach_core_cr2
+	ach_core_cr3
+	ach_core_cr4
+	newline
+	ach_core_mine1
+	ach_core_mine2
+	ach_core_mine3
+	ach_core_mine4
+	ach_core_mine5
+	newline
+	ach_core_sec
 	newline
 end
+texts feedListItemHeader
+	(rattlerach!0x00000020) "Achievements"
+end
 texts feedListItemName
-	"Achievements"
+	(rattlermenu!0x00000000) "Achievements"
 end
 key feedListItemType FeedItemMessage
+key feedListItemIconKey AssetBrowserGraphics!spg_feedicon_ufoeditor.png

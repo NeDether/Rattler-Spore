@@ -3,15 +3,14 @@ string16 description "Medium Mineral Scanner"
 int32 spaceToolBuyCost 2
 key spaceToolContext always
 texts spaceToolDescription
-	(rattlercargo!0x00000017) "PLACEHOLDER"
+	(rattlercargo!0x0000001B) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000018) "PLACEHOLDER"
+	(rattlercargo!0x0000001C) "PLACEHOLDER"
 end
 bool spaceToolDisableOn201Ruins true
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-bool spaceToolHide false
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end

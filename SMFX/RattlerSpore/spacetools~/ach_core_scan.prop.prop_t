@@ -1,0 +1,12 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "An Achievement!"
+texts spaceToolDescription
+	(rattlerach!0x00000001) "Achievement Name"
+end
+texts spaceToolDetailDescription
+	(rattlerach!0x00000011) "Achievement Description"
+end
+key spaceToolImageID ufotools~!toolScanIconMK1.png
+texts spaceToolLockedDescription
+	"~blank_text~"
+end

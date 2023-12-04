@@ -5,16 +5,15 @@ int32 spaceToolBuyCost 2
 key spaceToolContext planet
 float spaceToolDamageArea 0.5
 texts spaceToolDescription
-	(rattlercargo!0x0000000B) "PLACEHOLDER"
+	(rattlercargo!0x0000001D) "PLACEHOLDER"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x0000000C) "PLACEHOLDER"
+	(rattlercargo!0x0000001E) "PLACEHOLDER"
 end
 float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0.85
-bool spaceToolHide false
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
