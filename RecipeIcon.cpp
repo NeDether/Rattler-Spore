@@ -7,12 +7,25 @@ RecipeIcon::RecipeIcon(UTFWin::IWindow* window, Recipe juh)
 	mapItemWindow = window;
 	myRecipe = juh;
 	mapError = u"";
-
 	string16 products;
 	products.assign_convert(to_string(myRecipe.productAmount));
 	products = u" x" + products;
-	mapItemWindow->FindWindowByID(id("count"))->SetCaption(products.c_str());
+	mapItemWindow->FindWindowByID(id("zurgtastic"))->FindWindowByID(id("count"))->SetCaption(products.c_str());
+	PropertyListPtr sillyPropList;
+	PropManager.GetPropertyList(myRecipe.mToolID, 0x30608f0b, sillyPropList);
 
+	LocalizedString silly;
+	LocalizedString verySilly;
+	(App::Property::GetText(sillyPropList.get(), 0x3068D95D, silly));
+	(App::Property::GetText(sillyPropList.get(), 0x04CAD19B, verySilly));
+	myTooltip = UTFWin::CreateTooltip(silly.GetText(),verySilly.GetText());
+	window->FindWindowByID(id("zurgtastic"))->AddWinProc(myTooltip);
+			
+		
+	
+
+
+	
 }
 
 RecipeIcon::~RecipeIcon()

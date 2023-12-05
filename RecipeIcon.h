@@ -30,5 +30,6 @@ private:
 	Recipe myRecipe;
 	UTFWin::IWindow* mapItemWindow;
 	string16 mapError;
-	//UTFWin::Tooltip* mapTooltip;
+	UTFWin::Tooltip* myTooltip;
+
 };

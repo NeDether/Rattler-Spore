@@ -29,5 +29,5 @@ private:
 	uint32_t myResource;
 	UTFWin::IWindow* mapItemWindow;
 	string16 mapError;
-	//UTFWin::Tooltip* mapTooltip;
+	UTFWin::Tooltip* myTooltip;
 };

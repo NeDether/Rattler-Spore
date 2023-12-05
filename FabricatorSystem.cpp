@@ -123,8 +123,7 @@ bool FabricatorSystem::InCategory(uint32_t resID, uint32_t cat)
 	return false;
 }
 
-bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe)
-{
+bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe){
 	Selected = ThatRecipe;
 
 	auto resourcesWindow = mpUIlayout->FindWindowByID(id("req"), true);
@@ -167,7 +166,7 @@ bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe)
 					PropertyListPtr sillyPropList;
 					if (PropManager.GetPropertyList(zurg, 0x034d97fa, sillyPropList))
 					{
-					App::ConsolePrintF("Yay!");
+						App::ConsolePrintF("Yay!");
 						if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 						{
 							App::ConsolePrintF("Wahoo!");
@@ -181,9 +180,12 @@ bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe)
 
 								if (App::Property::GetUInt32(sillyPropList.get(), 0x058CBB75, rColor)) {
 									App::ConsolePrintF("ZurgTastic!");
-									rColor=rColor+4278190080;
+									rColor = rColor + 4278190080;
 									Color ColR = Color::Color(rColor);
 									icon->SetShadeColor(ColR);
+								//	LocalizedString westyorkshire;
+								//	App::Property::GetText(sillyPropList.get(), 0x3068D95D, westyorkshire);
+								//	itemWindow->FindWindowByID(0x03754e6c)->SetCaption(westyorkshire.GetText());
 								}
 
 								//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
@@ -192,12 +194,14 @@ bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe)
 						}
 					}
 					if (!HasMaterial(res.Ingredients[i], res.IngCount[i])) {
-						itemWindow->SetShadeColor(Color::RED);
+						
+						itemWindow->FindWindowByID(id("zurgtastic"))->SetShadeColor(Color::RED);
 						
 					}
+
 					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
 					itemWindow->FindWindowByID(id("zurgtastic"))->AddWinProc(new ResourceIcon(itemWindow, zurg, res.IngCount[i]));
-					itemWindow->SetLayoutLocation((55 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 75);
+					itemWindow->SetLayoutLocation((60 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 80);
 
 					mapUI.push_back(itemWindow);
 				}
@@ -212,7 +216,7 @@ bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe)
 	return false;
 }
 
-bool FabricatorSystem::OpenFab(bool sex) {
+bool FabricatorSystem::OpenFab(bool sex){
 	if (!mpUIlayout)
 	{
 		mpUIlayout = new UTFWin::UILayout();
@@ -384,7 +388,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 
 					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
 					itemWindow->FindWindowByID(id("zurgtastic"))->AddWinProc(new RecipeIcon(itemWindow, zurg));
-					itemWindow->SetLayoutLocation((55 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 75);
+					itemWindow->SetLayoutLocation((55 * (i % 16)) + (8 * ((i % 16) + 1)), div((i), 16).quot * 75);
 
 					mapUI.push_back(itemWindow);
 				}
