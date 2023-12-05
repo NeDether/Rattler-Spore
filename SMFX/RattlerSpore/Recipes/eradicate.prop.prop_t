@@ -4,16 +4,19 @@ uint32s Blueprint #All of the required blueprints for this recipe.
 end
 
 uint32s Ingredients #A vector of each possible ingredient. 
-	hash(spice_drt_ice)
-	hash(spice_mat_copper)
+	hash(spice_mat_crude)
+	hash(spice_mat_quartz)
+	hash(spice_drt_carbon)
 end
 
 uint32s IngCount #A vector Of the amount of materials it needs.
-	25
-	10
+	80
+	40
+	95
+	
 end 
 
-uint32 productAmount 3 #Amount of items this pops out.
+uint32 productAmount 9 #Amount of items this pops out.
 uint32 Catagory 0 #catagory in
 
 bool SecretRecip false

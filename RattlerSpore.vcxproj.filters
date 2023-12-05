@@ -55,6 +55,9 @@
     <ClInclude Include="ResourceIcon.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
+    <ClInclude Include="ScanMenu.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -91,6 +94,9 @@
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="ResourceIcon.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="ScanMenu.cpp">
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
   </ItemGroup>

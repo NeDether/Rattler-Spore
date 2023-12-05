@@ -2,6 +2,7 @@ animations~	0x0
 auto_spacetrading~_rattler_forge
 auto_spacetools~_mineral_scanner1
 auto_Recipes_placeembassy
+spice_mat_cobalt
 auto_spacetools~_mineral_scanner3
 auto_spacetools~_mineral_scanner2
 AssetBrowserFeedLists
@@ -10,12 +11,15 @@ rattlermenu
 auto_Recipes_planetbusterbomb
 GGETextEP1
 button
+auto_spacetrading~_spice_mat_amethyst
 ach_core_geo1
 MaterialList
 spacegame_tools
 ach_core_geo3
 ach_core_geo2
 auto_Recipes_placespicestorage
+auto_Recipes_energymegapotion
+auto_spacetrading~_spice_mat_cobalt
 2
 0
 auto_Recipes_droughtgenerator
@@ -39,7 +43,9 @@ volcano
 city
 auto_spacetools~_ach_core_cr3
 auto_spacetools~_ach_core_cr2
+auto_spacetrading~_spice_mat_lithium
 auto_spacetools~_ach_core_cr4
+auto_spacetrading~_spice_mat_diamond
 r
 upgrade
 rspore_ach
@@ -49,15 +55,19 @@ auto_spacetools~_ach_core_sec
 spice_mat_latticine
 auto_Recipes_antimattermissile
 store-mining
+auto_spacetrading~_spice_mat_serenidite
 turret
 zurgtastic
 auto_Recipes_aoe_repair
 AssetBrowserGraphics
+auto_spacetrading~_spice_mat_uranium
 rainoffire
+auto_spacetrading~_spice_mat_nvidium
 crafting
 monolith
 ach_core_sec
 auto_Recipes_volcano
+energymegapotion
 sg_rare_geodes_08
 auto_spacetools~_mining_beam1
 auto_spacetools~_mining_beam2
@@ -75,6 +85,7 @@ spacetrading~	0x34d97fa
 rspore_core
 auto_spacetrading~_spice_drt_sulphide
 ratt
+spice_mat_crude
 ach_core_scan
 rattlerf
 placebioprotector
@@ -89,7 +100,9 @@ rattler
 exit
 auto_Recipes_placecolony
 auto_Recipes_placeuberturret
+auto_spacetrading~_spice_mat_zurg
 auto_Recipes_fireworks
+spice_mat_nvidium
 auto_Recipes_epicize
 auto_AssetBrowserFeedLists_rattlerspore_spacetools
 animal
@@ -112,7 +125,9 @@ toolScanIconMK3
 toolScanIconMK1
 rattlercargo
 auto_spacetrading~_spice_mat_titanium
+ScanMenu
 rattlerach
+auto_spacetrading~_spice_mat_quartz
 special
 CreatureEdit
 auto_Recipes_repairpotion
@@ -136,15 +151,20 @@ auto_spacetools~_ach_core_mine5
 antimattermissile
 auto_spacetools~_ach_core_mine4
 auto_spacetools~_ach_core_mine1
+auto_spacetrading~_spice_mat_flesh
 sporemaster
 auto_spacetools~_ach_core_scan
 auto_spacetools~_ach_core_mine3
 FabMenu
 auto_spacetools~_ach_core_mine2
 names
+spice_mat_flesh
 rattlerforge
 rat
 ToolTemplate
+spice_mat_lithium
+auto_spacetrading~_spice_mat_obsidian
+spice_mat_obsidian
 antimatterbomb
 dryice
 rattlerforg
@@ -152,6 +172,7 @@ rattlerforge!0x00000000
 auto_Recipes_zoo
 ufotools~	0x3064cb38
 toolenergypotion
+spice_mat_zurg
 spice_mat_copper
 newline
 auto_spacetrading~_spice_mat_latticine
@@ -162,7 +183,10 @@ auto_Recipes_monolith
 spacetools~	0x30608f0b
 spice
 graphics_misc_2~	0x354663b
+auto_spacetrading~_spice_mat_crude
+spice_mat_serenidite
 fireworks
+spice_mat_diamond
 auto_spacetrading~_spice_drt_silica
 epicize
 auto_animations~_MaterialList
@@ -179,6 +203,7 @@ auto_Recipes_icecomet
 ach_core_mine5
 ach_core_mine4
 auto_Recipes_antimatterbomb
+spice_mat_quartz
 rattlerspore_category
 vehicle
 auto_Recipes_placeloyaltybooster
@@ -225,7 +250,9 @@ Planetscan
 SG_ufo_mind_erase_muzzle
 planetbusterbomb
 ScrappedGAMenu1
+spice_mat_amethyst
 auto_Recipes_placebioprotector
+spice_mat_uranium
 sg_crate_spice_06
 building
 locale~	0x2fabf01
