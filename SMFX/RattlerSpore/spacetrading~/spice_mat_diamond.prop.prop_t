@@ -1,15 +1,15 @@
 key inventoryItemArtifactModel sg_crate_spice_06
 float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
-uint32 spaceEconomySpiceColor 0x0077ff77
+uint32 spaceEconomySpiceColor 0x0000aaff
 texts spaceToolDescription
-	"Serenidite"
+	"Diamond"
 end
 texts spaceToolDetailDescription
 	(rattlercargo!0x00000010) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
-	0xff77ff77
+	0xff000000
 end
 key spaceToolImageID ufotools~!spg_cargopas_mineral.png
 float spaceTradingBaseCost 10000
