@@ -7,7 +7,9 @@ This is a mod for SPORE that adds a whole new line of progression as well as new
 * Chocoice75 : Heavy reference usage from [Solar Spore](https://github.com/VanillaCold/Spore-SolarSpore) code.
 * [game-icons.net](https://game-icons.net/) : Provided base icons used for tools in which I modified.
 ## Special Thanks!
+* 0KepOnline : Assistance
 * Chocice75 : Assistance
 * emd : Assistance
 * Liskomato : Assistance
 * lucas : Play Testing
+* mosilez : Play Testing
