@@ -23,11 +23,14 @@ class MiningBeam
 {
 public:
 	
-	MiningBeam();
+	MiningBeam(int silly);
 	~MiningBeam();
 
 
 	bool OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position, Simulator::SpaceToolHit hitType, int) override;
+	void getPool(uint32_t seed, int k);
 	virtual bool OnSelect(Simulator::cSpaceToolData* pTool) override;
+private:
 
+	int power;
 };

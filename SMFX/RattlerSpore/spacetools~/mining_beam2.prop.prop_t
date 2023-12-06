@@ -13,7 +13,7 @@ end
 float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0.85
+float spaceToolEnergyCost 0.5
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end
@@ -24,7 +24,7 @@ float spaceToolMinDamage 5
 key spaceToolPanelKey TravelAbilityPanel
 key spaceToolUpgradeFile mining_beam1.prop
 bool spaceToolShowCollectedOrUnlockedText false
-key spaceToolStrategy mining_beam1
+key spaceToolStrategy mining_beam2
 key spaceToolType special
 int32 spaceToolUseCost 0
 bool toolDestroysFloraAndFauna true

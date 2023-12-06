@@ -1,0 +1,47 @@
+texts spaceToolDescription
+	(store-mining!0x00000012) "PLACEHOLDER"
+end
+texts spaceToolDetailDescription
+	(store-mining!0x00000003) "PLACEHOLDER"
+end
+key spaceToolImageID ufotools~!tooliconDrillMK2.png
+float spaceTradingAbundance 15
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 900000
+float spaceTradingChance 50
+float spaceTradingChanceBard 25
+float spaceTradingChanceDiplomat 18
+float spaceTradingChanceEcologist 5
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 75
+float spaceTradingChancePlayerDiplomat 75
+float spaceTradingChancePlayerEcologist 75
+float spaceTradingChancePlayerKnight 75
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 75
+float spaceTradingChancePlayerTrader 75
+float spaceTradingChancePlayerWanderer 75
+float spaceTradingChancePlayerWarrior 75
+float spaceTradingChancePlayerZealot 75
+float spaceTradingChanceScientist 100
+float spaceTradingChanceShaman 65
+float spaceTradingChanceTrader 95
+float spaceTradingChanceWarrior 35
+float spaceTradingChanceZealot 15
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierBard 1
+float spaceTradingCostMultiplierGrob 0.25
+float spaceTradingCostMultiplierTrader 1.03
+float spaceTradingCostMultiplierUserCul 1.2
+float spaceTradingCostMultiplierUserEco 0.9
+float spaceTradingCostMultiplierUserMil 1.2
+float spaceTradingCostMultiplierScientist 1.05
+float spaceTradingCostMultiplierWarrior 1.25
+float spaceTradingCostMultiplierZealot 1.50
+uint32 spaceTradingQuantityToOffer 0
+key spaceTradingExchangeFor mining_beam2.prop
+key spaceTradingRequires mining_beam1.prop
+int32 spaceTradingRequiresTier 1
+int32 spaceTradingToolReofferRate 50
+key spaceTradingToolClass special
+key spaceTradingType upgrade

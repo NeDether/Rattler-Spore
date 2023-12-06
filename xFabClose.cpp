@@ -45,7 +45,7 @@ bool xFabClose::HandleUIMessage(IWindow* window, const Message& message)
 {
 	if (message.eventType == MessageType::kMsgButtonClick)
 	{
-		App::ConsolePrintF("your dirt is: carbon");
+	//	App::ConsolePrintF("your dirt is: carbon");
 		return FabricatorSystemA.CloseFab(false);
 	}
 	// Return true if the message was handled, and therefore no other window procedure should receive it.

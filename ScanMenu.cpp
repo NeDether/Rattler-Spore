@@ -55,19 +55,22 @@ void ScanMenu::Update(int deltaTime, int deltaGameTime) {
 			float offset2 = (((mWindowOffset * -1) + 1) / 8); //max((((windowOffset * -1) + 1) / 8), 1.0)
 			if (close) {
 				counter++;
-				offset2 = (((mWindowOffset) + 1) / 8); //max((((windowOffset * -1) + 1) / 8), 1.0)
-				mWindowOffset = mWindowOffset - offset2;
+				if (counter == 100) {
+					mWindowOffset = -2;
+				}
+				if (counter > 100) {
+					offset2 = ((mWindowOffset) / 8); //max((((windowOffset * -1) + 1) / 8), 1.0)
+				}
 			}
-			else {
-				mWindowOffset = mWindowOffset + offset2;
-			}
-
+			
+			mWindowOffset = mWindowOffset + offset2;
 			
 
 			UTFWin::IWindow* parentWindow = window->GetParent();
 			Math::Rectangle rec = parentWindow->GetArea();
-			window->SetArea(Math::Rectangle(rec.right / 2 - (700 / 2), (rec.bottom / 2 - (300 / 2)) + mWindowOffset, rec.right / 2 + (700 / 2), (rec.bottom / 2 + (300 / 2)) + mWindowOffset));
-			if (counter >= 24) {
+			//window->SetArea(Math::Rectangle(rec.right / 2 - (700 / 2), (rec.bottom / 2 - (400 / 2)) + mWindowOffset, rec.right / 2 + (700 / 2), (rec.bottom / 2 + (400 / 2)) + mWindowOffset));
+			window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2)) + (rec.right / 4), (rec.bottom / 2 - (400 / 2)) + mWindowOffset + rec.top - 400, (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + rec.top - 400));
+			if (mWindowOffset <= -600 && close) {
 			
 				DeleteScan(true);
 			}
@@ -177,10 +180,12 @@ bool ScanMenu::AddResources(vector<uint32_t> resources)
 
 bool ScanMenu::OpenScan(bool sex)
 {
+	DeleteScan(true);
 	if (!mpUIlayout)
 	{
 		mpUIlayout = new UTFWin::UILayout();
 	}
+	counter = 0;
 	close = false;
 	if (mpUIlayout->LoadByID(id("ScanMenu")))
 	{
@@ -195,14 +200,15 @@ bool ScanMenu::OpenScan(bool sex)
 
 		if (sex)
 		{
-			mWindowOffset = (rec.top / 2 + (200 / 2) * -1);
+			mWindowOffset = (rec.top / 2 + (400 / 2) * -1);
 		}
 		else
 		{
 			mWindowOffset = 0;
 		}
+		window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2)) + (rec.right / 4), (rec.bottom  / 2 - (400 / 2)) + mWindowOffset + rec.top - 200, (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + rec.top - 200));
 
-		window->SetArea(Math::Rectangle(rec.right / 2 - (700 / 2), (rec.bottom / 2 - (300 / 2)) + mWindowOffset, rec.right / 2 + (700 / 2), (rec.bottom / 2 + (300 / 2)) + mWindowOffset));
+		//window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2))+(rec.right/4), (rec.bottom / 2 - (400 / 2)) + mWindowOffset + (rec.bottom / 2), (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + (rec.bottom / 2)));
 		auto menuWindow = mpUIlayout->FindWindowByID(id("ScanMenu"));
 		layout.SetParentWindow(window);
 		return true;
@@ -219,7 +225,7 @@ bool ScanMenu::CloseScan(bool sex) {
 	{
 		counter = 0;
 		close = true;
-
+		//mWindowOffset = -2;
 		return true;
 	}
 	return false;
@@ -231,7 +237,7 @@ bool ScanMenu::DeleteScan(bool sex)
 {	//App::ConsolePrintF("mario");
 	if (mpUIlayout)
 	{
-
+		counter = 0;
 		close = false;
 		mpUIlayout->SetVisible(false);
 		//App::ConsolePrintF("le test");

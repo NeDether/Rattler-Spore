@@ -1,6 +1,12 @@
 0x00000000 Mineral Scanner MKI
 0x00000001 Use this in space to geologically index the mineral composition of the selected planet's crust.
 0x00000002 Mining Beam MKI
-0x00000003 Able to harvest minerals on a planet. Only can mine crust-based minerals.
+0x00000003 Able to harvest minerals on a planet.
 0x00000004 RATTLER Fabricator
 0x00000005 An essential item for any empire looking to expand. This ship interior extension is able to create tools and goods without the use of colony factories. Harvest planetary resources and use them inside this machine.
+0x00000010 Mineral Scanner MK2
+0x00000011 Use this in space to geologically index the mineral composition of the selected planet's crust and mantle.
+0x00000012 Mining Beam MK2
+0x00000020 Mineral Scanner MK3
+0x00000021 Use this in space to geologically index the entire mineral composition of the selected planet.
+0x00000022 Mining Beam MK3

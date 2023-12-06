@@ -17,7 +17,7 @@ end
 key spaceToolImageID ufotools~!toolScanIconMK1.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey TravelAbilityPanel
-float spaceToolRechargeRate 3
+float spaceToolRechargeRate 0.5
 int32 spaceToolUseCost 0
 float spaceToolEnergyCost 0.5
 key spaceToolStrategy mineral_scanner1

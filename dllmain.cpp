@@ -20,8 +20,12 @@ using namespace ArgScript;
 void Initialize() {
 	InjectCategories::InjectHeader();
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
-    ToolManager.AddStrategy(new MiningBeam(), id("mining_beam1"));
-	ToolManager.AddStrategy(new MiningScanner(), id("mineral_scanner1"));
+    ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
+	ToolManager.AddStrategy(new MiningScanner(1), id("mineral_scanner1"));
+	ToolManager.AddStrategy(new MiningBeam(2), id("mining_beam2"));
+	ToolManager.AddStrategy(new MiningScanner(2), id("mineral_scanner2"));
+	ToolManager.AddStrategy(new MiningBeam(3), id("mining_beam3"));
+	ToolManager.AddStrategy(new MiningScanner(3), id("mineral_scanner3"));
 	ToolManager.AddStrategy(new Fabricator(), id("rattler_forge"));
 	SimulatorSystem.AddStrategy(new FabricatorSystem(), FabricatorSystem::NOUN_ID);
 	SimulatorSystem.AddStrategy(new ScanMenu(), ScanMenu::NOUN_ID);
