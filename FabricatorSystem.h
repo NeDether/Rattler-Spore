@@ -88,6 +88,7 @@ public:
 	// You can add more methods here
 	//
 	map<uint32_t, Recipe> RecipeMap;
+	map<uint32_t, Category> CatMap;
 	static Simulator::Attribute ATTRIBUTES[];
 	static FabricatorSystem* Get();
 

@@ -408,7 +408,23 @@ bool FabricatorSystem::ReadRecipes()
 
 	vector<uint32_t> categoryIDs;
 	PropManager.GetPropertyListIDs(id("RecipeCategories"), categoryIDs);
+	for each (uint32_t catID in categoryIDs)
+	{
+		try
+		{
+			Category cat = Category(catID);
+			CatMap.emplace(cat.mCatID, cat);
+		}
+		catch (std::exception except)
+		{
+			const char* text = except.what();
+			wstring report;
+			report.assign_convert(text);
+			MessageBox(NULL, report.c_str(), LPCWSTR(u"Error adding category"), 0x00000010L);
+		}
 
+
+	}
 	vector<uint32_t> recipeIDs;
 	PropManager.GetPropertyListIDs(id("Recipes"), recipeIDs);
 	App::ConsolePrintF("Reading Recipes...");
@@ -623,8 +639,8 @@ Category::Category(uint32_t propID)
 {
 	if (propID == 0)
 	{
-		mCatID = 0;
-		Cat = 0;
+		mCatID = 0; //Tool Icon n' name. :emoji_9:
+		Cat = 0; //The internal id or something.
 
 		return;
 	}
@@ -632,7 +648,7 @@ Category::Category(uint32_t propID)
 	if (PropManager.GetPropertyList(propID, id("RecipeCategories"), mpPropList))
 	{
 		App::Property::GetUInt32(mpPropList.get(), id("CatID"), mCatID);
-		App::Property::GetUInt32(mpPropList.get(), id("Category"), Cat);
+		Cat = propID;
 
 	}
 	else
@@ -641,4 +657,10 @@ Category::Category(uint32_t propID)
 		throw std::invalid_argument(error.c_str());
 	}
 
+}
+
+Category::Category()
+{
+	mCatID = 0; //Tool Icon n' name. :emoji_9:
+	Cat = 0; //The internal id or something.
 }
