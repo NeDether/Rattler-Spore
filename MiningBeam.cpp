@@ -144,7 +144,7 @@ void MiningBeam::getPool(uint32_t seed, int k) {
                 SpaceTrading.ObtainTradingObject({ id("spice_mat_uranium"), 0, 0 }, 1);
             }
             else if (chud == 1) {
-                SpaceTrading.ObtainTradingObject({ id("spice_mat_nviduium"), 0, 0 }, 1);
+                SpaceTrading.ObtainTradingObject({ id("spice_mat_nvidium"), 0, 0 }, 1);
             }
             else if (chud == 2) {
                 SpaceTrading.ObtainTradingObject({ id("spice_mat_diamond"), 0, 0 }, 1);

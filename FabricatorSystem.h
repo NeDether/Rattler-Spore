@@ -21,7 +21,20 @@
 /// In your dllmain Initialize method, add the system like this:
 /// ModAPI::AddSimulatorStrategy(new FabricatorSystem(), FabricatorSystem::NOUN_ID);
 ///
+struct Category
+{
+public:
+	Category(uint32_t propID);
+	Category();
 
+	uint32_t mCatID; //A fake SpaceTool that provides the image of the category.
+	PropertyListPtr mpPropList;
+	uint32_t Cat; //The internal number that this category is.
+
+	explicit operator bool() const;
+
+
+};
 struct Recipe
 {
 public:

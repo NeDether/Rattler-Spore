@@ -224,6 +224,8 @@ bool FabricatorSystem::OpenFab(bool sex){
 
 	if (mpUIlayout->LoadByID(id("FabMenu")))
 	{
+		
+		auto paws = GameTimeManager.Pause(Simulator::TimeManagerPause::CommScreen);
 		Selected = NULL;
 		//mpUIlayout->LoadByID(id("FabMenu"));
 		mpUIlayout->SetVisible(true);
@@ -271,6 +273,7 @@ bool FabricatorSystem::CloseFab(bool sex) {
 	{
 
 		
+		auto paws = GameTimeManager.Resume(Simulator::TimeManagerPause::CommScreen);
 		mpUIlayout->SetVisible(false);
 		//App::ConsolePrintF("le test");
 		WindowManager.GetMainWindow()->RemoveWindow(mpUIlayout->FindWindowByID(0xFFFFFFFF, false));
@@ -403,10 +406,13 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 bool FabricatorSystem::ReadRecipes()
 {
 
+	vector<uint32_t> categoryIDs;
+	PropManager.GetPropertyListIDs(id("RecipeCategories"), categoryIDs);
+
 	vector<uint32_t> recipeIDs;
 	PropManager.GetPropertyListIDs(id("Recipes"), recipeIDs);
 	App::ConsolePrintF("Reading Recipes...");
-
+		
 	
 		for each (uint32_t resID in recipeIDs)
 		{
@@ -416,8 +422,9 @@ bool FabricatorSystem::ReadRecipes()
 				
 				bool SecretRecip;
 				if (App::Property::GetBool(res.mpPropList.get(), id("SecretRecip"), SecretRecip))
-				{
+				{	
 					if (SecretRecip != true)
+
 						RecipeMap.emplace(res.CraftingID, res);
 				}
 				else
@@ -610,4 +617,28 @@ Recipe::Recipe(){
 Recipe::operator bool() const
 {
 	return (CraftingID != 0);
+}
+
+Category::Category(uint32_t propID)
+{
+	if (propID == 0)
+	{
+		mCatID = 0;
+		Cat = 0;
+
+		return;
+	}
+
+	if (PropManager.GetPropertyList(propID, id("RecipeCategories"), mpPropList))
+	{
+		App::Property::GetUInt32(mpPropList.get(), id("CatID"), mCatID);
+		App::Property::GetUInt32(mpPropList.get(), id("Category"), Cat);
+
+	}
+	else
+	{
+		string error = "Category prop " + to_string(propID) + " is not valid!";
+		throw std::invalid_argument(error.c_str());
+	}
+
 }

@@ -8,6 +8,7 @@ auto_spacetools~_mineral_scanner2
 AssetBrowserFeedLists
 rattlerspore_spacetools
 rattlermenu
+skibidi
 auto_Recipes_planetbusterbomb
 GGETextEP1
 button
@@ -19,6 +20,7 @@ ach_core_geo3
 ach_core_geo2
 auto_Recipes_placespicestorage
 auto_Recipes_energymegapotion
+cat_name
 auto_spacetrading~_spice_mat_cobalt
 2
 0
@@ -79,6 +81,8 @@ placeembassy
 spg_feedicon_ufoeditor
 repairpotion
 auto_spacetrading~_mineral_scanner1
+auto_spacetrading~_mineral_scanner3
+auto_spacetrading~_mineral_scanner2
 repairmegapotion
 AssetBrowserFeedItems
 spacetrading~	0x34d97fa
@@ -114,7 +118,9 @@ mining_beam1
 req
 placebiostabilizer
 auto_AssetBrowserFeedItems_rspore_ach
+auto_spacetrading~_mining_beam2
 rattlerfo
+auto_spacetrading~_mining_beam3
 toolenergymegapotion
 auto_spacetrading~_mining_beam1
 auto_Recipes_energypotion
@@ -205,6 +211,7 @@ ach_core_mine4
 auto_Recipes_antimatterbomb
 spice_mat_quartz
 rattlerspore_category
+cat_list
 vehicle
 auto_Recipes_placeloyaltybooster
 TravelAbilityPanel
