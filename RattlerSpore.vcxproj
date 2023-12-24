@@ -98,6 +98,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CategoryIcon.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Craft.h">
       <SubType>
       </SubType>
@@ -137,6 +141,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CategoryIcon.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Craft.cpp">
       <SubType>
       </SubType>

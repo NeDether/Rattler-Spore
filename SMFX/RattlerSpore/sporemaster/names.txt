@@ -11,6 +11,7 @@ recip-categories
 rattlermenu
 skibidi
 catSocial
+auto_RecipeCategories_tool_category
 auto_Recipes_planetbusterbomb
 GGETextEP1
 button
@@ -30,6 +31,7 @@ auto_Recipes_droughtgenerator
 eradicate
 exitRF
 droughtgenerator
+cat_header_name
 recipetemplate
 auto_Recipes_recipetemplate
 fabricatorbackground
@@ -56,6 +58,7 @@ upgrade
 rspore_ach
 placehappinessbooster
 rattlerfor
+auto_RecipeCategories_combat_category
 auto_spacetools~_ach_core_sec
 spice_mat_latticine
 auto_Recipes_antimattermissile
@@ -68,6 +71,7 @@ AssetBrowserGraphics
 auto_spacetrading~_spice_mat_uranium
 rainoffire
 auto_spacetrading~_spice_mat_nvidium
+catslot
 crafting
 catColonization
 monolith
@@ -80,6 +84,7 @@ auto_spacetools~_mining_beam2
 energypotion
 auto_spacetools~_mining_beam3
 auto_Recipes_rainoffire
+auto_spacetools~_cat_colonization
 rattl
 placeembassy
 spg_feedicon_ufoeditor
@@ -104,7 +109,6 @@ auto_AssetBrowserFeedItems_rspore_core
 spice_mat_titanium
 planet
 bg
-
 rattler
 exit
 auto_Recipes_placecolony
@@ -114,9 +118,11 @@ auto_Recipes_fireworks
 spice_mat_nvidium
 auto_Recipes_epicize
 auto_AssetBrowserFeedLists_rattlerspore_spacetools
+auto_RecipeCategories_social_category
 animal
 mining_beam2
 mining_beam3
+auto_spacetools~_cat_soc
 AssetBrowserFeedCategories
 asteroid
 mining_beam1
@@ -128,8 +134,10 @@ rattlerfo
 auto_spacetrading~_mining_beam3
 toolenergymegapotion
 auto_spacetrading~_mining_beam1
+cat_combat
 auto_Recipes_energypotion
 spg_main_energypotion
+auto_RecipeCategories_terra_category
 craft
 toolScanIconMK2
 auto_RecipeCategories_tool
@@ -142,6 +150,7 @@ rattlerach
 auto_spacetrading~_spice_mat_quartz
 special
 CreatureEdit
+cat_colonization
 auto_Recipes_repairpotion
 SG_ufo_mind_erase_HitWater
 auto_AssetBrowserFeedCategories_rattlerspore_category
@@ -164,9 +173,11 @@ antimattermissile
 auto_spacetools~_ach_core_mine4
 auto_spacetools~_ach_core_mine1
 auto_spacetrading~_spice_mat_flesh
+crapingslotZ
 sporemaster
 auto_spacetools~_ach_core_scan
 auto_spacetools~_ach_core_mine3
+auto_spacetools~_cat_terra
 FabMenu
 auto_spacetools~_ach_core_mine2
 names
@@ -178,9 +189,11 @@ spice_mat_lithium
 auto_spacetrading~_spice_mat_obsidian
 spice_mat_obsidian
 antimatterbomb
+countZ
 dryice
 rattlerforg
 rattlerforge!0x00000000
+social_category
 auto_Recipes_zoo
 cat_main
 ufotools~	0x3064cb38
@@ -207,6 +220,8 @@ auto_animations~_MaterialList
 ra
 auto_Recipes_Planetscan
 zoo
+colonization_category
+terra_category
 auto_Recipes_placebiostabilizer
 ep1_effects_3~	0x408a4302
 ach_core_mine3
@@ -214,11 +229,13 @@ ach_core_mine2
 auto_spacetrading~_spice_drt_kamacite
 ach_core_mine1
 RecipeCategories
+auto_RecipeCategories_colonization_category
 auto_Recipes_icecomet
 ach_core_mine5
 ach_core_mine4
 auto_Recipes_antimatterbomb
 spice_mat_quartz
+zurgtasticZ
 rattlerspore_category
 catMain
 cat_list
@@ -245,6 +262,7 @@ auto_Recipes_CreatureEdit
 mineral_scanner3
 feedlisticon_hammer
 mach-ranking
+tool_category
 auto_spacetrading~_spice_mat_gold
 categories
 sex
@@ -254,6 +272,7 @@ crapingMat
 auto_spacetools~_ach_core_fab
 auto_spacetools~_ach_core_geo1
 auto_spacetools~_ach_core_geo2
+auto_spacetools~_cat_combat
 auto_spacetools~_ach_core_geo3
 auto_Recipes_repairmegapotion
 icon
@@ -272,11 +291,15 @@ ScrappedGAMenu1
 spice_mat_amethyst
 auto_Recipes_placebioprotector
 spice_mat_uranium
+cat_terra
 sg_crate_spice_06
 tool
 catCombat
+iconZ
+cat_soc
 auto_spacetools~_cat_tools
 building
 locale~	0x2fabf01
 always
+combat_category
 placespicestorage

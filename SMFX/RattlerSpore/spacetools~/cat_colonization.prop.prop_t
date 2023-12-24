@@ -1,0 +1,12 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "colonizationial tools"
+texts spaceToolDescription
+	(recip-categories!0x00000004) "Category Name"
+end
+texts spaceToolDetailDescription
+	(recip-categories!0x00000004) "Zurgroot"
+end
+key spaceToolImageID ufotools~!catColonization.png
+texts spaceToolLockedDescription
+	"~blank_text~"
+end

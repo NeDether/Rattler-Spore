@@ -1,0 +1,12 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "social tools"
+texts spaceToolDescription
+	(recip-categories!0x00000001) "Category Name"
+end
+texts spaceToolDetailDescription
+	(recip-categories!0x00000001) "Zurgroot"
+end
+key spaceToolImageID ufotools~!catSocial.png
+texts spaceToolLockedDescription
+	"~blank_text~"
+end

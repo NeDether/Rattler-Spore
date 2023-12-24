@@ -18,6 +18,6 @@ uint32s IngCount #A vector Of the amount of materials it needs.
 end 
 
 uint32 productAmount 1 #Amount of items this pops out.
-uint32 Catagory 0 #catagory in
+uint32 Catagory hash(combat_category) #catagory in
 
 bool SecretRecip false

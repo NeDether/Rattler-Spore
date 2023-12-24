@@ -4,6 +4,7 @@
 #include "xFabOpen.h"
 #include "RecipeIcon.h"
 #include "ResourceIcon.h"
+#include "CategoryIcon.h"
 #include "Craft.h"
 #include <Spore\UTFWin\WinTreeView.h>
 #include <Spore\UTFWin\IButton.h>
@@ -89,13 +90,13 @@ Recipe& FabricatorSystem::GetRecipe(uint32_t resID) {
 	int g = 0;
 	for (auto it = RecipeMap.begin(); it != RecipeMap.end(); it++)
 	{
-		App::ConsolePrintF("Res ID: %d Iterator: %d Recipe Map ID of Iterator: %d", resID, g, RecipeMap[g].CraftingID);
+		//App::ConsolePrintF("Res ID: %d Iterator: %d Recipe Map ID of Iterator: %d", resID, g, RecipeMap[g].CraftingID);
 	}
 	if (RecipeMap.find(resID) != RecipeMap.end())
 	{
 		return RecipeMap[resID];
 	}
-	App::ConsolePrintF("GetFailed.");
+	//App::ConsolePrintF("GetFailed.");
 	return Recipe(0);
 }
 
@@ -112,9 +113,9 @@ bool FabricatorSystem::IsSecret(uint32_t resID)
 bool FabricatorSystem::InCategory(uint32_t resID, uint32_t cat)
 {
 	if (Recipe& res = GetRecipe(resID)) {
-		App::ConsolePrintF("The Catagory: %d",res.Cat);
+		//App::ConsolePrintF("The Catagory: %d",res.Cat);
 		if (res.Cat == cat) {
-			App::ConsolePrintF("Zurgin' off.");
+			//App::ConsolePrintF("Zurgin' off.");
 			return true;
 		}
 		return false;
@@ -150,7 +151,7 @@ bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe){
 	if (Recipe& res = ThatRecipe) {
 		for each (uint32_t zurg in res.Ingredients)
 		{
-			App::ConsolePrintF("%d", zurg);
+		//	App::ConsolePrintF("%d", zurg);
 			if (true)
 			{
 				UTFWin::UILayout* layout = new UTFWin::UILayout();
@@ -166,20 +167,20 @@ bool FabricatorSystem::SelectRecipe(Recipe ThatRecipe){
 					PropertyListPtr sillyPropList;
 					if (PropManager.GetPropertyList(zurg, 0x034d97fa, sillyPropList))
 					{
-						App::ConsolePrintF("Yay!");
+					//	App::ConsolePrintF("Yay!");
 						if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 						{
-							App::ConsolePrintF("Wahoo!");
+						//	App::ConsolePrintF("Wahoo!");
 							ImagePtr img;
 							if (Image::GetImage(imgKey, img))
 							{
-								App::ConsolePrintF("Yipee!");
+								//App::ConsolePrintF("Yipee!");
 								ImageDrawable* drawable = new ImageDrawable();
 								drawable->SetImage(img.get());
 								uint32_t rColor;
 
 								if (App::Property::GetUInt32(sillyPropList.get(), 0x058CBB75, rColor)) {
-									App::ConsolePrintF("ZurgTastic!");
+									//App::ConsolePrintF("ZurgTastic!");
 									rColor = rColor + 4278190080;
 									Color ColR = Color::Color(rColor);
 									icon->SetShadeColor(ColR);
@@ -312,12 +313,130 @@ bool FabricatorSystem::Fabricate(Recipe res)
 
 void FabricatorSystem::RenderRecipies(uint32_t cat)
 {
+	auto categoryWindow = mpUIlayout->FindWindowByID(id("cat_list"), true);
 	auto inventoryWindow = mpUIlayout->FindWindowByID(id("cat"), true);
+	auto catText = mpUIlayout->FindWindowByID(id("cat_name"), true);
+	//Remove children of these windows.
+	if (inventoryWindow) {
+		vector<UTFWin::IWindow*> shin;
+		for (UTFWin::IWindow* child : inventoryWindow->children()) {
+
+			if (child) {
+				shin.push_back(child);
+			}
+		}
+		while (shin.size() != 0) {
+
+			inventoryWindow->RemoveWindow(shin.back());
+			shin.pop_back();
+
+		}
+	}
+
+	//Sets the name of the fabricator to the selected categories's name.
+	if (catText) {
+		App::ConsolePrintF("Gyatt Rizz!");
+		ResourceKey txtKey;
+		PropertyListPtr sillyBillyPropList;
+		//Gets the .prop in the RecipeCategories.
+		if (PropManager.GetPropertyList(cat, 0x215986d3, sillyBillyPropList))
+		{	//Gets the prop hash of the icon tool
+			App::ConsolePrintF("Skibidi dop dop yes yes");
+			if (App::Property::GetKey(sillyBillyPropList.get(), 0x3068D95D, txtKey))
+			{
+				uint32_t gyattRizz;
+				App::Property::GetUInt32(sillyBillyPropList.get(), 0x3068D95D, gyattRizz);
+				if (PropManager.GetPropertyList(txtkey, 0x215986d3, sillyBillyPropList))
+				{
+					App::ConsolePrintF("Wuh");
+					LocalizedString silly;
+					App::Property::GetText(sillyBillyPropList.get(), 0x3068D95D, silly);
+					string16 products;
+					products.assign_convert(silly.GetText());
+					mpUIlayout->FindWindowByID(id("cat_name"), true)->SetCaption(products.c_str());
+				}
+			}
+		}
+	}
+	if (categoryWindow) {
+		vector<UTFWin::IWindow*> shit;
+		for (UTFWin::IWindow* child : categoryWindow->children()) {
+
+			if (child) {
+				shit.push_back(child);
+			}
+		}
+		while (shit.size() != 0) {
+
+			categoryWindow->RemoveWindow(shit.back());
+			shit.pop_back();
+
+		}
+	}
 	int i = 0;
 	
 	vector<Recipe> validRecipes;
 	vector<Recipe> invalidRecipes;
+	vector<Category> categoryList;
+	//Emplaces categories first.
+	for (auto it = CatMap.begin(); it != CatMap.end(); it++) {
+		//Emplaces Nodes on Red-Black tree.
+		categoryList.insert(categoryList.begin(), it.mpNode->mValue.second);
+	
+	}
 
+	//Render Categories.
+
+	for each (Category zurg in categoryList)
+	{
+		UTFWin::UILayout* layout = new UTFWin::UILayout();
+		//Uses recipeslot UI node.
+		layout->LoadByID(id("catslot"));
+		layout->SetParentWindow(categoryWindow);
+
+		layout->SetVisible(true);
+
+		if (auto itemWindow = layout->FindWindowByID(id("crapingslotZ")))
+		{
+			
+
+			auto icon = itemWindow->FindWindowByID(id("iconZ"));
+			ResourceKey imgKey;
+			PropertyListPtr sillyPropList;
+			if (PropManager.GetPropertyList(zurg.mCatID, 0x30608f0b, sillyPropList))
+			{
+				ImagePtr img;
+				if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
+				{
+					//App::ConsolePrintF("Wahoo!");
+					ImagePtr img;
+					if (Image::GetImage(imgKey, img))
+					{
+						ImageDrawable* drawable = new ImageDrawable();
+						drawable->SetImage(img.get());
+
+						//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
+						icon->SetDrawable(drawable);
+
+					}
+				}
+			}
+			if (zurg.Cat != cat) {
+
+				itemWindow->FindWindowByID(id("zurgtasticZ"))->SetShadeColor(Color(0.5, 0.5, 0.5, 0.8));
+
+			}
+			itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
+			itemWindow->FindWindowByID(id("zurgtasticZ"))->AddWinProc(new CategoryIcon(itemWindow, zurg));
+			itemWindow->SetLayoutLocation((55 * (i % 16)) + (8 * ((i % 16) + 1)), div((i), 16).quot * 75);
+
+			mapUI.push_back(itemWindow);
+		}
+		i++;
+	}
+	//Resets i
+	i = 0;
+	//Emplaces non-secret and selected category Recipes
 	for (auto it = RecipeMap.begin(); it != RecipeMap.end(); it++)
 	{
 		//string error;
@@ -377,7 +496,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 						ImagePtr img;
 						if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 						{
-							App::ConsolePrintF("Wahoo!");
+							//App::ConsolePrintF("Wahoo!");
 							ImagePtr img;
 							if (Image::GetImage(imgKey, img))
 							{
@@ -405,7 +524,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 
 bool FabricatorSystem::ReadRecipes()
 {
-
+	//Reads Categories First
 	vector<uint32_t> categoryIDs;
 	PropManager.GetPropertyListIDs(id("RecipeCategories"), categoryIDs);
 	for each (uint32_t catID in categoryIDs)
@@ -425,9 +544,10 @@ bool FabricatorSystem::ReadRecipes()
 
 
 	}
+	//Reads Recipies Second
 	vector<uint32_t> recipeIDs;
 	PropManager.GetPropertyListIDs(id("Recipes"), recipeIDs);
-	App::ConsolePrintF("Reading Recipes...");
+	//App::ConsolePrintF("Reading Recipes...");
 		
 	
 		for each (uint32_t resID in recipeIDs)
@@ -439,9 +559,13 @@ bool FabricatorSystem::ReadRecipes()
 				bool SecretRecip;
 				if (App::Property::GetBool(res.mpPropList.get(), id("SecretRecip"), SecretRecip))
 				{	
-					if (SecretRecip != true)
-
+					if (SecretRecip != true) {
+					
 						RecipeMap.emplace(res.CraftingID, res);
+					
+					}
+
+						
 				}
 				else
 				{
@@ -458,7 +582,7 @@ bool FabricatorSystem::ReadRecipes()
 			}
 		
 		}
-	RenderRecipies(0);
+	RenderRecipies(id("tool_category"));
 	return false;
 
 }
@@ -469,7 +593,7 @@ bool FabricatorSystem::UseMaterial(uint32_t WareID, int neededAmount)
 	auto X = inventory->IndexOf(Simulator::SpaceInventoryItemType(4), { WareID, 0, 0 });
 	auto H = inventory->GetItem(X);
 	if (H == nullptr) {
-		App::ConsolePrintF("Does not have Any Resources...");
+		//App::ConsolePrintF("Does not have Any Resources...");
 		return false;
 	}
 	size_t itemCount;
@@ -478,7 +602,7 @@ bool FabricatorSystem::UseMaterial(uint32_t WareID, int neededAmount)
 
 		if (itemCount >= neededAmount) {
 
-			App::ConsolePrintF("The total ''Count'' in the inv: %d", H);
+			//App::ConsolePrintF("The total ''Count'' in the inv: %d", H);
 			auto D = inventory->RemoveItem(H);
 
 			if (itemCount != neededAmount) {
@@ -493,9 +617,9 @@ bool FabricatorSystem::UseMaterial(uint32_t WareID, int neededAmount)
 			//Deletes the cargo if reaches 0 because spore is ok with having '0' of a cargo slot.
 			auto D = inventory->RemoveItem(H);
 		}
-		App::ConsolePrintF("Insufficient Resources...");
+		//App::ConsolePrintF("Insufficient Resources...");
 	}
-	App::ConsolePrintF("I had a bruh moment.");
+	//App::ConsolePrintF("I had a bruh moment.");
 	return false;
 }
 
@@ -522,7 +646,7 @@ bool FabricatorSystem::HasMaterial(uint32_t WareID, int neededAmount)
 	auto X = inventory->IndexOf(Simulator::SpaceInventoryItemType(4), { WareID, 0, 0 });
 	auto H = inventory->GetItem(X);
 	if (H == nullptr) {
-		App::ConsolePrintF("Does not have Any Resources...");
+	//	App::ConsolePrintF("Does not have Any Resources...");
 		return false;
 	}
 	size_t itemCount;
@@ -535,9 +659,9 @@ bool FabricatorSystem::HasMaterial(uint32_t WareID, int neededAmount)
 			//do stuff
 		}
 
-		App::ConsolePrintF("Insufficient Resources...");
+	//	App::ConsolePrintF("Insufficient Resources...");
 	}
-	App::ConsolePrintF("I had a bruh moment.");
+//	App::ConsolePrintF("I had a bruh moment.");
 	return false;
 }
 bool FabricatorSystem::AbleToCraft(Recipe res)

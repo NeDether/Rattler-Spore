@@ -17,6 +17,9 @@
     <Filter Include="RattlerSpore\Function">
       <UniqueIdentifier>{e9a6d353-a286-4af2-a322-db1bb9d964a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Function\Fab Icons">
+      <UniqueIdentifier>{bcc87017-f119-4fb9-ba62-bbaa5ab65fb2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -46,17 +49,20 @@
     <ClInclude Include="Craft.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
-    <ClInclude Include="RecipeIcon.h">
-      <Filter>RattlerSpore\Function</Filter>
-    </ClInclude>
     <ClInclude Include="InjectCategories.h">
-      <Filter>RattlerSpore\Function</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceIcon.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
     <ClInclude Include="ScanMenu.h">
       <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="RecipeIcon.h">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceIcon.h">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryIcon.h">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,17 +93,20 @@
     <ClCompile Include="Craft.cpp">
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
-    <ClCompile Include="RecipeIcon.cpp">
-      <Filter>RattlerSpore\Function</Filter>
-    </ClCompile>
     <ClCompile Include="InjectCategories.cpp">
-      <Filter>RattlerSpore\Function</Filter>
-    </ClCompile>
-    <ClCompile Include="ResourceIcon.cpp">
       <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="ScanMenu.cpp">
       <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="RecipeIcon.cpp">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceIcon.cpp">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryIcon.cpp">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
