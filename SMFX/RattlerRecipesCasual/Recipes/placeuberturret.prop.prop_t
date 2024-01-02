@@ -1,0 +1,21 @@
+uint32 Recipe hash(placeuberturret)#Link to the spacetools~
+
+uint32s Blueprint #All of the required blueprints for this recipe.
+end
+
+uint32s Ingredients #A vector of each possible ingredient. 
+	hash(spice_mat_amethyst)
+	hash(spice_drt_silica)
+	hash(spice_drt_sulphide)
+end
+
+uint32s IngCount #A vector Of the amount of materials it needs.
+	25
+	25
+	20
+end 
+
+uint32 productAmount 5 #Amount of items this pops out.
+uint32 Catagory hash(colonization_category) #catagory in
+
+bool SecretRecip false
