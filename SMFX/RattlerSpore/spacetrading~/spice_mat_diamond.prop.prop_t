@@ -9,7 +9,7 @@ texts spaceToolDetailDescription
 	(rattlercargo!0x00000010) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
-	0xff000000
+	0xff0aaff
 end
 key spaceToolImageID ufotools~!spg_cargopas_mineral.png
 float spaceTradingBaseCost 10000

@@ -72,8 +72,12 @@ auto_spacetrading~_spice_mat_uranium
 rainoffire
 auto_spacetrading~_spice_mat_nvidium
 catslot
+Ach0013
+Ach0012
+Ach0011
 crafting
 catColonization
+Ach0010
 monolith
 ach_core_sec
 auto_Recipes_volcano
@@ -105,6 +109,8 @@ placebioprotector
 auto_Recipes_eradicate
 auto_Recipes_placehappinessbooster
 rollover
+achievement
+AchIcons
 auto_AssetBrowserFeedItems_rspore_core
 spice_mat_titanium
 planet
@@ -136,12 +142,21 @@ toolenergymegapotion
 auto_spacetrading~_mining_beam1
 cat_combat
 auto_Recipes_energypotion
+Ach0001
 spg_main_energypotion
 auto_RecipeCategories_terra_category
+Ach0002
+Ach0003
+Ach0004
+Ach0005
+Ach0006
 craft
+Ach0007
 toolScanIconMK2
 auto_RecipeCategories_tool
+Ach0008
 toolScanIconMK3
+Ach0009
 toolScanIconMK1
 rattlercargo
 auto_spacetrading~_spice_mat_titanium
@@ -168,6 +183,7 @@ auto_spacetools~_rattler_forge
 spg_cargopas_mineral
 ach_core_cr1
 placecolony
+graphics_atlas~	0x31a44893
 auto_spacetools~_ach_core_mine5
 antimattermissile
 auto_spacetools~_ach_core_mine4
@@ -178,6 +194,7 @@ sporemaster
 auto_spacetools~_ach_core_scan
 auto_spacetools~_ach_core_mine3
 auto_spacetools~_cat_terra
+rat_achievement
 FabMenu
 auto_spacetools~_ach_core_mine2
 names
@@ -269,6 +286,7 @@ sex
 CreatureCreate
 spice_mat_gold
 crapingMat
+auto_layouts_atlas~_rat_achievement
 auto_spacetools~_ach_core_fab
 auto_spacetools~_ach_core_geo1
 auto_spacetools~_ach_core_geo2

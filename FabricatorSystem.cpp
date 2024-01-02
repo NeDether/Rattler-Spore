@@ -334,30 +334,10 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 	}
 
 	//Sets the name of the fabricator to the selected categories's name.
-	if (catText) {
-		App::ConsolePrintF("Gyatt Rizz!");
-		ResourceKey txtKey;
-		PropertyListPtr sillyBillyPropList;
-		//Gets the .prop in the RecipeCategories.
-		if (PropManager.GetPropertyList(cat, 0x215986d3, sillyBillyPropList))
-		{	//Gets the prop hash of the icon tool
-			App::ConsolePrintF("Skibidi dop dop yes yes");
-			if (App::Property::GetKey(sillyBillyPropList.get(), 0x3068D95D, txtKey))
-			{
-				uint32_t gyattRizz;
-				App::Property::GetUInt32(sillyBillyPropList.get(), 0x3068D95D, gyattRizz);
-				if (PropManager.GetPropertyList(txtkey, 0x215986d3, sillyBillyPropList))
-				{
-					App::ConsolePrintF("Wuh");
-					LocalizedString silly;
-					App::Property::GetText(sillyBillyPropList.get(), 0x3068D95D, silly);
-					string16 products;
-					products.assign_convert(silly.GetText());
-					mpUIlayout->FindWindowByID(id("cat_name"), true)->SetCaption(products.c_str());
-				}
-			}
-		}
-	}
+	
+
+
+			
 	if (categoryWindow) {
 		vector<UTFWin::IWindow*> shit;
 		for (UTFWin::IWindow* child : categoryWindow->children()) {
@@ -405,9 +385,26 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 			PropertyListPtr sillyPropList;
 			if (PropManager.GetPropertyList(zurg.mCatID, 0x30608f0b, sillyPropList))
 			{
-				ImagePtr img;
 				if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 				{
+					if (catText) {
+						App::ConsolePrintF("cat name exists");
+						if (cat == zurg.Cat) {
+							LocalizedString silly;
+							App::ConsolePrintF("found the hash of the icon tool.");
+							if (App::Property::GetText(sillyPropList.get(), 0x3068D95D, silly))
+							{
+								App::ConsolePrintF("found the text of the icon tool.");
+								//Gets spaceToolDescription of the item.
+
+								string16 products;
+								products.assign_convert(silly.GetText());
+								mpUIlayout->FindWindowByID(id("cat_name"), true)->SetCaption(products.c_str());
+							}
+						
+						
+						}
+					}
 					//App::ConsolePrintF("Wahoo!");
 					ImagePtr img;
 					if (Image::GetImage(imgKey, img))
