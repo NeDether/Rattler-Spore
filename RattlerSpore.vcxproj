@@ -98,11 +98,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AchievementSystem.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="CategoryIcon.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="Craft.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DestroySave.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -131,6 +139,10 @@
     </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ViewCrafts.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="xFabClose.h">
       <SubType>
       </SubType>
@@ -141,11 +153,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AchievementSystem.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="CategoryIcon.cpp">
       <SubType>
       </SubType>
     </ClCompile>
     <ClCompile Include="Craft.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DestroySave.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -183,6 +203,10 @@
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ViewCrafts.cpp">
+      <SubType>
+      </SubType>
     </ClCompile>
     <ClCompile Include="xFabClose.cpp">
       <SubType>

@@ -14,6 +14,7 @@
 #include <Spore\App\JobManager.h>
 #include <Spore\UI\ScrollFrameVertical.h>
 #include <set>
+#include "AchievementSystem.h"
 
 #define FabricatorSystemPtr intrusive_ptr<FabricatorSystem>
 #define FabricatorSystemA (FabricatorSystem::Get())[0]

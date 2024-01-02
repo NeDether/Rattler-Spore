@@ -6,7 +6,7 @@ end
 texts spaceToolDetailDescription
 	(rattlerach!0x0000001A) "Achievement Description"
 end
-key spaceToolImageID ufotools~!tooliconDrillMK3.png
+key spaceToolImageID AchIcons!Ach0009.png
 texts spaceToolLockedDescription
 	"~blank_text~"
 end

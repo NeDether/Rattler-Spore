@@ -9,6 +9,8 @@
 #include "InjectCategories.h"
 #include "ScanMenu.h"
 #include <Spore/Simulator/cDefaultBeamTool.h>
+#include "ViewCrafts.h"
+#include "DestroySave.h"
 
 // This is in dllmain.cpp
 
@@ -18,8 +20,12 @@ using namespace ArgScript;
 
 
 void Initialize() {
+	//Inject Categories in the Space Stage Tool Menu.
 	InjectCategories::InjectHeader();
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
+
+
+	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
 	ToolManager.AddStrategy(new MiningScanner(1), id("mineral_scanner1"));
 	ToolManager.AddStrategy(new MiningBeam(2), id("mining_beam2"));
@@ -27,8 +33,16 @@ void Initialize() {
 	ToolManager.AddStrategy(new MiningBeam(3), id("mining_beam3"));
 	ToolManager.AddStrategy(new MiningScanner(3), id("mineral_scanner3"));
 	ToolManager.AddStrategy(new Fabricator(), id("rattler_forge"));
+
+
+	//Add The New Systems
 	SimulatorSystem.AddStrategy(new FabricatorSystem(), FabricatorSystem::NOUN_ID);
 	SimulatorSystem.AddStrategy(new ScanMenu(), ScanMenu::NOUN_ID);
+	SimulatorSystem.AddStrategy(new AchievementSystem(), AchievementSystem::NOUN_ID);
+
+	//Add New Cheats.
+	CheatManager.AddCheat("viewCrafts", new ViewCrafts());
+	CheatManager.AddCheat("roomroot", new DestroySave());
 }
 
 void Dispose()

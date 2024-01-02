@@ -18,4 +18,4 @@ uint32 Catagory hash(terra_category) #What catagory in the crafter will be
 
 
 
-bool SecretRecip true #won't show up if true
+bool SecretRecip false #won't show up if true

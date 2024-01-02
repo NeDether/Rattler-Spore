@@ -14,6 +14,7 @@
 #include <Spore/Simulator/StarID.h>
 #include <Spore/Simulator/SubSystem/StarManager.h>
 #include <Spore/Simulator/cPlanetRecord.h>
+#include "AchievementSystem.h"
 
 
 #define MiningBeamPtr intrusive_ptr<MiningBeam>

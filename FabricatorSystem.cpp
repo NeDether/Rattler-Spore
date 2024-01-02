@@ -307,6 +307,20 @@ bool FabricatorSystem::Fabricate(Recipe res)
 	
 	return false;
 	}
+	AchievementSystemA.CraftCount += res.productAmount;
+
+	if (AchievementSystemA.CraftCount > 50) {
+		AchievementSystemA.Achieve("ach_core_cr1");
+	}
+	if (AchievementSystemA.CraftCount > 200) {
+		AchievementSystemA.Achieve("ach_core_cr2");
+	}
+	if (AchievementSystemA.CraftCount > 1000) {
+		AchievementSystemA.Achieve("ach_core_cr3");
+	}
+	if (AchievementSystemA.CraftCount > 7500) {
+		AchievementSystemA.Achieve("ach_core_cr4");
+	}
 
 	return true;
 }

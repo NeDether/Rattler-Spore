@@ -122,6 +122,7 @@ auto_Recipes_placeuberturret
 auto_spacetrading~_spice_mat_zurg
 auto_Recipes_fireworks
 spice_mat_nvidium
+AchTemp
 auto_Recipes_epicize
 auto_AssetBrowserFeedLists_rattlerspore_spacetools
 auto_RecipeCategories_social_category
@@ -213,6 +214,7 @@ rattlerforge!0x00000000
 social_category
 auto_Recipes_zoo
 cat_main
+leDesc
 ufotools~	0x3064cb38
 toolenergypotion
 spice_mat_zurg
@@ -226,7 +228,9 @@ count
 auto_Recipes_monolith
 spacetools~	0x30608f0b
 spice
+skibidiRizz
 graphics_misc_2~	0x354663b
+auto_Recipes_icecapseeder
 auto_spacetrading~_spice_mat_crude
 spice_mat_serenidite
 fireworks
@@ -256,6 +260,7 @@ zurgtasticZ
 rattlerspore_category
 catMain
 cat_list
+leIcon
 vehicle
 auto_Recipes_placeloyaltybooster
 TravelAbilityPanel
@@ -278,10 +283,12 @@ mineral_scanner2
 auto_Recipes_CreatureEdit
 mineral_scanner3
 feedlisticon_hammer
+atmospheregenerator
 mach-ranking
 tool_category
 auto_spacetrading~_spice_mat_gold
 categories
+auto_Recipes_atmospheregenerator
 sex
 CreatureCreate
 spice_mat_gold
@@ -303,6 +310,7 @@ FeedItemMessage
 aoe_repair
 placeuberturret
 Planetscan
+icecapseeder
 SG_ufo_mind_erase_muzzle
 planetbusterbomb
 ScrappedGAMenu1
@@ -314,6 +322,7 @@ sg_crate_spice_06
 tool
 catCombat
 iconZ
+leTitle
 cat_soc
 auto_spacetools~_cat_tools
 building

@@ -20,6 +20,9 @@
     <Filter Include="RattlerSpore\Function\Fab Icons">
       <UniqueIdentifier>{bcc87017-f119-4fb9-ba62-bbaa5ab65fb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Cheats">
+      <UniqueIdentifier>{272066a0-c6b3-4deb-a5ed-50b19277cad7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -64,6 +67,15 @@
     <ClInclude Include="CategoryIcon.h">
       <Filter>RattlerSpore\Function\Fab Icons</Filter>
     </ClInclude>
+    <ClInclude Include="ViewCrafts.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementSystem.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="DestroySave.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -107,6 +119,15 @@
     </ClCompile>
     <ClCompile Include="CategoryIcon.cpp">
       <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewCrafts.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="AchievementSystem.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="DestroySave.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
