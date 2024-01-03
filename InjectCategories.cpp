@@ -72,7 +72,8 @@ bool InjectCategories::InjectCategory(char16_t* grug)
 
     if (hasInjectedCategory)
     { // never inject twice
-        return true;
+        //HAHA GET FIXED BOOIIIIIi
+       // return true;
     }
 
 
@@ -93,16 +94,18 @@ bool InjectCategories::InjectCategory(char16_t* grug)
     {
         return false;
     }
-
+    
     // add resource keys to vector
+    resourceKeysVector.clear();
     for (size_t i = 0; i < resourceKeysCount; i++)
     {
+        
         resourceKeysVector.push_back(resourceKeys[i]);
     }
 
     // attempt to retrieve resource key of the categories
     if (!ResourceKey::Parse(moderatorCategoryResourceKey, grug))
-    {
+    {   
         return false;
     }
 
@@ -112,5 +115,6 @@ bool InjectCategories::InjectCategory(char16_t* grug)
     // change the property with the injected category
     property->SetArrayKey(resourceKeysVector.data(), resourceKeysVector.size());
     hasInjectedCategory = true;
+    resourceKeysVector.clear();
     return true;
 }

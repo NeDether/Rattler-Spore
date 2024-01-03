@@ -1,5 +1,18 @@
-<mod displayName="Rattler SPORE" unique="RattlerSPORE" description="A Space Stage overhaul mod for SPORE.  Aimed to make the game loop in Space more enjoyable by incorperating modern game elements such as resource gathering, and crafting. Serves as the basis for many potential add-ons."  installerSystemVersion="1.0.1.2" hasCustomInstaller="true" isExperimental="true" dllsBuild="2.5.290">
-<component unique="RattlerCore" displayName="Rattler SPORE Industry Core" description="The core components of RattlerSPORE, contains mineral tiers 1-3. If you do not prefer most of the overhaul elements, but wish to keep the mining. Only install this. Otherwise, select to your heart's content!" game="GalacticAdventures" defaultChecked="true">RattlerSpore.package</component>
-<prerequisite>RattlerSpore.dll</prerequisite>
-<remove>RattlerSpore.dll</remove>
+<mod displayName="Rattler SPORE" unique="RattlerSPORE" description="A Space Stage overhaul mod for SPORE.  Aimed to make the game loop in Space more enjoyable by incorperating modern game elements such as resource gathering, crafting and brand new achievements. Serves as the basis for many potential add-ons."  installerSystemVersion="1.0.1.2" hasCustomInstaller="true" isExperimental="false" dllsBuild="2.5.290">
+	<remove>RattlerSpore.dll</remove>
+	<remove>Rattler!RecipesCasual.package</remove>
+	<remove>Rattler!RecipesNormal.package</remove>
+	<remove>Rattler!RecipesGrindy.package</remove>
+	<remove>RattlerSpore.package</remove>
+	
+	<component unique="RattlerCore" displayName="Rattler SPORE Industry Core" description="The core components of RattlerSPORE, contains mineral tiers 1-3. If you do not prefer most of the overhaul elements, but wish to keep the mining. Only install this. Otherwise, select to your heart's content!" game="GalacticAdventures" defaultChecked="true">RattlerSpore.package</component>
+	
+	<componentGroup unique="toolRecip" displayName="Core Recipe Addons">
+		<component unique="CasualTools" displayName="Casual Tool Recipes" description="This difficulty is for more casual players of SPORE. The recipe prices are half off." game="GalacticAdventures" defaultChecked="false">Rattler!RecipesCasual.package</component>
+		<component unique="NormalTools" displayName="Normal Tool Recipes" description="The intended difficulty of RattlerSPORE. Is a tad grindy." game="GalacticAdventures" defaultChecked="true">Rattler!RecipesNormal.package</component>
+		<component unique="GrindyTools" displayName="Grindy Tool Recipes" description="Doubles the prices of all recipes, making the mod even more grindy. WARNING: DO NOT USE UNLESS YOU HAVE A MOD THAT ALLOWS YOU TO CARRY MORE THAN 99 SPICE." game="GalacticAdventures" defaultChecked="false">Rattler!RecipesGrindy.package</component>
+	</componentGroup>
+	
+	<prerequisite>RattlerSpore.dll</prerequisite>
+
 </mod>

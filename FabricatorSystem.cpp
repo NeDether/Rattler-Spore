@@ -402,13 +402,13 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 				if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 				{
 					if (catText) {
-						App::ConsolePrintF("cat name exists");
+						//App::ConsolePrintF("cat name exists");
 						if (cat == zurg.Cat) {
 							LocalizedString silly;
-							App::ConsolePrintF("found the hash of the icon tool.");
+							//App::ConsolePrintF("found the hash of the icon tool.");
 							if (App::Property::GetText(sillyPropList.get(), 0x3068D95D, silly))
 							{
-								App::ConsolePrintF("found the text of the icon tool.");
+								//App::ConsolePrintF("found the text of the icon tool.");
 								//Gets spaceToolDescription of the item.
 
 								string16 products;

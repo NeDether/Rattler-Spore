@@ -1,2 +1,20 @@
 0x00000000 Achievements
 0x00000001 Core Tools
+0x00000002 Casual Tool Recipes
+0x00000003 Normal Tool Recipes
+0x00000004 Grindy Tool Recipes
+0x00000005 Core Wares 
+0x00000006 Casual Ware Recipes
+0x00000007 Normal Ware Recipes
+0x00000008 Grindy Ware Recipes
+0x00000009 Rattler Industry
+0x0000000A Rattler Ships
+0x0000000B Casual Ship Recipes
+0x0000000C Normal Ship Recipes
+0x0000000D Grindy Ship Recipes
+0x0000000E Rattler Conquest
+0x0000000F Rattler Combat
+0x00000010 Rattler Galaxy
+0x00000011 Casual Galaxy Recipes
+0x00000012 Normal Galaxy Recipes
+0x00000013 Grindy Galaxy Recipes

@@ -1,0 +1,9 @@
+key feedListItemIconKey graphics_misc_2~!feedlisticon_hammer.png
+keys feedListItemKeyList
+	newline
+
+end
+texts feedListItemName
+	(rattlermenu!0x00000002) "casual"
+end
+key feedListItemType FeedItemMessage

@@ -23,6 +23,23 @@ void Initialize() {
 	//Inject Categories in the Space Stage Tool Menu.
 	InjectCategories::InjectHeader();
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
+	App::ConsolePrintF("RattlerSPORE: Core Enabled");
+	//May seem pointless but this is for copy and pasting config and stuff.
+	if (PropManager.HasPropertyList(id("grindytools"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Grindy Tool Recipes Addon Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_grindytools.prop");
+	}
+	if (PropManager.HasPropertyList(id("normaltools"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Normal Tool Recipes Addon Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_normaltools.prop");
+	}
+	if (PropManager.HasPropertyList(id("casualtools"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Casual Tool Recipes Addon Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_casualtools.prop");
+	}
 
 
 	//Add the New Core Tools
