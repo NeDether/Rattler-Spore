@@ -3,16 +3,16 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x0077ff77
 texts spaceToolDescription
-	"Serenidite"
+	(rattlercargo!0x00000026) "Serenidite"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000010) "PLACEHOLDER"
+	(rattlercargo!0x00000032) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
 	0xff77ff77
 end
-key spaceToolImageID ufotools~!spg_cargopas_mineral.png
-float spaceTradingBaseCost 10000
+key spaceToolImageID ufotools~!spg_serenidite.png
+float spaceTradingBaseCost 178000
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0

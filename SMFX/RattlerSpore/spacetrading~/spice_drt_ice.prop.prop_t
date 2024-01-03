@@ -11,7 +11,7 @@ end
 uint32s spaceToolImageColors
 	0xff00aaff
 end
-key spaceToolImageID ufotools~!spg_cargopas_mineral.png
+key spaceToolImageID ufotools~!spg_ice.png
 float spaceTradingBaseCost 6275
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0

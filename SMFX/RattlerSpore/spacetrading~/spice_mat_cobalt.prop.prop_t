@@ -3,16 +3,16 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x000055ff
 texts spaceToolDescription
-	"Cobalt"
+	(rattlercargo!0x00000025) "Cobalt"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000010) "PLACEHOLDER"
+	(rattlercargo!0x00000031) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
 	0xff0055ff
 end
-key spaceToolImageID ufotools~!spg_cargopas_mineral.png
-float spaceTradingBaseCost 10000
+key spaceToolImageID ufotools~!spg_cobalt.png
+float spaceTradingBaseCost 17237
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0

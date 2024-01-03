@@ -3,16 +3,16 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x002b111f
 texts spaceToolDescription
-	"Organic Crude"
+	(rattlercargo!0x00000023) "Organic Crude"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000010) "PLACEHOLDER"
+	(rattlercargo!0x0000002F) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
 	0xff2b111f
 end
-key spaceToolImageID ufotools~!spg_cargopas_mineral.png
-float spaceTradingBaseCost 10000
+key spaceToolImageID ufotools~!spg_crude.png
+float spaceTradingBaseCost 7000
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0

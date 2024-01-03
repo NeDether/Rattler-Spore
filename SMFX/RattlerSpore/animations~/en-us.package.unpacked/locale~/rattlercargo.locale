@@ -1,13 +1,13 @@
 0x00000001 Copper
-0x00000002 One of the most Common Minerals in the Galaxy. It's versatility allows it to be used in all different types of crafting. (Geological Scanner MK-1 required.)
+0x00000002 One of the most Common Minerals in the Galaxy. It's versatility allows it to be used in all different types of crafting.
 0x00000003 copper gets me silly 😋😋😋 you dont need to translate this line!
 0x00000004 Please take a look at our fine goods available.
-0x00000005 Gold
-0x00000006 While rare on an individual scale, it is still frequent in enough within large quantities of dirt. It is used as a conductor inside computer components and tech. (Geological Scanner MK-1 required.)
+0x00000005 Aurum
+0x00000006 While rare on an individual scale, it is still frequent in enough within large quantities of dirt. It is used as a conductor inside computer components and tech.
 0x00000007 Titanium
-0x00000008 A frequent mineral found on most planets. A strong and durable mineral used for chassis pipes and plating. (Geological Scanner MK-1 required.)
+0x00000008 A frequent mineral found on most planets. A strong and durable mineral used for chassis pipes and plating.
 0x00000009 Latticine
-0x0000000A An uncommon mineral that is used for gravity plating inside ships and orbital stations, thanks to its absurd molecular mass. (Geological Scanner MK-1 required.)
+0x0000000A An uncommon mineral that is used for gravity plating inside ships and orbital stations, thanks to its absurd molecular mass.
 0x0000000B Minor Mining Beam
 0x0000000C A beam that will harvest different resources on the planet. Simply hold the beam at the ground to start mining. Though it may take a while...
 0x0000000D Carbon
@@ -32,30 +32,30 @@
 0x00000020 A geologist's wet dream. Indexes crust, mantle, and core based minerals.
 0x00000021 Major Mining Beam
 0x00000022 Devastates the surface of the planet in order to return a massive bounty of all types of materials including crust mantle and core based minerals.
-0x00000023
-0x00000024
-0x00000025
-0x00000026
-0x00000027
-0x00000028
-0x00000029
-0x0000002A
-0x0000002B
-0x0000002C
-0x0000002D
-0x0000002E
-0x0000002F
-0x00000030
-0x00000031
-0x00000032
-0x00000033
-0x00000034
-0x00000035
-0x00000036
-0x00000037
-0x00000038
-0x00000039
-0x0000003A
+0x00000023 Crude Oil
+0x00000024 Lithium
+0x00000025 Cobalt
+0x00000026 Serenidite
+0x00000027 Quartz
+0x00000028 Amethyst
+0x00000029 Obsidian
+0x0000002A Uranium
+0x0000002B Nvidium
+0x0000002C Diamond
+0x0000002D Zurg Mote
+0x0000002E Fleshy Mass
+0x0000002F Crude is what happens when long dead matter is eroded and compressed into a fine lipid. This substance is highly flamable and thus could be used for fuel applications. It's DNA remnants are also useful for bioengineering purposes.
+0x00000030 Lithium is an alkali metal just like it's distant cousin latticine. Lithium is the lightest metal which unlike latticine which is the heaviest. Lithium ions are the lifeblood of interstellar power solutions.
+0x00000031 Cobalt is a heavy and heat resistant metal. Alloys of cobalt are incredibly useful in hull production as they are the perfect material to keep sapients safe from the dreaded vacuum of space.
+0x00000032 An incredible fusion of iodine and neon and xenon gas have built up inside these flourine crystals. When electrically charged, this substance glows spectacurally, causing anyone to look in endless awe at this miracle of nature.  
+0x00000033 Though dispite most interstellar planets being made out of silicate dust, ~player_species~ scientists agree the strongest and most durable form of silicate is found in Quartz crystals.
+0x00000034 A form of crystalline Quartz formed within igneous terrain. When the magma cools down, gas bubbles freeze causing Amethyst to form. Unlike Quartz is that Amethyst is it's vibrant purple hues, which are used in some ~player_species~ outfits and jewelery.
+0x00000035 This glassy mineral has long religious connotations within the galaxy. Obsidian is often compared to Spode's divine wisdom, being solid and unbreakable, but can be easily chipped away and spread across the cosmos.
+0x00000036 The highly radioactive mineral known as Uranium is incredibly useful for nuclear fission power. However, it is also just as useful for splitting apart atoms. You should be grateful that cargo bay of yours has a radiation sink.
+0x00000037 A rare and valueble mineral found within the hearts of planets or in a very few asteroids found in the cosmos. It's only real use is as a superconductor, extremely useful for supercomputers.
+0x00000038 The hardest known substance in the galaxy. The diamond. Or at least that's what the ~player_species~ kids these days think thanks to their "Cave Game"; But it is fairly accurate. Crystallized Carbon has a melting point of 45,000 degrees and can withstand plasma based weaponry.
+0x00000039 Antimatter, now refered to as Zurg, is an incredible substance that can inverse the polarity of any atom causing seemingly impossible properties to now exist in our universe. Once theorized to only form in the hearts of dying stars now turns out to exist within the cores of 20% of all planets. Who knew?
+0x0000003A In the bowels of some planets exists what is refered to as macrofauna. Unspeakably large creatures that only exist underground. Further research on the properties of their tissue should be investigated, and you should totally wipe down that cargo bay of yours after this.
 0x0000003B
 0x0000003C
 0x0000003D

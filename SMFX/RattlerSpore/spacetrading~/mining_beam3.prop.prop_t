@@ -7,7 +7,7 @@ end
 key spaceToolImageID ufotools~!tooliconDrillMK3.png
 float spaceTradingAbundance 15
 bool spaceTradingAlliesOnly false
-float spaceTradingBaseCost 12000000
+float spaceTradingBaseCost 42000000
 float spaceTradingChance 50
 float spaceTradingChanceBard 25
 float spaceTradingChanceDiplomat 18

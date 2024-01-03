@@ -3,16 +3,16 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x00ffaa77
 texts spaceToolDescription
-	"Fleshy Mass"
+	(rattlercargo!0x0000002E) "Fleshy Mass"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000010) "PLACEHOLDER"
+	(rattlercargo!0x0000003A) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
 	0xffffaa77
 end
-key spaceToolImageID ufotools~!spg_cargopas_mineral.png
-float spaceTradingBaseCost 10000
+key spaceToolImageID ufotools~!spg_flesh.png
+float spaceTradingBaseCost 101000
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0

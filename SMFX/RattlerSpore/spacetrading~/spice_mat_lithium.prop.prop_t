@@ -3,16 +3,16 @@ float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
 uint32 spaceEconomySpiceColor 0x009e9585
 texts spaceToolDescription
-	"Lithium"
+	(rattlercargo!0x00000024) "Lithium"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000010) "Power"
+	(rattlercargo!0x00000030) "Power"
 end
 uint32s spaceToolImageColors
 	0xff9e9585
 end
-key spaceToolImageID ufotools~!spg_cargopas_mineral.png
-float spaceTradingBaseCost 10000
+key spaceToolImageID ufotools~!spg_lithium.png
+float spaceTradingBaseCost 8130
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0
