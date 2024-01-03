@@ -40,6 +40,11 @@ void Initialize() {
 		App::ConsolePrintF("RattlerSPORE: Casual Tool Recipes Addon Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_casualtools.prop");
 	}
+	if (PropManager.HasPropertyList(id("industry"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Industry Addon Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_industry.prop");
+	}
 
 
 	//Add the New Core Tools

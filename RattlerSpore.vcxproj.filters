@@ -23,6 +23,9 @@
     <Filter Include="RattlerSpore\Cheats">
       <UniqueIdentifier>{272066a0-c6b3-4deb-a5ed-50b19277cad7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Function\Buildings">
+      <UniqueIdentifier>{d6fde435-9dc8-475f-8a1a-c7d3bea7737c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -76,6 +79,12 @@
     <ClInclude Include="DestroySave.h">
       <Filter>RattlerSpore\Cheats</Filter>
     </ClInclude>
+    <ClInclude Include="DrillBuilding.h">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaceDrill.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -128,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="DestroySave.cpp">
       <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="DrillBuilding.cpp">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaceDrill.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

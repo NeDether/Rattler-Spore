@@ -1,0 +1,47 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Place Bio Stabilizer"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 1000
+key spaceToolContext planet
+texts spaceToolDescription
+	"Planetary Mine"
+end
+texts spaceToolDetailDescription
+	"bottom text."
+end
+bool spaceToolDisableOn201Ruins false
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!tooliconDrillMK1.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 999
+float spaceToolMaxRange 100
+key spaceToolPanelKey ColonizeConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy placeObject
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+bool toolDeselectsOnPlanetExit true
+bool toolDoActionPostEffect true
+key toolHitGroundEffectID SG_colonytool_place_biostabilizer
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_colonytool_place_biostabilizer
+key toolMuzzleEffectID 0x448D5F72
+bool toolOnlyOnPlayerColonies true
+key toolPlacedModelKey SG_colonytool_biostabilizer
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x23D7D504
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 300
+float toolProjectileTimeOut 300
+int32s toolTargetFlags
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

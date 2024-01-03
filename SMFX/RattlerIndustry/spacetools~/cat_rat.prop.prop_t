@@ -1,0 +1,12 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "rattler tools"
+texts spaceToolDescription
+	(recip-categories!0x00000005) "Category Name"
+end
+texts spaceToolDetailDescription
+	(recip-categories!0x00000005) "Zurgroot"
+end
+key spaceToolImageID ufotools~!spg_cargopas_mineral.png
+texts spaceToolLockedDescription
+	"~blank_text~"
+end
