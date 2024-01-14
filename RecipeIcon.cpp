@@ -12,7 +12,14 @@ RecipeIcon::RecipeIcon(UTFWin::IWindow* window, Recipe juh)
 	products = u" x" + products;
 	mapItemWindow->FindWindowByID(id("zurgtastic"))->FindWindowByID(id("count"))->SetCaption(products.c_str());
 	PropertyListPtr sillyPropList;
-	PropManager.GetPropertyList(myRecipe.mToolID, 0x30608f0b, sillyPropList);
+	//If CargoType get from SpaceTrading aka 0x034d97fa
+	if (myRecipe.CargoType) {
+		PropManager.GetPropertyList(myRecipe.mToolID, 0x034d97fa, sillyPropList);
+	}
+	else {
+		PropManager.GetPropertyList(myRecipe.mToolID, 0x30608f0b, sillyPropList);
+	}
+	
 
 	LocalizedString silly;
 	LocalizedString verySilly;

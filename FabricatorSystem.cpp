@@ -302,11 +302,22 @@ bool FabricatorSystem::Fabricate(Recipe res)
 		}
 			j++;
 	}
+	//If a spacetrading~
+	if (res.CargoType) {
+		if (!GiveSpice(res.mToolID, res.productAmount)) {
 
-	if (!GiveItem(res.mToolID, res.productAmount)) {
-	
-	return false;
+			return false;
+		}
 	}
+	else {
+	//If a spacetools~
+
+		if (!GiveItem(res.mToolID, res.productAmount)) {
+
+			return false;
+		}
+	}
+
 	AchievementSystemA.CraftCount += res.productAmount;
 
 	if (AchievementSystemA.CraftCount > 50) {
@@ -397,6 +408,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 			auto icon = itemWindow->FindWindowByID(id("iconZ"));
 			ResourceKey imgKey;
 			PropertyListPtr sillyPropList;
+
 			if (PropManager.GetPropertyList(zurg.mCatID, 0x30608f0b, sillyPropList))
 			{
 				if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
@@ -502,19 +514,54 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 					auto icon = itemWindow->FindWindowByID(id("icon"));
 					ResourceKey imgKey;
 					PropertyListPtr sillyPropList;
-					if (PropManager.GetPropertyList(zurg.mToolID, 0x30608f0b, sillyPropList))
-					{
-						ImagePtr img;
-						if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
+					//If is a cargotype, get info from spacetrading~ rather than spacetools~
+					if (zurg.CargoType) {
+						App::ConsolePrintF("Wahoo!");
+						if (PropManager.GetPropertyList(zurg.mToolID, 0x034d97fa, sillyPropList))
 						{
-							//App::ConsolePrintF("Wahoo!");
 							ImagePtr img;
-							if (Image::GetImage(imgKey, img))
+							if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 							{
-								ImageDrawable* drawable = new ImageDrawable();
-								drawable->SetImage(img.get());
-								//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
-								icon->SetDrawable(drawable);
+								//App::ConsolePrintF("Wahoo!");
+								ImagePtr img;
+								if (Image::GetImage(imgKey, img))
+								{
+									ImageDrawable* drawable = new ImageDrawable();
+									drawable->SetImage(img.get());
+									uint32_t rColor;
+
+									if (App::Property::GetUInt32(sillyPropList.get(), 0x058CBB75, rColor)) {
+										//App::ConsolePrintF("ZurgTastic!");
+										rColor = rColor + 4278190080;
+										Color ColR = Color::Color(rColor);
+										icon->SetShadeColor(ColR);
+										//	LocalizedString westyorkshire;
+										//	App::Property::GetText(sillyPropList.get(), 0x3068D95D, westyorkshire);
+										//	itemWindow->FindWindowByID(0x03754e6c)->SetCaption(westyorkshire.GetText());
+									}
+
+									//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
+									icon->SetDrawable(drawable);
+								}
+							}
+						}
+					}
+					else {
+						//Get it from spacetools~
+						if (PropManager.GetPropertyList(zurg.mToolID, 0x30608f0b, sillyPropList))
+						{
+							ImagePtr img;
+							if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
+							{
+								//App::ConsolePrintF("Wahoo!");
+								ImagePtr img;
+								if (Image::GetImage(imgKey, img))
+								{
+									ImageDrawable* drawable = new ImageDrawable();
+									drawable->SetImage(img.get());
+									//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
+									icon->SetDrawable(drawable);
+								}
 							}
 						}
 					}
@@ -651,6 +698,16 @@ bool FabricatorSystem::GiveItem(uint32_t WareID, uint32_t givenAmount)
 	}
 	return false;
 }
+bool FabricatorSystem::GiveSpice(uint32_t WareID, uint32_t givenAmount)
+{
+	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+	
+	SpaceTrading.ObtainTradingObject({ WareID, 0, 0 }, givenAmount);
+
+
+
+	return true;
+}
 bool FabricatorSystem::HasMaterial(uint32_t WareID, int neededAmount)
 { //Checks if has the materials in the first place before using them up.
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
@@ -701,6 +758,7 @@ Recipe::Recipe(uint32_t propID) {
 		productAmount = 0;
 		Cat = 0;
 		Secret = true;
+		CargoType = false;
 		return;
 	}
 
@@ -710,12 +768,17 @@ Recipe::Recipe(uint32_t propID) {
 		App::Property::GetUInt32(mpPropList.get(), id("Recipe"), mToolID); //Gets .prop of the item it gives you.
 		//App::Property::GetText(mpPropList.get(), id("CName"), CName);
 		//App::Property::GetText(mpPropList.get(), id("CDesc"), CDesc);
+		CargoType = false;
 		if (!App::Property::GetUInt32(mpPropList.get(), id("productAmount"), productAmount))
 		{
 			string error = "Research property list " + to_string(propID) + " has no output amount!";
 			throw std::invalid_argument(error.c_str());
 		}
 		App::Property::GetBool(mpPropList.get(), id("SecretRecip"), Secret);
+		
+		if (!App::Property::GetBool(mpPropList.get(), id("CargoType"), CargoType)) {
+			CargoType = false;
+		};
 		App::Property::GetUInt32(mpPropList.get(), id("Catagory"), Cat);
 		size_t count;
 		uint32_t* ids;
@@ -763,6 +826,7 @@ Recipe::Recipe(){
 	productAmount = 0;
 	Cat = 0;
 	Secret = true;
+	CargoType = false;
 }
 
 Recipe::operator bool() const

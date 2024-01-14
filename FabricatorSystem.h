@@ -57,6 +57,7 @@ public:
 	//LocalizedString CName;
 	//LocalizedString CDesc;
 	bool Secret;
+	bool CargoType;
 };
 ///kamacite - ni - [0]
 ///sulphide - s - [1]
@@ -109,6 +110,7 @@ public:
 	
 	bool UseMaterial(uint32_t WareID, int neededAmount);
 	bool GiveItem(uint32_t WareID, uint32_t givenAmount);
+	bool GiveSpice(uint32_t WareID, uint32_t givenAmount);
 	bool HasMaterial(uint32_t WareID, int neededAmount);
 	bool AbleToCraft(Recipe res);
 

@@ -1,0 +1,9 @@
+key feedListItemIconKey ufotools~!spg_cargopas_spice.png
+keys feedListItemKeyList
+	newline
+
+end
+texts feedListItemName
+	(spicedye!0x00000000) "spicedye"
+end
+key feedListItemType FeedItemMessage

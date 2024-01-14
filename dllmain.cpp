@@ -55,6 +55,13 @@ void Initialize() {
 		SimulatorSystem.AddStrategy(new FactoryManager(), FactoryManager::NOUN_ID);
 	}
 
+	//Spice Dyeing Addon
+	if (PropManager.HasPropertyList(id("spicedye"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Spice Dyeing Addon Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_dye.prop");
+	}
+
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
