@@ -11,6 +11,9 @@
 #include <Spore/Simulator/cDefaultBeamTool.h>
 #include "ViewCrafts.h"
 #include "DestroySave.h"
+#include "FactoryManager.h"
+#include "DrillBuilding.h"
+#include "PlaceDrill.h"
 
 // This is in dllmain.cpp
 
@@ -44,6 +47,12 @@ void Initialize() {
 	{
 		App::ConsolePrintF("RattlerSPORE: Industry Addon Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_industry.prop");
+
+		ClassManager.AddFactory(new DrillBuildingFactory());
+
+		ToolManager.AddStrategy(new PlaceDrill(), id("placedrill"));
+
+		SimulatorSystem.AddStrategy(new FactoryManager(), FactoryManager::NOUN_ID);
 	}
 
 

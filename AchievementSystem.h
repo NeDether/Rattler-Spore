@@ -44,8 +44,8 @@ public:
 	static AchievementSystem* Get();
 	vector <string> Discoveries;
 	bool SecretPhrase;
-	int CraftCount;
-	int MineCount;
+	int CraftCount = 0;
+	int MineCount = 0;
 
 private:
 	int counter;

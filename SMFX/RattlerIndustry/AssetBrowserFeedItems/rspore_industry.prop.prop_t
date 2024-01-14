@@ -1,6 +1,7 @@
 key feedListItemIconKey graphics_misc_2~!feedlisticon_main.png
 keys feedListItemKeyList
 	placedrill
+	decomissioner
 	newline
 
 end

@@ -1,0 +1,2 @@
+animations~	0x0
+RattlerSpore

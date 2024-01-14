@@ -36,6 +36,8 @@ Simulator::Attribute AchievementSystem::ATTRIBUTES[] = {
 	// This one must always be at the end
 
 	SimAttribute(AchievementSystem,CraftCount,1),
+	SimAttribute(AchievementSystem,Discoveries,1),
+	SimAttribute(AchievementSystem,MineCount,1),
 	Simulator::Attribute()
 };
 
@@ -44,11 +46,10 @@ Simulator::Attribute AchievementSystem::ATTRIBUTES[] = {
 void AchievementSystem::Initialize() {
 	sInstance = this;
 	mpUIlayout = nullptr;
-	CraftCount = 0;
-	MineCount = 0;
+
 	counter = 0;
 	SecretPhrase = false;
-	Discoveries.push_back("mario");
+
 }
 
 void AchievementSystem::Dispose() {

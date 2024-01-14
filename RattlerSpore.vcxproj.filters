@@ -85,6 +85,9 @@
     <ClInclude Include="PlaceDrill.h">
       <Filter>RattlerSpore\Tools</Filter>
     </ClInclude>
+    <ClInclude Include="FactoryManager.h">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -143,6 +146,9 @@
     </ClCompile>
     <ClCompile Include="PlaceDrill.cpp">
       <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryManager.cpp">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

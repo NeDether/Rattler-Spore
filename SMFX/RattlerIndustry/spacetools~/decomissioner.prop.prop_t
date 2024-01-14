@@ -1,0 +1,52 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 2
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	"Decomission Ray"
+end
+texts spaceToolDetailDescription
+	"Salvages unwanted or misplaced convoys or factories."
+end
+float spaceToolDetectableRange 15
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key spaceToolImageID ufotools~!spg_amethyst.png
+float spaceToolMaxDamage 0
+float spaceToolMaxRange 500
+float spaceToolMinDamage 0
+key spaceToolPanelKey ColonizeAbilityPanel
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy decomissioner
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool toolDestroysFloraAndFauna true
+key toolBeamEffectID SG_mining_laser_beam
+key toolHitCombatantEffectID SG_ufo_mind_erase_HitCombatant
+key toolHitGroundEffectID 0x19D7E754
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_ufo_mind_erase_HitWater
+key toolMuzzleEffectID SG_ufo_mind_erase_muzzle
+bool toolPicksFlora true
+bool toolIsHoming false
+float toolRelationshipDelta -0.02
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end
