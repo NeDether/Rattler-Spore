@@ -28,6 +28,7 @@ void Initialize() {
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
 	App::ConsolePrintF("RattlerSPORE: Core Enabled");
 	//May seem pointless but this is for copy and pasting config and stuff.
+
 	if (PropManager.HasPropertyList(id("grindytools"), id("rattlerConfig")))
 	{
 		App::ConsolePrintF("RattlerSPORE: Grindy Tool Recipes Addon Enabled");
@@ -43,9 +44,17 @@ void Initialize() {
 		App::ConsolePrintF("RattlerSPORE: Casual Tool Recipes Addon Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_casualtools.prop");
 	}
+	//Core Wares
+	if (PropManager.HasPropertyList(id("wares"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Core Wares Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_wares.prop");
+
+	}
+	//Core Industry
 	if (PropManager.HasPropertyList(id("industry"), id("rattlerConfig")))
 	{
-		App::ConsolePrintF("RattlerSPORE: Industry Addon Enabled");
+		App::ConsolePrintF("RattlerSPORE: Core Industry Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_industry.prop");
 
 		ClassManager.AddFactory(new DrillBuildingFactory());

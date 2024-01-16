@@ -1,0 +1,9 @@
+key feedListItemIconKey ufotools~!spg_cargopas_mineral.png
+keys feedListItemKeyList
+	newline
+
+end
+texts feedListItemName
+	(rattlermenu!0x00000005) "wares mod"
+end
+key feedListItemType FeedItemMessage

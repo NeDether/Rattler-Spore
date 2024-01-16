@@ -1,12 +1,12 @@
 key inventoryItemArtifactModel sg_crate_spice_06
 float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
-uint32 spaceEconomySpiceColor 0x00ffffff
+#uint32 spaceEconomySpiceColor 0x00ffffff
 texts spaceToolDescription
 	(rattlerwares!0x00000000) "Hermetic Plating"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000010) "PLACEHOLDER"
+	(rattlerwares!0x00000010) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
 	0xffffffff

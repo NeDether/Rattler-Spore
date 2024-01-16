@@ -39,7 +39,7 @@ public:
 
 	static Simulator::Attribute ATTRIBUTES[];
 	static FactoryManager* Get();
-
+	
 
 private:
 	//
@@ -48,4 +48,5 @@ private:
 	
 	bool LoadPlanet = false;
 	static FactoryManager* sInstance;
+	vector<DrillBuildingPtr> SavedBuildings;
 };

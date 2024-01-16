@@ -80,7 +80,7 @@ void DrillBuilding::init(Vector3 pos, uint32_t PlanetID)
 	
 	pid = PlanetID;
 
-	modelPtr = GameNounManager.CreateInstance(kRock);
+	modelPtr = GameNounManager.CreateInstance(kOrnament);
 
 	object_cast<cSpatialObject>(modelPtr)->SetModelKey({ id("ep1_ci_spice_pumpstation"), TypeIDs::prop, GroupIDs::CivicObjects });
 	Vector3 direction = { 0, 0, 1 };
@@ -95,7 +95,7 @@ void DrillBuilding::init(Vector3 pos, uint32_t PlanetID)
 bool DrillBuilding::render()
 {
 	modelPtr.reset();
-	modelPtr = GameNounManager.CreateInstance(kRock);
+	modelPtr = GameNounManager.CreateInstance(kOrnament);
 
 	object_cast<cSpatialObject>(modelPtr)->SetModelKey({ id("ep1_ci_spice_pumpstation"), TypeIDs::prop, GroupIDs::CivicObjects });
 	Vector3 direction = { 0, 0, 1 };
@@ -121,5 +121,6 @@ Vector3 DrillBuilding::getPosition()
 Simulator::Attribute DrillBuilding::ATTRIBUTES[] = {
 	// Add more attributes here
 	// This one must always be at the end
+
 	Simulator::Attribute()
 };
