@@ -1,0 +1,28 @@
+key inventoryItemArtifactModel sg_crate_spice_06
+float inventoryItemArtifactNormalScale 2
+float inventoryItemArtifactPlumpScale 2
+uint32 spaceEconomySpiceColor 0x00ffffff
+texts spaceToolDescription
+	(rattlerwares!0x00000000) "Hermetic Plating"
+end
+texts spaceToolDetailDescription
+	(rattlercargo!0x00000010) "PLACEHOLDER"
+end
+uint32s spaceToolImageColors
+	0xffffffff
+end
+key spaceToolImageID ufotools~!spg_hplating.png
+float spaceTradingBaseCost 15135
+float spaceTradingChanceBlueEasy 0.0
+float spaceTradingChanceBlueHard 0.0
+float spaceTradingChanceRedEasy 0.0
+float spaceTradingChanceRedHard 0.0
+float spaceTradingChanceYellowEasy 0.0
+float spaceTradingChanceYellowHard 0.0
+texts spaceTradingNeed
+	(rattlercargo!0x00000003) "zurgroot."
+end
+texts spaceTradingNoNeed
+	(rattlercargo!0x00000004) "Please take a look at our fine goods available."
+end
+key spaceTradingType spice
