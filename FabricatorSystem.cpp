@@ -647,6 +647,9 @@ bool FabricatorSystem::ReadRecipes()
 
 bool FabricatorSystem::UseMaterial(uint32_t WareID, int neededAmount)
 {//Returns True if Has Material. Returns False if Does not.
+	if (PropManager.HasPropertyList(id("creativeTools"), id("rattlerConfig"))) {
+		return true;
+	}
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 	auto X = inventory->IndexOf(Simulator::SpaceInventoryItemType(4), { WareID, 0, 0 });
 	auto H = inventory->GetItem(X);
@@ -710,6 +713,9 @@ bool FabricatorSystem::GiveSpice(uint32_t WareID, uint32_t givenAmount)
 }
 bool FabricatorSystem::HasMaterial(uint32_t WareID, int neededAmount)
 { //Checks if has the materials in the first place before using them up.
+	if (PropManager.HasPropertyList(id("creativeTools"), id("rattlerConfig"))) {
+		return true;
+	}
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 	auto X = inventory->IndexOf(Simulator::SpaceInventoryItemType(4), { WareID, 0, 0 });
 	auto H = inventory->GetItem(X);

@@ -34,7 +34,7 @@ bool FactoryManager::Read(Simulator::ISerializerStream* stream)
 Simulator::Attribute FactoryManager::ATTRIBUTES[] = {
 	// Add more attributes here
 	// This one must always be at the end
-	SimAttribute(FactoryManager,SavedBuildings,1),
+	//SimAttribute(FactoryManager,SavedBuildings,1),
 	Simulator::Attribute()
 };
 
@@ -44,7 +44,7 @@ void FactoryManager::Initialize() {
 }
 
 void FactoryManager::Dispose() {
-	
+	//SavedBuildings.clear();
 }
 
 void FactoryManager::Update(int deltaTime, int deltaGameTime) {
@@ -53,7 +53,7 @@ void FactoryManager::Update(int deltaTime, int deltaGameTime) {
 		if (!LoadPlanet) {
 			uint32_t pid = GetActivePlanetRecord()->GetID().internalValue;
 			auto buildings = GetData<DrillBuilding>();
-			SavedBuildings.clear();
+	//		SavedBuildings.clear();
 			for (auto fact : buildings) {
 				if (fact->getPlanetID() == pid) {
 
@@ -64,7 +64,7 @@ void FactoryManager::Update(int deltaTime, int deltaGameTime) {
 
 				
 				}
-				SavedBuildings.push_back(fact);
+			//	SavedBuildings.push_back(fact);
 				LoadPlanet = true;
 				
 			}
@@ -73,15 +73,15 @@ void FactoryManager::Update(int deltaTime, int deltaGameTime) {
 	else {
 		LoadPlanet = false;
 		//If simulator got cleared
-		auto buildings = GetData<DrillBuilding>();
-		if (buildings.size() < SavedBuildings.size()) {
-			for (auto fact : SavedBuildings) {
+	//	auto buildings = GetData<DrillBuilding>();
+	//	if (buildings.size() < SavedBuildings.size()) {
+		//	for (auto fact : SavedBuildings) {
 				
-				auto factory = simulator_new<DrillBuilding>();
-				factory->init(fact->getPosition(), fact->getPlanetID());
-			}
+		//		auto factory = simulator_new<DrillBuilding>();
+		//		factory->init(fact->getPosition(), fact->getPlanetID());
+		//	}
 				
-		}
+	//	}
 	}
 	
 

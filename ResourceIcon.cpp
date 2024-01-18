@@ -10,7 +10,15 @@ ResourceIcon::ResourceIcon(UTFWin::IWindow* window, uint32_t juh, uint32_t neede
 
 	string16 products;
 	products.assign_convert(to_string(needed));
-	products = u" x" + products;
+	if (PropManager.HasPropertyList(id("creativeTools"), id("rattlerConfig"))) {
+		products = u" Free";
+	
+	}
+	else {
+		products = u" x" + products;
+	
+	}
+	
 	mapItemWindow->FindWindowByID(id("zurgtastic"))->FindWindowByID(id("count"))->SetCaption(products.c_str());
 	PropertyListPtr sillyPropList;
 	PropManager.GetPropertyList(myResource, 0x034d97fa, sillyPropList);

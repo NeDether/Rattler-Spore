@@ -1,0 +1,9 @@
+key feedListItemIconKey graphics_misc_2~!feedlisticon_hammer.png
+keys feedListItemKeyList
+	newline
+
+end
+texts feedListItemName
+	"Creative Mode"
+end
+key feedListItemType FeedItemMessage

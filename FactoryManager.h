@@ -48,5 +48,5 @@ private:
 	
 	bool LoadPlanet = false;
 	static FactoryManager* sInstance;
-	vector<DrillBuildingPtr> SavedBuildings;
+	//vector<DrillBuildingPtr> SavedBuildings;
 };
