@@ -26,6 +26,9 @@
     <Filter Include="RattlerSpore\Function\Buildings">
       <UniqueIdentifier>{d6fde435-9dc8-475f-8a1a-c7d3bea7737c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Empires">
+      <UniqueIdentifier>{e0a4545b-4413-4d74-8e35-8e320466fa74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -88,6 +91,12 @@
     <ClInclude Include="FactoryManager.h">
       <Filter>RattlerSpore\Function\Buildings</Filter>
     </ClInclude>
+    <ClInclude Include="SpawnBee.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="SkondEmpire.h">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -149,6 +158,12 @@
     </ClCompile>
     <ClCompile Include="FactoryManager.cpp">
       <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnBee.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="SkondEmpire.cpp">
+      <Filter>RattlerSpore\Empires</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

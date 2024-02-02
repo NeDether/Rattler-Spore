@@ -14,6 +14,8 @@
 #include "FactoryManager.h"
 #include "DrillBuilding.h"
 #include "PlaceDrill.h"
+#include "SkondEmpire.h"
+#include "SpawnBee.h"
 
 // This is in dllmain.cpp
 
@@ -77,6 +79,7 @@ void Initialize() {
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_dye.prop");
 	}
 
+	SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
@@ -95,6 +98,7 @@ void Initialize() {
 
 	//Add New Cheats.
 	CheatManager.AddCheat("viewCrafts", new ViewCrafts());
+	CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 }
 

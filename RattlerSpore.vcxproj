@@ -149,6 +149,14 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="SkondEmpire.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SpawnBee.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="ViewCrafts.h">
@@ -221,6 +229,14 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="ScanMenu.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="SkondEmpire.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="SpawnBee.cpp">
       <SubType>
       </SubType>
     </ClCompile>

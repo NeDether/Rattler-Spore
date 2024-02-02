@@ -50,3 +50,15 @@ private:
 	static FactoryManager* sInstance;
 	//vector<DrillBuildingPtr> SavedBuildings;
 };
+
+struct ratBuilding
+{public:
+
+
+private:
+	Vector3 position;
+	uint32_t planetID;
+	uint32_t ID;
+	uint32_t propFact;
+	
+};
