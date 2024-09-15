@@ -60,17 +60,16 @@ void Initialize() {
 
 	}
 	//Core Industry
-	//if (PropManager.HasPropertyList(id("industry"), id("rattlerConfig")))
-	//{
-	//	App::ConsolePrintF("RattlerSPORE: Core Industry Enabled");
-	//	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_industry.prop");
+	if (PropManager.HasPropertyList(id("industry"), id("rattlerConfig")))
+	{
+		App::ConsolePrintF("RattlerSPORE: Core Industry Enabled");
+		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_industry.prop");
+		ClassManager.AddFactory(new DrillBuildingFactory());
 
-	//	ClassManager.AddFactory(new DrillBuildingFactory());
+		ToolManager.AddStrategy(new PlaceDrill(), id("placedrill"));
 
-	//	ToolManager.AddStrategy(new PlaceDrill(), id("placedrill"));
-
-	//	SimulatorSystem.AddStrategy(new FactoryManager(), FactoryManager::NOUN_ID);
-	//}
+		SimulatorSystem.AddStrategy(new FactoryManager(), FactoryManager::NOUN_ID);
+	}
 
 	//Spice Dyeing Addon
 	if (PropManager.HasPropertyList(id("spicedye"), id("rattlerConfig")))

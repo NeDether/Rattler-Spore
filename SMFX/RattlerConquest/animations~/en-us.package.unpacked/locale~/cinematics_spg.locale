@@ -1,0 +1,90 @@
+################
+
+0x00000001 Lift off! You've successfully developed a ship capable of space flight! The heavens beckon, the cosmos awaits, the universe is at your fingertips... If you can learn to fly this thing...
+0x00000029 You have discovered a wild planet, plenty of creatures and plants are available to propagate life on other planets. Wild planets are also abundant with Spice, and can support colonies.
+0x0000002B You have discovered a barren planet. Barren planets can sustain a limited colony, or you can improve its Terrascore (T-Score) and establish a flourishing spaceport for your empire.
+0x05b15258 Your SETI device has revealed strange radio signals emitting from this star. Fly in and explore!
+0x05b1cb68 An unusual scan pattern was detected on this planet. Fly in close and explore!
+0x064bd3e4 No objects were detected on this planet. Something is not right here...
+0x05b1a752 It's an ambush! Pirates were faking a signal to lure you into a trap. Prepare for battle!
+0x05b1568d Space Pirates! These guys are going to be trouble, you may want to go planetside to fight them off.
+
+0x00000007 Drake's equation was right... a living alien race! We are not alone! It looks like they have sent an envoy to greet you. Perhaps you should talk to them, open your Communications Panel.
+
+0x0000000B The ecosystem of this planet is in jeopardy. Kill off the sick animals before they infect the rest of the species, causing a ripple effect, leading to the collapse of the planetary food web.
+0x00000020 You have designated ~planet_name~ as a Wildlife Sanctuary. You can collect up to ~prop_file:0x02ae0c7e!0xa6d1bc70~~tuning_int:0x05469bf8~ animals and place them to inhabit this planet in safety.
+
+0x0000000F Your ~ufo_name~ has taken so much damage that it has been destroyed.
+0x00000010 Thanks to advances in cloning technology and emergency consciousness transferrals, you have not died. Instead, you return to your homeworld, where your empire is building a new ~ufo_name~ for you.
+0x0000002C Your ~ufo_name~ has taken so much damage that it has been destroyed. Thanks to advances in cloning technology you have not died. Instead, you return to your homeworld, a new spaceship at the ready.
+0x0601fe99 With the destruction of ~ufo_name~ your allies have returned to their home systems as will you to retrieve a new ship. To rebuild your fleet, visit your allies and enlist their services again.
+0x064e8373 We've built you a new ship, try not to break it this time!
+
+0x00000014 Could this be a Grox colony? Their cold-blooded reputation is renowned in the galaxy. Beware!
+
+0x0000002E You have entered the territory of the ~race~. Your relations are poor, thus, they consider this to be a hostile action and will attack you.
+0x0000002F This territory is controlled by the race of this homestar. They consider your presence in their territory to be an act of aggression.
+0x00000030 This is enemy territory. This race will continue to attack as long as you remain in their territory. You need to decide. Flee, Fight or Peace. What will it be?
+
+0x05f776d6 As you approach the galactic core, it gets harder to plot a course through the gravity wells of the dense star clusters. Your travel range has decreased to provide better precision.
+
+0x060c72dc You have collected Spice! Spice is a valued commodity. Collect it from your colonies and homeworld each time you visit them. 
+0x063abd3d Congratulations, you have earned the badge and title of Captain!
+0x063bb6d0 Congratulations, you are now bestowed with the title of Commander!
+0x063bb6d6 Congratulations, you have earned the title of Commodore! Your Allied Fleet now has room for an additional ship.
+0x063bb6da Congratulations, you have earned the title of Admiral!
+0x063bb6df Congratulations, you have earned the title of The Celebrated! Your promotion means you may now lead a larger Allied Fleet.
+0x063bb6e3 Congratulations, you have been promoted to the title of The Renowned!
+0x063bb6e8 Congratulations, you have earned the title of The Great! Your promotion means you may now lead a larger Allied Fleet!
+0x063bb6ee Congratulations, you have earned the title of The Legendary!
+0x063bb6f2 Congratulations, you have been promoted to the title of All-Powerful!
+0x063bb6f6 Congratulations, you have earned the very exclusive title of Ultimate Being!
+0x063bb6fa Congratulations! You have reached the highest level of accomplishment. You have earned the title of Omnipotent! Well done!
+
+
+0x05f9e801 Now that you have a trade route established, you'll automatically send Spice between Empires. This partnership paves the way for purchasing the system.
+0x05fa2a28 Your actions have gained you favor with this empire. Open communications and use your diplomatic skills to propose an alliance with them.
+
+0x05fa70da It's time for War! Use your weapons to destroy all of the colonies on this planet, to force their surrender and then choose to obliterate or capture them.
+0x05fa8a4d Planets in green orbit paths are easier to terraform and colonize than planets on red or blue orbit paths.
+
+0x05fa8a4e Colonies can be established on any planet from barren moons to lush TerraScore 3 oases. Fruitful colonies mine spice that can be traded. 
+
+0x05fa8a4f Congratulations! You have grown your empire. Each colony's productivity is tied to its size. Size is limited by the Terrascore of the planet. Invest in terraforming, then add colonies and buildings to reap the highest rewards.
+
+# Terraform
+0x05fa8a51 Congratulations! You have terraformed and colonized which has grown your empire. Spice from your colonies can be traded with other races.
+
+# Space 201
+0x00000004 Something is showing up on the ship's radar...
+0x0000001A It's a crashed spacecraft! And it's emitting a strange radio signal. Fly to it and use the Scan Tool to investigate the crash site. 
+0x0000001B The wreck dates to several million years ago. Whoever made this is long gone. It's hull structure indicates it was damaged in battle. Wait! The wreck has triggered a transfer beam! Some items are transfering aboard...
+0x06304fa8 A strange cube with a socket in it. Alongside the machine is a module for your laser that exctracts minerals from planets. The controls flare to life on the ancient device once it is plugged into your ship's power core. Investigating the screen from your control panel, it appears to be a sort of fabricator with a few blueprints pre-programmed on it. One of them is for a FTL-Drive. 
+0x0663a00a The RATTLER Fabricator suddenly begins to ping a location on a nearby star, perhaps this could be it's place of origin?
+0x0000001C Too late! These ruins must be what's left of the home colony of the aliens from the wreck. Scanning the ruins may reveal clues to what happened here.
+0x0000001D The scan came up with nothing, but it seems to have triggered a response. Some activity is showing up on the radar... 
+0x00000028 The scan must have triggered the colony's defenses. These drones don't look friendly... Wait... An incoming transmission...
+
+# Rares
+0x0000000C The ship's radar has detected an object of interest on this planet!
+0x0000000D The galaxy is filled with rare objects, statues and fossils. One of these unique collectibles is right here! Abduct it and sell it for big Sporebucks, or try and collect entire sets and demand even more value.
+0x0000001E The ship's radar has picked up a unique scan signature. Unlike any other detected before.
+0x0643d130 A planetary sculpting tool! Create signature planets using this tool.
+
+# Uplift Game
+0x00000022 The monolith will cause this planet to evolve... come back later to see what happened!
+
+#System Capture
+0x06610f0b Congratulations! Through military might you have forced your enemies into submission and captured their system. 
+0x06610f0c Congratulations! Through military might you have forced your enemies into submission and captured their system.
+0x06610f0d Congratulations! Using diplomatic means to form a strong trade alliance, you've been able to negotiate a sweet deal and purchase their system.
+0x06610f0e Congratulations! Using diplomatic means to form a strong trade alliance, you've been able to negotiate a sweet deal and purchase their system.
+
+
+#Center Of Galaxy -- DO NOT TOUCH THE TIMING ON THIS.  IF YOU WANT TO CHANGE IT, ASK ME (LYDIA)
+
+0x067b778c ~br~~br~Greetings my friend!~br~~br~You have traveled very far and overcome many obstacles.~br~~br~Along the way you have encountered many of your diverse, far-flung siblings--~br~~br~~br~precious few of them will make it this far.~br~~br~Your heroic efforts have proven you deserving,~br~~br~worthy of advancement to the next level of your existence.~br~~br~~br~The universe you inhabit is but one of many~br~~br~countless worlds, unseen but yet connected.~br~~br~~br~Your creative efforts have not gone unnoticed.~br~~br~Indeed they have spilled into these other, unseen worlds~br~~br~~br~just as your world has been enriched by them.~br~~br~~br~It is now time for you to join us--~br~~br~~br~Join us!  Mwahahahaha!!~br~~br~~br~No, just kidding. It’s not scary.~br~Indeed. The times ahead, they are good.~br~~br~Really, really good.~br~Some of you may ask, who is this mysterious voice who~br~knows so much and possesses such great powers?~br~~br~~br~~br~~br~I’m glad you asked…~br~
+
+0x067b7833 ~br~~br~I’m Steve.~br~~br~~br~You are now to be given the power.~br~~br~Yes, that’s right, THE POWER.~br~~br~The power to create and spread life, intelligence and understanding throughout the cosmos.~br~~br~~br~~br~Use this power wisely.~br~Use this power so that we may one day become AS ONE…~br~~br~~br~that is… I mean…~br~in a metaphorical sense.~br~~br~~br~Oh… one last thing.~br~~br~We are nearly sold out on the last phase of a wonderful time-share opportunity on one of our larger stars--and a rare planet in its orbit.~br~~br~~br~~br~If you are in the neighborhood, we’d love to have you by for a free breakfast and short presentation.~br~~br~~br~Just look for the third rock from Sol.~br~
+
+0x06526580 You have been awarded the Staff of Life.
