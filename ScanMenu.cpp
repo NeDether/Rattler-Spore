@@ -64,7 +64,7 @@ void ScanMenu::Update(int deltaTime, int deltaGameTime) {
 			}
 			
 			mWindowOffset = mWindowOffset + offset2;
-			
+			//TODO: FIX THIS CRAP!!!!!
 
 			UTFWin::IWindow* parentWindow = window->GetParent();
 			Math::Rectangle rec = parentWindow->GetArea();

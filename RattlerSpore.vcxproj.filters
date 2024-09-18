@@ -97,6 +97,9 @@
     <ClInclude Include="SkondEmpire.h">
       <Filter>RattlerSpore\Empires</Filter>
     </ClInclude>
+    <ClInclude Include="SpawnStation.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -164,6 +167,9 @@
     </ClCompile>
     <ClCompile Include="SkondEmpire.cpp">
       <Filter>RattlerSpore\Empires</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnStation.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

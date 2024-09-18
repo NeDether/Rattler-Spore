@@ -16,12 +16,15 @@ auto_Recipes_planetbusterbomb
 GGETextEP1
 button
 auto_spacetrading~_spice_mat_amethyst
+spg_sulphide
 ach_core_geo1
 MaterialList
 spacegame_tools
 ach_core_geo3
 ach_core_geo2
 auto_Recipes_placespicestorage
+auto_rattlerConfig_hi
+spg_flesh
 auto_Recipes_energymegapotion
 cat_name
 auto_spacetrading~_spice_mat_cobalt
@@ -30,11 +33,14 @@ auto_spacetrading~_spice_mat_cobalt
 auto_Recipes_droughtgenerator
 eradicate
 exitRF
+spg_serenidite
 droughtgenerator
 cat_header_name
 recipetemplate
+spg_copper
 auto_Recipes_recipetemplate
 fabricatorbackground
+spg_titanium
 layouts_atlas~	0x40464200
 Template
 tooliconDrillMK3
@@ -43,6 +49,7 @@ tooliconDrillMK1
 placeloyaltybooster
 Recipes
 cat_tools
+spg_diamond
 rattler_forge
 ach_core_fab
 auto_spacetools~_ach_core_cr1
@@ -63,10 +70,13 @@ auto_spacetools~_ach_core_sec
 spice_mat_latticine
 auto_Recipes_antimattermissile
 store-mining
+spg_ice
 auto_spacetrading~_spice_mat_serenidite
 turret
 zurgtastic
+spg_nvidium
 auto_Recipes_aoe_repair
+spg_uranium
 AssetBrowserGraphics
 auto_spacetrading~_spice_mat_uranium
 rainoffire
@@ -88,25 +98,30 @@ auto_spacetools~_mining_beam2
 energypotion
 auto_spacetools~_mining_beam3
 auto_Recipes_rainoffire
+spg_amethyst
 auto_spacetools~_cat_colonization
 rattl
 placeembassy
 spg_feedicon_ufoeditor
 repairpotion
+spg_obsidian
 auto_spacetrading~_mineral_scanner1
 auto_spacetrading~_mineral_scanner3
 auto_spacetrading~_mineral_scanner2
 repairmegapotion
 AssetBrowserFeedItems
+spg_silica
 spacetrading~	0x34d97fa
 rspore_core
 auto_spacetrading~_spice_drt_sulphide
 ratt
 spice_mat_crude
 ach_core_scan
+spg_crude
 rattlerf
 placebioprotector
 auto_Recipes_eradicate
+spg_gold
 auto_Recipes_placehappinessbooster
 rollover
 achievement
@@ -208,8 +223,10 @@ auto_spacetrading~_spice_mat_obsidian
 spice_mat_obsidian
 antimatterbomb
 countZ
+spg_cobalt
 dryice
 rattlerforg
+hi
 rattlerforge!0x00000000
 social_category
 auto_Recipes_zoo
@@ -237,6 +254,7 @@ fireworks
 spice_mat_diamond
 auto_spacetrading~_spice_drt_silica
 epicize
+spg_kamacite
 auto_animations~_MaterialList
 ra
 auto_Recipes_Planetscan
@@ -244,6 +262,7 @@ zoo
 colonization_category
 terra_category
 auto_Recipes_placebiostabilizer
+spg_latticine
 ep1_effects_3~	0x408a4302
 ach_core_mine3
 ach_core_mine2
@@ -257,6 +276,7 @@ ach_core_mine4
 auto_Recipes_antimatterbomb
 spice_mat_quartz
 zurgtasticZ
+spg_lithium
 rattlerspore_category
 catMain
 cat_list
@@ -291,10 +311,12 @@ categories
 auto_Recipes_atmospheregenerator
 sex
 CreatureCreate
+rattlerConfig
 spice_mat_gold
 crapingMat
 auto_layouts_atlas~_rat_achievement
 auto_spacetools~_ach_core_fab
+spg_quartz
 auto_spacetools~_ach_core_geo1
 auto_spacetools~_ach_core_geo2
 auto_spacetools~_cat_combat
@@ -310,6 +332,7 @@ FeedItemMessage
 aoe_repair
 placeuberturret
 Planetscan
+spg_carbon
 icecapseeder
 SG_ufo_mind_erase_muzzle
 planetbusterbomb
@@ -322,6 +345,7 @@ sg_crate_spice_06
 tool
 catCombat
 iconZ
+spg_zurg
 leTitle
 cat_soc
 auto_spacetools~_cat_tools

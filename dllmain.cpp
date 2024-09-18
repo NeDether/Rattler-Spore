@@ -16,11 +16,12 @@
 #include "PlaceDrill.h"
 #include "SkondEmpire.h"
 #include "SpawnBee.h"
+#include "SpawnStation.h"
 
 // This is in dllmain.cpp
 
 using namespace ArgScript;
-using namespace ArgScript;
+
 
 
 
@@ -28,6 +29,7 @@ void Initialize() {
 	//Inject Categories in the Space Stage Tool Menu.
 	InjectCategories::InjectHeader();
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
+	App::ConsolePrintF("''We are Skond. We see you.''");
 	App::ConsolePrintF("RattlerSPORE: Core Enabled");
 	//May seem pointless but this is for copy and pasting config and stuff.
 
@@ -97,6 +99,7 @@ void Initialize() {
 
 	//Add New Cheats.
 	CheatManager.AddCheat("viewCrafts", new ViewCrafts());
+	CheatManager.AddCheat("SpawnStation", new SpawnStation());
 	CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 }

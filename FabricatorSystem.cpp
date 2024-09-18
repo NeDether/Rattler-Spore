@@ -55,7 +55,8 @@ void FabricatorSystem::Initialize() {
 void FabricatorSystem::Dispose() {
 	
 }
-
+//TODO: FIX THIS CRAP
+//eh later
 void FabricatorSystem::Update(int deltaTime, int deltaGameTime) {
 	if (Simulator::IsSpaceGame()) //If we're in the space stage... (adventures do not count)
 	{
