@@ -17,6 +17,7 @@
 #include "SkondEmpire.h"
 #include "SpawnBee.h"
 #include "SpawnStation.h"
+#include "ReadPlanet.h"
 
 // This is in dllmain.cpp
 
@@ -100,6 +101,7 @@ void Initialize() {
 	//Add New Cheats.
 	CheatManager.AddCheat("viewCrafts", new ViewCrafts());
 	CheatManager.AddCheat("SpawnStation", new SpawnStation());
+	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
 	CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 }

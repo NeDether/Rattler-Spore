@@ -13,24 +13,39 @@ SpawnStation::~SpawnStation()
 
 void SpawnStation::ParseLine(const ArgScript::Line& line)
 {
-	App::ConsolePrintF("''So THIS is Pibb Xtra... GHAHAHA!''");
+	App::ConsolePrintF("sensible and readable debug text indicating this is working :):)");
 	auto StarRecord = GetActiveStarRecord();
-	PlanetID guh(StarRecord->GetID(), StarRecord->mPlanets.size());
-	cPlanetPtr pibbxtra = nullptr;
-	cPlanetRecordPtr okay = nullptr;
-	cPlanetRecord::Create(guh, okay);
+	PlanetID stationID(StarRecord->GetID(), StarRecord->mPlanets.size());
+	cPlanetPtr newPlanPointer = nullptr;
+	cPlanetRecordPtr newPlanRec = nullptr;
+	newPlanRec.get()->Create(stationID, newPlanRec);
 	auto orbulon = cEllipticalOrbit::cEllipticalOrbit();
-	StarManager.GenerateEllipticalOrbit(StarRecord,orbulon,0.5,5.0,GetActivePlanetRecord());
-	orbulon.Precalculate();
-	okay.get()->mOrbit = orbulon;
-	okay.get()->mName = (string16) "Space Station";
-	auto rizz = okay.get()->GenerateTerrainKey();
-	okay.get()->SetGeneratedTerrainKey(rizz);
+	StarManager.GenerateEllipticalOrbit(StarRecord,orbulon,50,200,GetActivePlanetRecord());
+	newPlanRec.get()->mOrbit = orbulon;
 	
-	StarRecord->mPlanets.push_back(okay);
+	newPlanRec.get()->mType = PlanetType::GasGiant;
+	newPlanRec.get()->mName = u"Space Station";
+	//auto newterrain = newPlanRec.get()->GenerateTerrainKey();
+	//newPlanRec.get()->SetGeneratedTerrainKey(newterrain);
 	
-	StarManager.RecordToPlanet(okay.get(), pibbxtra);
+	
+	
+	StarManager.RecordToPlanet(newPlanRec.get(), newPlanPointer);
+	newPlanPointer.get()->SetRepresentationMode(PlanetRepresentationMode::VisiblePlanetAndHitSphere);
+	newPlanPointer.get()->SetModelKey({ id("ep1_ci_spice_pumpstation"), TypeIDs::prop, GroupIDs::CivicObjects });
+	
+	newPlanPointer.get()->SetIsOnView(true);
+	
 
+	newPlanPointer.get()->SetIsSelected(true);
+	StarRecord->mPlanets.push_back(newPlanRec);
+	StarRecord->mPlanetCount += 1;
+	StarRecord->GetPlanetRecords();
+	//cPlanetRecord debugGetter = *StarRecord->GetPlanetRecord(StarRecord->mPlanets.size());
+	//debugGetter.mTechLevel
+	App::ConsolePrintF("planets: %d ", StarRecord->mPlanets.size());
+	newPlanPointer.get()->mEffectScript = 0x3c3d344f;
+	
 	// This method is called when your cheat is invoked.
 	// Put your cheat code here.
 }

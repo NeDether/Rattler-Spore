@@ -12,16 +12,26 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Spore ModAPI", "..\..\Spore
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug DLL|x86 = Debug DLL|x86
 		Debug|x86 = Debug|x86
+		Release DLL|x86 = Release DLL|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Debug DLL|x86.ActiveCfg = Debug|Win32
+		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Debug DLL|x86.Build.0 = Debug|Win32
 		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Debug|x86.ActiveCfg = Debug|Win32
 		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Debug|x86.Build.0 = Debug|Win32
+		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Release DLL|x86.ActiveCfg = Release|Win32
+		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Release DLL|x86.Build.0 = Release|Win32
 		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Release|x86.ActiveCfg = Release|Win32
 		{07FC5B61-B575-4207-B464-AFAE6AF3FC19}.Release|x86.Build.0 = Release|Win32
+		{F057451A-1413-4D68-AF56-1BF529933420}.Debug DLL|x86.ActiveCfg = Debug DLL|Win32
+		{F057451A-1413-4D68-AF56-1BF529933420}.Debug DLL|x86.Build.0 = Debug DLL|Win32
 		{F057451A-1413-4D68-AF56-1BF529933420}.Debug|x86.ActiveCfg = Debug|Win32
 		{F057451A-1413-4D68-AF56-1BF529933420}.Debug|x86.Build.0 = Debug|Win32
+		{F057451A-1413-4D68-AF56-1BF529933420}.Release DLL|x86.ActiveCfg = Release DLL|Win32
+		{F057451A-1413-4D68-AF56-1BF529933420}.Release DLL|x86.Build.0 = Release DLL|Win32
 		{F057451A-1413-4D68-AF56-1BF529933420}.Release|x86.ActiveCfg = Release|Win32
 		{F057451A-1413-4D68-AF56-1BF529933420}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection

@@ -1,0 +1,13 @@
+key parent ufoModels_UserColor~!Template.prop
+bboxs modelBoundingBox
+	(-2.054867, -1.4702942, -2.1019473) (2.0548704, 2.809432, 2.0634031)
+end
+float modelBoundingRadius 3.0097954
+int32s modelMeshAnimSharing
+	0
+	0
+	0
+	0
+	0
+end
+key modelMeshLOD0 ufoModels_UserColor~!0x23B66452.gmdl

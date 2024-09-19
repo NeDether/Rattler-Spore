@@ -26,30 +26,33 @@ void SpawnBee::ParseLine(const ArgScript::Line& line)
 	StarRecord->mpSpeciesProfile = SelectedSpecies;
 	StarRecord->mCitizenSpeciesKey = ResourceKey({ 0x23E33E31, TypeIDs::crt, GroupIDs::CreatureModels });
 	StarRecord->mEmpireID = SkondEmpireA.Skond->GetEmpireID();
-	//GetActivePlanetRecord()->mTechLevel = TechLevel::Empire;
-	//GetActivePlanetRecord()->mNumDefenderUFOs = 25;
+	GetActivePlanetRecord()->mTechLevel = TechLevel::Empire;
+	GetActivePlanetRecord()->mNumDefenderUFOs = 25;
+	SkondEmpireA.Skond->mIDColorID = 0xFFA500;
+	SkondEmpireA.Skond->UpdateAndGetColor();
 	
 	StarRecord->mTechLevel = (TechLevel::City);
+	cPlanetRecord::FillPlanetDataForTechLevel(GetActivePlanetRecord(), TechLevel::Empire);
 	//GetActivePlanetRecord()->mTechLevel = (TechLevel)32;
-	GetActivePlanetRecord()->mTechLevel = (TechLevel::City);
+	GetActivePlanetRecord()->mTechLevel = (TechLevel::Empire);
 	GetActivePlanetRecord()->mSpiceGen = ResourceKey({ id("spice6"),0,0 });
 	GetActivePlanetRecord()->mPlanetRing = 5;
 	//GetActivePlanetRecord()->field_10C = 1; //followers?
 	
 	//ResourceKey({ 0x23B66448, TypeIDs::bld, GroupIDs::BuildingModels }); Node Model
 	//ResourceKey({ 0x23B66453, TypeIDs::ufo, GroupIDs::UFOModels }); Swarmer Model
-	auto hive = simulator_new<cToolObject>();
-	hive->SetModelKey(ResourceKey({ 0x23B66448, TypeIDs::bld, GroupIDs::BuildingModels }));
-	hive->SetPosition(GetPlayerUFO()->GetPosition());
-	hive->SetOrientation(PlanetModel.GetOrientation(hive->GetPosition(), Vector3(0, 0, 1)));
-	hive->SetHealthPoints(50);
-	hive->mMaxHealthPoints = 50;
-	hive->SetIsOnView(true);
-	auto mario = Simulator::GetData<cToolObject>();
-	for (auto skibidi : mario) {
-		App::ConsolePrintF("my fucking limit");
+	//auto hive = simulator_new<cToolObject>();
+	//hive->SetModelKey(ResourceKey({ 0x23B66448, TypeIDs::bld, GroupIDs::BuildingModels }));
+	//hive->SetPosition(GetPlayerUFO()->GetPosition());
+	//hive->SetOrientation(PlanetModel.GetOrientation(hive->GetPosition(), Vector3(0, 0, 1)));
+	//hive->SetHealthPoints(50);
+	//hive->mMaxHealthPoints = 50;
+	//hive->SetIsOnView(true);
+	//auto mario = Simulator::GetData<cToolObject>();
+	//for (auto skibidi : mario) {
+	//	App::ConsolePrintF("my fucking limit");
 		// vehicle is a cVehicle*
-	}
+	//}
 //	auto honey = simulator_new<cPlanetaryArtifact>();
 	//honey->SetPosition(GetPlayerUFO()->GetPosition());
 	//honey->SetOrientation(PlanetModel.GetOrientation(hive->GetPosition(), Vector3(0, 0, 1)));
@@ -61,8 +64,8 @@ void SpawnBee::ParseLine(const ArgScript::Line& line)
 	//wasp->SetPosition(GetPlayerUFO()->GetPosition());
 	//wasp->SetHealthPoints(50);
 	//wasp->mMaxHealthPoints = 50;
-	//wasp->mUFOType = 8;
-	//wasp mDesiredModelKey((ResourceKey({ 0x23B66453, TypeIDs::ufo, GroupIDs::UFOModels })));
+	//wasp->mUFOType = 0;
+	//wasp->mDesiredModelKey((ResourceKey({ 0x23B66453, TypeIDs::ufo, GroupIDs::UFOModels })));
 	//wasp->SetIsOnView(true);
 	//wasp->mNextPosition(Vector3{577,114,808});
 	//wasp->mNextOrientation(Vector4{0.23,0.198,0.82,0.47});
