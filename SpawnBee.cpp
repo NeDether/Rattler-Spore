@@ -25,16 +25,16 @@ void SpawnBee::ParseLine(const ArgScript::Line& line)
 	auto SelectedSpecies = SpeciesManager.GetSpeciesProfile({ 0x23E33E31, TypeIDs::crt, GroupIDs::CreatureModels });
 	StarRecord->mpSpeciesProfile = SelectedSpecies;
 	StarRecord->mCitizenSpeciesKey = ResourceKey({ 0x23E33E31, TypeIDs::crt, GroupIDs::CreatureModels });
-	StarRecord->mEmpireID = SkondEmpireA.Skond->GetEmpireID();
-	GetActivePlanetRecord()->mTechLevel = TechLevel::Empire;
-	GetActivePlanetRecord()->mNumDefenderUFOs = 25;
-	SkondEmpireA.Skond->mIDColorID = 0xFFA500;
-	SkondEmpireA.Skond->UpdateAndGetColor();
+	//StarRecord->mEmpireID = SkondEmpireA.Skond->GetEmpireID();
+	//GetActivePlanetRecord()->mTechLevel = TechLevel::Empire;
+	//GetActivePlanetRecord()->mNumDefenderUFOs = 25;
+	//SkondEmpireA.Skond->mIDColorID = 0xFFA500;
+	//SkondEmpireA.Skond->UpdateAndGetColor();
 	
 	StarRecord->mTechLevel = (TechLevel::City);
-	cPlanetRecord::FillPlanetDataForTechLevel(GetActivePlanetRecord(), TechLevel::Empire);
+	//cPlanetRecord::FillPlanetDataForTechLevel(GetActivePlanetRecord(), TechLevel::Empire);
 	//GetActivePlanetRecord()->mTechLevel = (TechLevel)32;
-	GetActivePlanetRecord()->mTechLevel = (TechLevel::Empire);
+	GetActivePlanetRecord()->mTechLevel = (TechLevel::City);
 	GetActivePlanetRecord()->mSpiceGen = ResourceKey({ id("spice6"),0,0 });
 	GetActivePlanetRecord()->mPlanetRing = 5;
 	//GetActivePlanetRecord()->field_10C = 1; //followers?

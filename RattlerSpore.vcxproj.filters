@@ -103,6 +103,9 @@
     <ClInclude Include="ReadPlanet.h">
       <Filter>RattlerSpore\Cheats</Filter>
     </ClInclude>
+    <ClInclude Include="SolarSystemResources.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -176,6 +179,9 @@
     </ClCompile>
     <ClCompile Include="ReadPlanet.cpp">
       <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="SolarSystemResources.cpp">
+      <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -21,4 +21,5 @@ public:
 	void* Cast(uint32_t type) const override;
 
 	bool OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position, Simulator::SpaceToolHit hitType, int) override;
+	virtual bool OnSelect(Simulator::cSpaceToolData* pTool);
 };

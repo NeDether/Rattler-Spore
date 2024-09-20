@@ -25,8 +25,8 @@ void SpawnStation::ParseLine(const ArgScript::Line& line)
 	
 	newPlanRec.get()->mType = PlanetType::GasGiant;
 	newPlanRec.get()->mName = u"Space Station";
-	//auto newterrain = newPlanRec.get()->GenerateTerrainKey();
-	//newPlanRec.get()->SetGeneratedTerrainKey(newterrain);
+//	auto newterrain = newPlanRec.get()->GenerateTerrainKey();
+//	newPlanRec.get()->SetGeneratedTerrainKey(newterrain);
 	
 	
 	
