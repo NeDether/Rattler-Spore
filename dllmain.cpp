@@ -18,7 +18,9 @@
 #include "SpawnBee.h"
 #include "SpawnStation.h"
 #include "ReadPlanet.h"
-
+#include "SolarSystemResources.h"
+#include "SolarSystemResourceEntry.h"
+#include "SolSysResourcesCheat.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -60,6 +62,8 @@ void Initialize() {
 	{
 		App::ConsolePrintF("RattlerSPORE: Core Wares Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_wares.prop");
+		
+
 
 	}
 	//Core Industry
@@ -71,7 +75,8 @@ void Initialize() {
 
 		ToolManager.AddStrategy(new PlaceDrill(), id("placedrill"));
 
-		SimulatorSystem.AddStrategy(new FactoryManager(), FactoryManager::NOUN_ID);
+		//SimulatorSystem.AddStrategy(new FactoryManager(), FactoryManager::NOUN_ID);
+		SimulatorSystem.AddStrategy(new SolarSystemResources(), SolarSystemResources::NOUN_ID);
 	}
 
 	//Spice Dyeing Addon
@@ -104,6 +109,7 @@ void Initialize() {
 	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
 	CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
+	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
 }
 
 void Dispose()

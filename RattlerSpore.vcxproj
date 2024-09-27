@@ -157,7 +157,15 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="SolarSystemResourceEntry.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="SolarSystemResources.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SolSysResourcesCheat.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -252,7 +260,15 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="SolarSystemResourceEntry.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="SolarSystemResources.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="SolSysResourcesCheat.cpp">
       <SubType>
       </SubType>
     </ClCompile>

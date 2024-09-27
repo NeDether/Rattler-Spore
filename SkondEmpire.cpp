@@ -59,11 +59,12 @@ void SkondEmpire::Update(int deltaTime, int deltaGameTime) {
 		Skond = StarManager.GetEmpireForStar(Homeworld.get()); 
 		auto SkondSpecies = SpeciesManager.GetSpeciesProfile({ 0x23E33E31, TypeIDs::crt, GroupIDs::CreatureModels }); //Get Skond Models n shit
 		Skond->SetSpeciesProfile(SkondSpecies); //set Set the species to the selectedSpecies
-		Skond->mArchetype = Archetypes::kArchetypePlayerKnight;
+		//Skond->mArchetype = Archetypes::kArchetypePlayerKnight;
+		Skond->mArchetype = Archetypes::kArchetypeGrob;
 		
 	}
-	//Skond->mEmpireName = string16("Skond Hive");
-	Skond->mCachedColor = (Color::Color(0xFF3b0039));
+	Skond->mEmpireName = u"Skond Hive";
+	
 }
 
 bool SkondEmpire::WriteToXML(Simulator::XmlSerializer* writexml)

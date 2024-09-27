@@ -1,4 +1,5 @@
 animations~	0x0
+SpaceCapture
 auto_spacetrading~_rattler_forge
 auto_spacetools~_mineral_scanner1
 auto_Recipes_placeembassy
@@ -34,9 +35,11 @@ auto_Recipes_droughtgenerator
 eradicate
 exitRF
 spg_serenidite
+SolarSystemResource
 droughtgenerator
 cat_header_name
 recipetemplate
+employed
 spg_copper
 auto_Recipes_recipetemplate
 fabricatorbackground
@@ -64,11 +67,15 @@ r
 upgrade
 rspore_ach
 placehappinessbooster
+sysUILayout
 rattlerfor
 auto_RecipeCategories_combat_category
+plannerbudget
 auto_spacetools~_ach_core_sec
 spice_mat_latticine
+station
 auto_Recipes_antimattermissile
+billclinton
 store-mining
 spg_ice
 auto_spacetrading~_spice_mat_serenidite
@@ -93,6 +100,7 @@ ach_core_sec
 auto_Recipes_volcano
 energymegapotion
 sg_rare_geodes_08
+power
 auto_spacetools~_mining_beam1
 auto_spacetools~_mining_beam2
 energypotion
@@ -106,8 +114,10 @@ spg_feedicon_ufoeditor
 repairpotion
 spg_obsidian
 auto_spacetrading~_mineral_scanner1
+SolarSystemResourceDEBUG
 auto_spacetrading~_mineral_scanner3
 auto_spacetrading~_mineral_scanner2
+Orbbarholder
 repairmegapotion
 AssetBrowserFeedItems
 spg_silica
@@ -125,6 +135,7 @@ spg_gold
 auto_Recipes_placehappinessbooster
 rollover
 achievement
+thaorb
 AchIcons
 auto_AssetBrowserFeedItems_rspore_core
 spice_mat_titanium
@@ -156,6 +167,7 @@ rattlerfo
 auto_spacetrading~_mining_beam3
 toolenergymegapotion
 auto_spacetrading~_mining_beam1
+Herbi
 cat_combat
 auto_Recipes_energypotion
 Ach0001
@@ -178,11 +190,14 @@ rattlercargo
 auto_spacetrading~_spice_mat_titanium
 ScanMenu
 rattlerach
+population
 auto_spacetrading~_spice_mat_quartz
 special
+carni
 CreatureEdit
 cat_colonization
 auto_Recipes_repairpotion
+game_entry~	0x199b485
 SG_ufo_mind_erase_HitWater
 auto_AssetBrowserFeedCategories_rattlerspore_category
 auto_spacetrading~_spice_mat_copper
@@ -192,6 +207,7 @@ spice_drt_sulphide
 cat
 spice_drt_silica
 ach_core_cr4
+orbbardecor
 toolForge
 ach_core_cr2
 ach_core_cr3
@@ -250,6 +266,7 @@ graphics_misc_2~	0x354663b
 auto_Recipes_icecapseeder
 auto_spacetrading~_spice_mat_crude
 spice_mat_serenidite
+Hoster
 fireworks
 spice_mat_diamond
 auto_spacetrading~_spice_drt_silica
@@ -334,9 +351,11 @@ placeuberturret
 Planetscan
 spg_carbon
 icecapseeder
+billclinton2
 SG_ufo_mind_erase_muzzle
 planetbusterbomb
 ScrappedGAMenu1
+crime
 spice_mat_amethyst
 auto_Recipes_placebioprotector
 spice_mat_uranium
@@ -344,6 +363,7 @@ cat_terra
 sg_crate_spice_06
 tool
 catCombat
+FBB5C6EC
 iconZ
 spg_zurg
 leTitle

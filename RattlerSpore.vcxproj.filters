@@ -29,6 +29,12 @@
     <Filter Include="RattlerSpore\Empires">
       <UniqueIdentifier>{e0a4545b-4413-4d74-8e35-8e320466fa74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Function\Systems">
+      <UniqueIdentifier>{4701934b-4b87-4e75-b63d-b0696d512454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Function\Systems\Classes">
+      <UniqueIdentifier>{1710da10-3e3b-4b70-bd5c-690df232f109}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -104,7 +110,13 @@
       <Filter>RattlerSpore\Cheats</Filter>
     </ClInclude>
     <ClInclude Include="SolarSystemResources.h">
-      <Filter>RattlerSpore\Function</Filter>
+      <Filter>RattlerSpore\Function\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="SolarSystemResourceEntry.h">
+      <Filter>RattlerSpore\Function\Systems\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SolSysResourcesCheat.h">
+      <Filter>RattlerSpore\Cheats</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -181,7 +193,13 @@
       <Filter>RattlerSpore\Cheats</Filter>
     </ClCompile>
     <ClCompile Include="SolarSystemResources.cpp">
-      <Filter>RattlerSpore\Function</Filter>
+      <Filter>RattlerSpore\Function\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="SolarSystemResourceEntry.cpp">
+      <Filter>RattlerSpore\Function\Systems\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="SolSysResourcesCheat.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
