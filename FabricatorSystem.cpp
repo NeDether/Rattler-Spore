@@ -60,7 +60,7 @@ void FabricatorSystem::Dispose() {
 void FabricatorSystem::Update(int deltaTime, int deltaGameTime) {
 	if (Simulator::IsSpaceGame()) //If we're in the space stage... (adventures do not count)
 	{
-		
+		//open animation refuses to play on smaller resolutions
 
 		if (mWindowOffset != 0 && mpUIlayout)
 		{
@@ -70,7 +70,7 @@ void FabricatorSystem::Update(int deltaTime, int deltaGameTime) {
 
 			UTFWin::IWindow* parentWindow = window->GetParent();
 			Math::Rectangle rec = parentWindow->GetArea();
-			window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
+			//window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
 		}
 	}
 	else
@@ -233,7 +233,7 @@ bool FabricatorSystem::OpenFab(bool sex){
 		mpUIlayout->SetVisible(true);
 		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
 		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
-		window->SetSize(1601.0F, 802.0F);
+		//window->SetSize(1601.0F, 802.0F);
 		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
 
 		Math::Rectangle rec = window->GetParent()->GetArea();
@@ -247,7 +247,7 @@ bool FabricatorSystem::OpenFab(bool sex){
 			mWindowOffset = 0;
 		}
 
-		window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
+		//window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
 
 
 		auto closeButton = mpUIlayout->FindWindowByID(id("exitRF"));

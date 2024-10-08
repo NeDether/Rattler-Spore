@@ -16,7 +16,7 @@ void SolSysResourcesCheat::ParseLine(const ArgScript::Line& line)
 {
 	
 
-	//SolarSystemResourcesA.OpenSysUI();
+	SolarSystemResourcesA.OpenSysUI();
 	
 	
 	//SolarSystemResourcesA.LogSystem();

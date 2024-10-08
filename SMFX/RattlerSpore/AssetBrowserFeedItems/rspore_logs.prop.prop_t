@@ -1,0 +1,36 @@
+keys feedListItemKeyList
+	rare-scientistscroll01
+	rare-scientistscroll02
+	rare-scientistscroll03
+	rare-scientistscroll04
+	rare-scientistscroll05
+	rare-scientistscroll06
+	rare-scientistscroll07
+	rare-scientistscroll08
+	rare-scientistscroll09
+	rare-scientistscroll10
+	rare-relic1
+	rare-relic2
+	rare-relic3
+	rare-relic4
+	rare-relic5
+	rare-relic6
+	rare-relic7
+	rare-relic8
+	rare-relic9
+	rare-relic10
+	rare-galacticobject1
+	rare-galacticobject2
+	rare-galacticobject3
+	rare-galacticobject4
+	rare-galacticobject5
+	rare-galacticobject6
+	rare-galacticobject7
+	rare-galacticobject8
+	rare-galacticobject9
+	rare-galacticobject10
+end
+texts feedListItemName
+	(rattlermenu!0x10000000) "Vault Archive Logs"
+end
+key feedListItemType FeedItemMessage

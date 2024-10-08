@@ -193,20 +193,21 @@ bool ScanMenu::OpenScan(bool sex)
 		mpUIlayout->SetVisible(true);
 		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
 		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
-		window->SetSize(1601.0F, 802.0F);
+		//window->SetSize(1601.0F, 802.0F);
 		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
 
 		Math::Rectangle rec = window->GetParent()->GetArea();
 
 		if (sex)
 		{
-			mWindowOffset = (rec.top / 2 + (400 / 2) * -1);
+			mWindowOffset = 0;
+				//(rec.top / 2 + (400 / 2) * -1);
 		}
 		else
 		{
 			mWindowOffset = 0;
 		}
-		window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2)) + (rec.right / 4), (rec.bottom  / 2 - (400 / 2)) + mWindowOffset + rec.top - 200, (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + rec.top - 200));
+		//Guh???window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2)) + (rec.right / 4), (rec.bottom  / 2 - (400 / 2)) + mWindowOffset + rec.top - 200, (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + rec.top - 200));
 
 		//window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2))+(rec.right/4), (rec.bottom / 2 - (400 / 2)) + mWindowOffset + (rec.bottom / 2), (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + (rec.bottom / 2)));
 		auto menuWindow = mpUIlayout->FindWindowByID(id("ScanMenu"));
