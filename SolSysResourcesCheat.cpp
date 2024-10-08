@@ -14,8 +14,14 @@ SolSysResourcesCheat::~SolSysResourcesCheat()
 
 void SolSysResourcesCheat::ParseLine(const ArgScript::Line& line)
 {
+	
+
+	//SolarSystemResourcesA.OpenSysUI();
+	
+	
 	//SolarSystemResourcesA.LogSystem();
-	SolarSystemResourcesA.OpenSysUI();
+	
+	
 	// This method is called when your cheat is invoked.
 	// Put your cheat code here.
 }

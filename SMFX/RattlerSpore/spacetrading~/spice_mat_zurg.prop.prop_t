@@ -25,4 +25,4 @@ end
 texts spaceTradingNoNeed
 	(rattlercargo!0x00000004) "Please take a look at our fine goods available."
 end
-key spaceTradingType spice
+key spaceTradingType ware
