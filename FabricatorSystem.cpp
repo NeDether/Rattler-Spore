@@ -232,6 +232,8 @@ bool FabricatorSystem::OpenFab(bool sex){
 		//mpUIlayout->LoadByID(id("FabMenu"));
 		mpUIlayout->SetVisible(true);
 		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
+		auto glider = mpUIlayout->FindWindowByID(0x0755F180);
+		glider->SetVisible(true);
 		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
 		//window->SetSize(1601.0F, 802.0F);
 		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
@@ -240,7 +242,7 @@ bool FabricatorSystem::OpenFab(bool sex){
 
 		if (sex)
 		{
-			mWindowOffset = (rec.bottom / 2 + (902 / 2));
+			mWindowOffset = 0;
 		}
 		else
 		{
@@ -273,10 +275,11 @@ bool FabricatorSystem::CloseFab(bool sex) {
 	//App::ConsolePrintF("mario");
 	if (mpUIlayout)
 	{
-
+		auto glider = mpUIlayout->FindWindowByID(0x0755F180);
+		glider->SetVisible(false);
 		
 		auto paws = GameTimeManager.Resume(Simulator::TimeManagerPause::CommScreen);
-		mpUIlayout->SetVisible(false);
+		//mpUIlayout->SetVisible(false);
 		//App::ConsolePrintF("le test");
 		WindowManager.GetMainWindow()->RemoveWindow(mpUIlayout->FindWindowByID(0xFFFFFFFF, false));
 		auto Delete(mpUIlayout);
@@ -517,13 +520,13 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 					PropertyListPtr sillyPropList;
 					//If is a cargotype, get info from spacetrading~ rather than spacetools~
 					if (zurg.CargoType) {
-						App::ConsolePrintF("Wahoo!");
+					
 						if (PropManager.GetPropertyList(zurg.mToolID, 0x034d97fa, sillyPropList))
 						{
 							ImagePtr img;
 							if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 							{
-								//App::ConsolePrintF("Wahoo!");
+					
 								ImagePtr img;
 								if (Image::GetImage(imgKey, img))
 								{
@@ -532,16 +535,13 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 									uint32_t rColor;
 
 									if (App::Property::GetUInt32(sillyPropList.get(), 0x058CBB75, rColor)) {
-										//App::ConsolePrintF("ZurgTastic!");
+							
 										rColor = rColor + 4278190080;
 										Color ColR = Color::Color(rColor);
 										icon->SetShadeColor(ColR);
-										//	LocalizedString westyorkshire;
-										//	App::Property::GetText(sillyPropList.get(), 0x3068D95D, westyorkshire);
-										//	itemWindow->FindWindowByID(0x03754e6c)->SetCaption(westyorkshire.GetText());
+
 									}
 
-									//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
 									icon->SetDrawable(drawable);
 								}
 							}
@@ -560,7 +560,6 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 								{
 									ImageDrawable* drawable = new ImageDrawable();
 									drawable->SetImage(img.get());
-									//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
 									icon->SetDrawable(drawable);
 								}
 							}

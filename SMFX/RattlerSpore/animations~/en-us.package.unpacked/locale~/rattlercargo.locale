@@ -25,11 +25,11 @@
 0x00000019 RATTLER Fabricator
 0x0000001A Constructs tools and items using harvested resources.
 0x0000001B Medium Mineral Scanner
-0x0000001C Use this in space to geologically index the mineral composition of the selected planet's crust and mantle.
+0x0000001C Indexes and allows for harvest of crust, and mantle based minerals.
 0x0000001D Medium Mining Beam
 0x0000001E A beam that will harvest different resources on the planet at a faster and more efficient speed.
 0x0000001F Major Mineral Scanner
-0x00000020 A geologist's wet dream. Indexes crust, mantle, and core based minerals.
+0x00000020 Indexes and allows for harvest of crust, mantle, and core based minerals.
 0x00000021 Major Mining Beam
 0x00000022 Devastates the surface of the planet in order to return a massive bounty of all types of materials including crust mantle and core based minerals.
 0x00000023 Crude Oil

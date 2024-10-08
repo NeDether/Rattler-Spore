@@ -32,7 +32,6 @@ void Initialize() {
 	//Inject Categories in the Space Stage Tool Menu.
 	InjectCategories::InjectHeader();
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
-	App::ConsolePrintF("''We are Skond. We see you.''");
 	App::ConsolePrintF("RattlerSPORE: Core Enabled");
 	//May seem pointless but this is for copy and pasting config and stuff.
 
@@ -86,7 +85,7 @@ void Initialize() {
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_dye.prop");
 	}
 
-	SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
+	//SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
@@ -104,12 +103,12 @@ void Initialize() {
 	SimulatorSystem.AddStrategy(new AchievementSystem(), AchievementSystem::NOUN_ID);
 
 	//Add New Cheats.
-	CheatManager.AddCheat("viewCrafts", new ViewCrafts());
-	CheatManager.AddCheat("SpawnStation", new SpawnStation());
-	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
-	CheatManager.AddCheat("SpawnBee", new SpawnBee());
+	//CheatManager.AddCheat("viewCrafts", new ViewCrafts());
+	//CheatManager.AddCheat("SpawnStation", new SpawnStation());
+	//CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
+	//CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
-	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
+	//CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
 }
 
 void Dispose()
