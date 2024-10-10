@@ -66,16 +66,16 @@ bool MiningScanner::OnSelect(cSpaceToolData* pTool)
     const PlanetID mario = GetActivePlanetRecord()->GetID();
     uint32_t greg = mario.internalValue;
     Math::RandomNumberGenerator rng(greg);
-    int chud = rng.RandomInt(16);
-    if (chud >= 0 && chud <= 4) { //Copper
+    int chud = rng.RandomInt(17);
+    if (chud >= 0 && chud <= 5) { //Copper
   //      App::ConsolePrintF("your mineral is: copper");
         gaksterrific.push_back(id("spice_mat_copper"));
     }
-    else if (chud >= 5 && chud <= 8) { //Titanium
+    else if (chud >= 6 && chud <= 10) { //Titanium
    //     App::ConsolePrintF("your mineral is: titanium");
         gaksterrific.push_back(id("spice_mat_titanium"));
     }
-    else if (chud >= 9 && chud <= 13) { //Gold
+    else if (chud >= 11 && chud <= 15) { //Gold
       //  App::ConsolePrintF("your mineral is: gold");
         gaksterrific.push_back(id("spice_mat_gold"));
     }

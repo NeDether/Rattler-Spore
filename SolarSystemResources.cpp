@@ -42,6 +42,7 @@ void SolarSystemResources::Initialize() {
 	sInstance = this;
 	SystemIn = 0;
 	sysLayout = nullptr;
+	
 }
 
 void SolarSystemResources::Dispose() {
@@ -62,10 +63,12 @@ void SolarSystemResources::Update(int deltaTime, int deltaGameTime) {
 
 bool SolarSystemResources::OpenSysUI()
 {
+
 	if (!sysLayout) {
 		sysLayout = new UTFWin::UILayout();
 	}
 
+		
 	if (sysLayout->LoadByID(id("SolarSystemResource"))) {
 		
 		sysLayout->SetVisible(true);
@@ -73,8 +76,7 @@ bool SolarSystemResources::OpenSysUI()
 		WindowManager.GetMainWindow()->SendToBack(sysLayout->GetContainerWindow());
 		auto window = sysLayout->FindWindowByID(0xFFFFFFFF, false);
 		Math::Rectangle rec = window->GetParent()->GetArea();
-		
-	
+		return true;
 	}
 
 
@@ -84,6 +86,8 @@ bool SolarSystemResources::OpenSysUI()
 
 bool SolarSystemResources::CloseSysUI()
 {
+	auto Delete(sysLayout);
+	sysLayout = nullptr;
 	return false;
 }
 

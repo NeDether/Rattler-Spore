@@ -21,6 +21,7 @@
 #include "SolarSystemResources.h"
 #include "SolarSystemResourceEntry.h"
 #include "SolSysResourcesCheat.h"
+#include "VaultManager.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -99,6 +100,7 @@ void Initialize() {
 
 	//Add The New Systems
 	SimulatorSystem.AddStrategy(new FabricatorSystem(), FabricatorSystem::NOUN_ID);
+	SimulatorSystem.AddStrategy(new VaultManager(), VaultManager::NOUN_ID);
 	SimulatorSystem.AddStrategy(new ScanMenu(), ScanMenu::NOUN_ID);
 	SimulatorSystem.AddStrategy(new AchievementSystem(), AchievementSystem::NOUN_ID);
 
@@ -108,7 +110,7 @@ void Initialize() {
 	//CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
 	//CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
-	//CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
+	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
 }
 
 void Dispose()
@@ -116,8 +118,17 @@ void Dispose()
 	// This method is called when the game is closing
 }
 
+member_detour(GenerateVaultDetour, Simulator::cStarManager, void(cStarRecord* pStarRecord, StarRequestFilter* pFilter, bool useMaxPlanets)) {
+	void detoured(cStarRecord * pStarRecord, StarRequestFilter * pFilter, bool useMaxPlanets) {
+		App::ConsolePrintF("The system has generated.");
+		original_function(this, pStarRecord, pFilter, useMaxPlanets);
+		return;
+	}
+};
+
 void AttachDetours()
 {
+	GenerateVaultDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 }

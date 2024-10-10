@@ -44,10 +44,12 @@ upgrade
 placehappinessbooster
 sysUILayout
 plannerbudget
+rspore
 spice_mat_latticine
 station
 store-mining
 spg_ice
+RSPORE_ufo_radar_incoming_ratal
 turret
 zurgtastic
 spg_uranium
@@ -130,6 +132,7 @@ rare-galacticobject9
 ScanMenu
 rare-galacticobject8
 rattlerach
+config
 special
 CreatureEdit
 auto_Recipes_repairpotion
@@ -141,6 +144,7 @@ spice_drt_sulphide
 cat
 orbbardecor
 toolForge
+configRSPORE
 spg_cargopas_mineral
 graphics_atlas~	0x31a44893
 antimattermissile
@@ -175,6 +179,7 @@ auto_animations~_MaterialList
 ra
 zoo
 auto_Recipes_placebiostabilizer
+sg_blue_dot
 ach_core_mine3
 ach_core_mine2
 auto_spacetrading~_spice_drt_kamacite
@@ -224,6 +229,7 @@ spice_mat_uranium
 cat_terra
 tool
 catCombat
+configEP1
 iconZ
 leTitle
 cat_soc
@@ -240,6 +246,7 @@ rare-scientistscroll02
 rare-scientistscroll03
 rare-scientistscroll01
 spacerares_storybook
+empirecol
 spacerares_jewel
 spice_mat_cobalt
 rare-scientistscroll10
@@ -263,6 +270,7 @@ employed
 auto_Recipes_recipetemplate
 spg_titanium
 layouts_atlas~	0x40464200
+skibididopdopdop
 ach_core_fab
 auto_spacetools~_ach_core_cr1
 city
@@ -290,6 +298,8 @@ auto_spacetrading~_spice_mat_serenidite
 spg_nvidium
 auto_Recipes_aoe_repair
 auto_spacetrading~_spice_mat_uranium
+scripts3~	0x40890200
+ui_spg_generic_alert
 catslot
 crafting
 monolith
@@ -327,6 +337,7 @@ asteroid
 mining_beam1
 auto_AssetBrowserFeedItems_rspore_ach
 cat_combat
+rspore-cutscenes
 auto_RecipeCategories_tool
 population
 auto_spacetrading~_spice_mat_quartz

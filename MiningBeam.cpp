@@ -31,7 +31,7 @@ bool MiningBeam::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position
         const Simulator::PlanetID mario = Simulator::GetActivePlanetRecord()->GetID();
         uint32_t greg = mario.internalValue;
         RandomNumberGenerator rng(greg);
-        int abudnacne = rng.RandomInt(6)+1;
+        int abudnacne = rng.RandomInt(7);
         for (int i = 0; i < power; i++) {
             if (inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) {
              //   App::ConsolePrintF("LOOOOOOL");
@@ -112,15 +112,15 @@ void MiningBeam::getPool(uint32_t seed, int k) {
     string john = "spice1";
     if (k == 0) {
 
-        int chud = rng.RandomInt(16);
+        int chud = rng.RandomInt(17);
 
-            if (chud >= 0 && chud <= 4) {
+            if (chud >= 0 && chud <= 5) {
                 john = "spice_mat_copper";
             }
-            else if (chud >= 5 && chud <= 8) {
+            else if (chud >= 6 && chud <= 10) {
                 john = "spice_mat_titanium";
             }
-            else if (chud >= 9 && chud <= 13) {
+            else if (chud >= 11 && chud <= 15) {
                 john = "spice_mat_gold";
             }
             else {

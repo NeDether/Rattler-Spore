@@ -118,6 +118,9 @@
     <ClInclude Include="SolSysResourcesCheat.h">
       <Filter>RattlerSpore\Cheats</Filter>
     </ClInclude>
+    <ClInclude Include="VaultManager.h">
+      <Filter>RattlerSpore\Function\Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -200,6 +203,9 @@
     </ClCompile>
     <ClCompile Include="SolSysResourcesCheat.cpp">
       <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="VaultManager.cpp">
+      <Filter>RattlerSpore\Function\Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
