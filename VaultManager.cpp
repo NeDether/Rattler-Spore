@@ -49,6 +49,32 @@ void VaultManager::Dispose() {
 void VaultManager::Update(int deltaTime, int deltaGameTime) {
 	
 }
+
+
+
+bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
+{	//If black hole, or galactic object end.
+	if ((int)StrRecord->GetType() <= 3) {
+		App::ConsolePrintF("The system is a black hole.");
+		return false;
+	}
+	if (StrRecord->GetTechLevel() == TechLevel::Creature) {
+		int i = 0;
+		bool generatedVault = false;
+		while (!generatedVault || (i <= StrRecord->mPlanetCount)) {
+			//If T0 T1 T2 or T3 then generate vault, otherwise if gas giant or asteroid belt, skip.
+			if((int) StrRecord->GetPlanetRecord(i)->mType <= 2) {
+				App::ConsolePrintF("A vault has generated on planet %d", i);
+				return true;
+			}
+			i++;
+		
+		}
+	}
+	App::ConsolePrintF("The system has the incorrect tech level.");
+	return false;
+}
+
 VaultManager* VaultManager::Get()
 {
 	return sInstance;

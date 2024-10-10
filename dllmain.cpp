@@ -22,6 +22,7 @@
 #include "SolarSystemResourceEntry.h"
 #include "SolSysResourcesCheat.h"
 #include "VaultManager.h"
+#include "VaultDetours.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -118,13 +119,7 @@ void Dispose()
 	// This method is called when the game is closing
 }
 
-member_detour(GenerateVaultDetour, Simulator::cStarManager, void(cStarRecord* pStarRecord, StarRequestFilter* pFilter, bool useMaxPlanets)) {
-	void detoured(cStarRecord * pStarRecord, StarRequestFilter * pFilter, bool useMaxPlanets) {
-		App::ConsolePrintF("The system has generated.");
-		original_function(this, pStarRecord, pFilter, useMaxPlanets);
-		return;
-	}
-};
+
 
 void AttachDetours()
 {

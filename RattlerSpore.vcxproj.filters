@@ -35,6 +35,9 @@
     <Filter Include="RattlerSpore\Function\Systems\Classes">
       <UniqueIdentifier>{1710da10-3e3b-4b70-bd5c-690df232f109}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RattlerSpore\Detours">
+      <UniqueIdentifier>{0ed385f3-b74a-4586-9da7-8849c7b67c07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -120,6 +123,9 @@
     </ClInclude>
     <ClInclude Include="VaultManager.h">
       <Filter>RattlerSpore\Function\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="VaultDetours.h">
+      <Filter>RattlerSpore\Detours</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

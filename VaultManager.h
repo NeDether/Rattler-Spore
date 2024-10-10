@@ -3,7 +3,7 @@
 #include <Spore\BasicIncludes.h>
 
 #define VaultManagerPtr intrusive_ptr<VaultManager>
-#define VaultManagerA intrusive_ptr<VaultManager>
+#define VaultManagerA (VaultManager::Get())[0]
 
 ///
 /// In your dllmain Initialize method, add the system like this:
@@ -28,13 +28,14 @@ public:
 	void Update(int deltaTime, int deltaGameTime) override;
 
 
-
+	bool GenerateVault(cStarRecordPtr StrRecord);
 
 	static VaultManager* Get();
 	
 	static Simulator::Attribute ATTRIBUTES[];
 
 private:
+
 	static VaultManager* sInstance;
 	//
 	// You can add members here
