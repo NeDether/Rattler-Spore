@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Spore\BasicIncludes.h>
+#include "VaultPlanet.h"
 
 #define VaultManagerPtr intrusive_ptr<VaultManager>
 #define VaultManagerA (VaultManager::Get())[0]
@@ -31,12 +32,18 @@ public:
 	bool GenerateVault(cStarRecordPtr StrRecord);
 
 	static VaultManager* Get();
-	
+
+
 	static Simulator::Attribute ATTRIBUTES[];
+
+	bool isVaultPlanet(uint32_t PlanetID);
+	
 
 private:
 
 	static VaultManager* sInstance;
+	bool cutsceneSeti;
+	vector<uint32_t> vaultplanets;
 	//
 	// You can add members here
 	//

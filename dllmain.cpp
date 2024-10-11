@@ -22,6 +22,7 @@
 #include "SolarSystemResourceEntry.h"
 #include "SolSysResourcesCheat.h"
 #include "VaultManager.h"
+#include "VaultPlanet.h"
 #include "VaultDetours.h"
 // This is in dllmain.cpp
 
@@ -105,6 +106,9 @@ void Initialize() {
 	SimulatorSystem.AddStrategy(new ScanMenu(), ScanMenu::NOUN_ID);
 	SimulatorSystem.AddStrategy(new AchievementSystem(), AchievementSystem::NOUN_ID);
 
+
+	//Add System Subobjects
+	ClassManager.AddFactory(new VaultPlanetFactory());
 	//Add New Cheats.
 	//CheatManager.AddCheat("viewCrafts", new ViewCrafts());
 	//CheatManager.AddCheat("SpawnStation", new SpawnStation());
@@ -124,6 +128,7 @@ void Dispose()
 void AttachDetours()
 {
 	GenerateVaultDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
+	displayPlanetIconDetour::attach(GetAddress(Simulator::cPlanetRecord, GetTypeIconKey));
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 }

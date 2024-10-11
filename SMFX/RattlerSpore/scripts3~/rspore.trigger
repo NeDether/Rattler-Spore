@@ -1,4 +1,6 @@
+##############################
 #### RSPORE_VaultDetector ####
+##############################
 
 state RSPORE_VaultDetector
     letterbox -on
@@ -34,7 +36,11 @@ state RSPORE_VaultDetector5
    nextState SPG_MomentButtonSnap
 end
 
+####
+
+#########################
 #### RSPORE_VAULTCUT ####
+#########################
 
 state RSPORE_VAULTCUT
    addActor "Rare" rare
@@ -107,3 +113,46 @@ state RSPORE_VAULTCUT3
    toggleplumping "Rare" true
    nextState SPG_MomentButtonSnap
 end   
+
+####
+
+##############################################
+#### RSPORE_VAULTSETI ####
+##############################################
+
+state RSPORE_VAULTSETIWAIT
+	letterbox -on
+	wait -secs 3
+	nextState RSPORE_VAULTSETI
+end
+
+state RSPORE_VAULTSETI
+    letterbox -on
+    mixevent space_cin_start 1
+    addActor "ufo" ufo
+    toggleplumping "ufo" false
+   startEffect "detection" RSPORE_ufo_radar_incoming_ratal_galaxy -target "ufo" -attached -noWait
+   startcamera -target "ufo" -targetOffset (0, 0, 0) -useFootprint -offset 7 -nearClip .05 -noWait -follow -duration 1.5 -ease
+    wait -secs 2
+    nextState RSPORE_VAULTSETIB
+end
+
+state RSPORE_VAULTSETIB
+  ### startcamera -target "cachedStar" -targetOffset (0, 0, 0) -anchored  -noWait -nearClip .05 -ease -duration 1 ######
+   wait -secs 2
+   nextState RSPORE_VAULTSETIC
+end
+
+state RSPORE_VAULTSETIC
+   pauseGame -screenEffect -pauseGraphics
+   wait -secs .135
+   nextState RSPORE_VAULTSETID
+end
+
+state RSPORE_VAULTSETID
+    text "SPG_SETI" rspore-cutscenes!0x00000004
+   wait -secs 1
+   nextState SPG_MomentButton
+end
+
+####

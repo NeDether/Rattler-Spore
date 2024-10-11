@@ -39,9 +39,11 @@ Simulator::Attribute VaultManager::ATTRIBUTES[] = {
 };
 
 void VaultManager::Initialize() {
+	cutsceneSeti = false;
 	sInstance = nullptr;
 }
 
+	
 void VaultManager::Dispose() {
 	
 }
@@ -63,9 +65,15 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 		bool generatedVault = false;
 		while (!generatedVault || (i <= StrRecord->mPlanetCount)) {
 			//If T0 T1 T2 or T3 then generate vault, otherwise if gas giant or asteroid belt, skip.
-			if((int) StrRecord->GetPlanetRecord(i)->mType <= 2) {
+			if((int)StrRecord->GetPlanetRecord(i)->mType <= 2) {
+				
+				CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
+					
+				auto vaultplanet = simulator_new<VaultPlanet>();
+				vaultplanet->init(StrRecord->GetPlanetRecord(i)->GetID().internalValue);
 				App::ConsolePrintF("A vault has generated on planet %d", i);
 				return true;
+				
 			}
 			i++;
 		
@@ -79,4 +87,20 @@ VaultManager* VaultManager::Get()
 {
 	return sInstance;
 }
+bool VaultManager::isVaultPlanet(uint32_t PlanetID)
+{	//Get rid of the simulator system, a regular vector would be more optimized.
+	auto vaults = GetData<VaultPlanet>();
+	//		SavedBuildings.clear();
+	for (auto vault : vaults) {
+		if (vault->GetPlanetID() == PlanetID) {
+
+			return true;
+
+
+
+		}
+	}
+	return false;
+}
+
 VaultManager* VaultManager::sInstance;
