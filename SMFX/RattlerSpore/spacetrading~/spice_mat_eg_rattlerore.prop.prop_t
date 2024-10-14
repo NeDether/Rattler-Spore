@@ -1,18 +1,18 @@
-key inventoryItemArtifactModel sg_rare_geodes_08
+key inventoryItemArtifactModel sg_crate_spice_06
 float inventoryItemArtifactNormalScale 2
 float inventoryItemArtifactPlumpScale 2
-uint32 spaceEconomySpiceColor 0x0040414f
+uint32 spaceEconomySpiceColor 0x00e35e05
 texts spaceToolDescription
-	(rattlercargo!0x00000009) "PLACEHOLDER"
+	(rattlercargo!0x0000003D) "Rattler Ore"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x0000000A) "PLACEHOLDER"
+	(rattlercargo!0x0000003E) "PLACEHOLDER"
 end
 uint32s spaceToolImageColors
-	0xff40414f
+	0xffe35e05
 end
-key spaceToolImageID ufotools~!spg_latticine.png
-float spaceTradingBaseCost 15983
+key spaceToolImageID ufotools~!spg_cargopas_mineral.png
+float spaceTradingBaseCost 101000
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0
@@ -20,7 +20,7 @@ float spaceTradingChanceRedHard 0.0
 float spaceTradingChanceYellowEasy 0.0
 float spaceTradingChanceYellowHard 0.0
 texts spaceTradingNeed
-	(rattlercargo!0x00000003) "im god no for some copper."
+	(rattlercargo!0x00000003) "zurgroot."
 end
 texts spaceTradingNoNeed
 	(rattlercargo!0x00000004) "Please take a look at our fine goods available."

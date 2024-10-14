@@ -112,7 +112,7 @@ void Initialize() {
 	//Add New Cheats.
 	//CheatManager.AddCheat("viewCrafts", new ViewCrafts());
 	//CheatManager.AddCheat("SpawnStation", new SpawnStation());
-	//CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
+	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
 	//CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());

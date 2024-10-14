@@ -66,11 +66,22 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 		while (!generatedVault || (i <= StrRecord->mPlanetCount)) {
 			//If T0 T1 T2 or T3 then generate vault, otherwise if gas giant or asteroid belt, skip.
 			if((int)StrRecord->GetPlanetRecord(i)->mType <= 2) {
-				
+				//If statement was here that checked the boolean, however it resulted in returning a nullptr and crashes the game.
 				CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
 					
 				auto vaultplanet = simulator_new<VaultPlanet>();
 				vaultplanet->init(StrRecord->GetPlanetRecord(i)->GetID().internalValue);
+				ResourceKey vaultScript;
+				//rattlesnake //prop //planetTerrainScripts_artDirected~
+				//vaultScript = ResourceKey(0x98eeb4f9, 0x00B1B104, 0x4184a200);
+				//vaultTEST //prop //planetTerrainScriptsRSPORE
+				vaultScript = ResourceKey(0x7d7f4fbb, 0x00B1B104, 0x8C2C3803);
+				StrRecord->GetPlanetRecord(i)->SetGeneratedTerrainKey(vaultScript);
+				StrRecord->GetPlanetRecord(i)->mCommodityNodes.clear();
+				StrRecord->GetPlanetRecord(i)->mFlags = 17480;
+
+				StrRecord->GetPlanetRecord(i)->mSpiceGen = ResourceKey({ id(""),0,0 });
+
 				App::ConsolePrintF("A vault has generated on planet %d", i);
 				return true;
 				
