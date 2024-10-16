@@ -39,8 +39,9 @@ Simulator::Attribute VaultManager::ATTRIBUTES[] = {
 };
 
 void VaultManager::Initialize() {
+	App::ConsolePrintF("SKIBIDI");
 	cutsceneSeti = false;
-	sInstance = nullptr;
+	sInstance = this;
 }
 
 	
@@ -63,13 +64,19 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 	if (StrRecord->GetTechLevel() == TechLevel::Creature) {
 		int i = 0;
 		bool generatedVault = false;
-		while (!generatedVault || (i <= StrRecord->mPlanetCount)) {
+		while (!generatedVault || (i <= StrRecord->mPlanetCount-1)) {
+			//replace with foreach
+			int rando = rand(14);
+			App::ConsolePrintF("rand %d", rando);
+			App::ConsolePrintF("rand 2 %d", rando);
 			//If T0 T1 T2 or T3 then generate vault, otherwise if gas giant or asteroid belt, skip.
-			if((int)StrRecord->GetPlanetRecord(i)->mType <= 2) {
+			if((int)StrRecord->GetPlanetRecord(i)->mType <= 2 && rando == 13) {
 				//If statement was here that checked the boolean, however it resulted in returning a nullptr and crashes the game.
 				CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
-					
+
+
 				auto vaultplanet = simulator_new<VaultPlanet>();
+				//replace with hash_map
 				vaultplanet->init(StrRecord->GetPlanetRecord(i)->GetID().internalValue);
 				ResourceKey vaultScript;
 				//rattlesnake //prop //planetTerrainScripts_artDirected~

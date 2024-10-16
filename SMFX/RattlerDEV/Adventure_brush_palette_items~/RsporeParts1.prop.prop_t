@@ -1,0 +1,38 @@
+int32s palettePagePartItemColumns
+	0
+	1
+	2
+	0
+	1
+	2
+	0
+	1
+	2
+	0
+	1
+	2
+end
+int32s palettePagePartItemRows
+	0
+	0
+	0
+	1
+	1
+	1
+	2
+	2
+	2
+	3
+	3
+	3
+end
+keys palettePagePartItems
+	palette_config~!A_NestMarker
+	palette_config~!A_OriginalNestMarker
+	palette_config~!A_Part1Marker
+	palette_config~!A_Part2Marker
+	palette_config~!A_Part3marker
+	palette_config~!A_Part4Marker
+	palette_config~!A_EpicMarker
+end
+key palettePagePartParentPage markerpage

@@ -126,7 +126,7 @@ void Dispose()
 
 
 void AttachDetours()
-{
+{	
 	GenerateVaultDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
 	displayPlanetIconDetour::attach(GetAddress(Simulator::cPlanetRecord, GetTypeIconKey));
 	// Call the attach() method on any detours you want to add

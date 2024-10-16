@@ -1,0 +1,5 @@
+key parent palette_config~!TemplateScenarioTerraformPage.prop
+string16 description "Community page 1"
+key palettePageParentCategory Adventure_brush_palette_category~!rattlercategory
+uint32 palettePageSequenceNumber 100
+int32 palettePageSetId 1

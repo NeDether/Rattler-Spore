@@ -36,3 +36,5 @@ member_detour(GenerateVaultDetour, Simulator::cStarManager, void(cStarRecord* pS
 		return;
 	}
 };
+
+
