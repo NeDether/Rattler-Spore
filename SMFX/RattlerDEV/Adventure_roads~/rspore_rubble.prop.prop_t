@@ -1,0 +1,21 @@
+key parent TerrainModelTemplate.prop
+string16 description "RattlerSPORE Ruin Planet Rubble"
+floats modelLODDistances
+	15000
+	40000
+	200000
+end
+key modelMeshHull granite_massiverock1-hull
+key modelMeshLOD0 RSPORE_PlanetProps!rspore_rubble
+colorRGB modelPaintDecalColor (1.5, 1.5, 1.5)
+vector3 modelPaintDecalParams (45, 0, 0.8)
+float modelPlacementSpacingRing 140
+float modelScale 1
+bool modelUsesDeadColor false
+float obstacleBaseCollisionRadius 35
+float obstacleCanopyCollisionRadius 15
+float obstacleCollisionHeight 44
+float obstacleObjectExclusionRadius 45
+bool rockObstacleAllowed false
+uint32 terrainScriptModelType hash(volcano)
+bool 0x568D3F60 true

@@ -1,4 +1,4 @@
-key parent planetTerrainThemes_artDirected~!SpiralTheme.prop
+key parent planetTerrainThemes_space_T0A0~!SpaceT0A0Default.prop
 keys modelEffect
 	EP1_TB_Oceans_Landmass
 	EP1_TB_BasicTools_LevelBrush

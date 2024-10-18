@@ -1,0 +1,13 @@
+key parent models!DefaultTemplate.prop
+bboxs modelBoundingBox
+	(-3.9522221, -5.2316599, -3.215028) (9.0810318, 6.1373, 5.5650458)
+end
+float modelBoundingRadius 12.2923279
+keys modelEffect
+	0xF17B2324
+end
+floats modelLODDistances
+	500
+	600
+end
+key modelMeshLOD0 rspore_rubble.rw4

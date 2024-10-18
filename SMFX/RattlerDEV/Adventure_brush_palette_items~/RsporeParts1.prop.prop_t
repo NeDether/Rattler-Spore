@@ -27,12 +27,9 @@ int32s palettePagePartItemRows
 	3
 end
 keys palettePagePartItems
-	palette_config~!A_NestMarker
-	palette_config~!A_OriginalNestMarker
-	palette_config~!A_Part1Marker
-	palette_config~!A_Part2Marker
-	palette_config~!A_Part3marker
-	palette_config~!A_Part4Marker
-	palette_config~!A_EpicMarker
+	palette_config~!rspore_rubble
+	palette_config~!rspore_spicegyser
+	palette_config~!rspore_ruinedcolony
+
 end
-key palettePagePartParentPage markerpage
+key palettePagePartParentPage rattlerpage1
