@@ -2,6 +2,7 @@
 
 #include <Spore\BasicIncludes.h>
 #include "VaultPlanet.h"
+#include <Spore/Simulator/StarID.h>
 
 #define VaultManagerPtr intrusive_ptr<VaultManager>
 #define VaultManagerA (VaultManager::Get())[0]
@@ -37,13 +38,15 @@ public:
 	static Simulator::Attribute ATTRIBUTES[];
 
 	bool isVaultPlanet(uint32_t PlanetID);
+	bool isGrobPlanet(uint32_t pID);
+	bool isSkondPlanet(uint32_t pID);
 	
 
 private:
 
 	static VaultManager* sInstance;
 	bool cutsceneSeti;
-	vector<uint32_t> vaultplanets;
+	hash_map<ResourceKey, Simulator::PlanetID> vaultplanets;
 	//
 	// You can add members here
 	//

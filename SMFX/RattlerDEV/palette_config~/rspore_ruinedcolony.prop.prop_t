@@ -2,7 +2,7 @@ key parent palette_config~!TemplateBrush.prop
 texts spaceToolDescription
 	"RattlerSPORE Ruin Planet Colony"
 end
-key spaceToolImageID gettyImages!denether_lowq.png
+key spaceToolImageID denether.png
 float terraformBrushIntensityDefault 0.5
 vector2 terraformBrushIntensityRange (0.125, 5)
 float terraformBrushSizeDefault 1

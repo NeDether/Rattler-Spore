@@ -81,9 +81,11 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 				CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
 
 
-				auto vaultplanet = simulator_new<VaultPlanet>();
+				auto vaultplanet = StrRecord->GetPlanetRecord(i)->GetID();
 				//replace with hash_map
-				vaultplanet->init(StrRecord->GetPlanetRecord(i)->GetID().internalValue);
+				ResourceKey vpkey;
+				vpkey.instanceID = vaultplanet.internalValue;
+				vaultplanets.emplace(vpkey,vaultplanet);
 				ResourceKey vaultScript;
 				//rattlesnake //prop //planetTerrainScripts_artDirected~
 				//vaultScript = ResourceKey(0x98eeb4f9, 0x00B1B104, 0x4184a200);
@@ -113,16 +115,30 @@ VaultManager* VaultManager::Get()
 }
 bool VaultManager::isVaultPlanet(uint32_t PlanetID)
 {	//Get rid of the simulator system, a regular vector would be more optimized.
-	auto vaults = GetData<VaultPlanet>();
+	
 	//		SavedBuildings.clear();
-	for (auto vault : vaults) {
-		if (vault->GetPlanetID() == PlanetID) {
 
-			return true;
+	if (vaultplanets.find(ResourceKey().WithInstance(PlanetID)) != vaultplanets.end()) {
+
+		return true;
 
 
+	}
+	return false;
+}
 
-		}
+bool VaultManager::isGrobPlanet(uint32_t pID)
+{
+	if (PlanetID(pID).GetRecord()->GetStarRecord()->mEmpireID == StarManager.GetGrobEmpireID() && PlanetID(pID).GetRecord()->GetTechLevel() == TechLevel::Empire) {
+		return true;
+	}
+	return false;
+}
+
+bool VaultManager::isSkondPlanet(uint32_t pID)
+{
+	if (PlanetID(pID).GetRecord()->GetTechLevel() == TechLevel::City) {
+		return true;
 	}
 	return false;
 }

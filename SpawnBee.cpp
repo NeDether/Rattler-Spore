@@ -36,7 +36,7 @@ void SpawnBee::ParseLine(const ArgScript::Line& line)
 	//StarRecord->mTechLevel = (TechLevel::City);
 	//cPlanetRecord::FillPlanetDataForTechLevel(GetActivePlanetRecord(), TechLevel::Empire);
 	//GetActivePlanetRecord()->mTechLevel = (TechLevel)32;
-	//GetActivePlanetRecord()->mTechLevel = (TechLevel::City);
+	GetActivePlanetRecord()->mTechLevel = (TechLevel::City);
 	GetActivePlanetRecord()->mSpiceGen = ResourceKey({ id("spice6"),0,0 });
 	GetActivePlanetRecord()->mPlanetRing = 5;
 	//GetActivePlanetRecord()->field_10C = 1; //followers?

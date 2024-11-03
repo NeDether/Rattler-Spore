@@ -31,6 +31,9 @@ keys palettePagePartItems
 	palette_config~!rspore_rubbledecal
 	palette_config~!rspore_spicegyser
 	palette_config~!rspore_ruinedcolony
+	palette_config~!rspore_nedether
+	palette_config~!rspore_grobcore
+	palette_config~!rspore_grobpipe
 
 end
 key palettePagePartParentPage rattlerpage1
