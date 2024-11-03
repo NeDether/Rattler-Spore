@@ -1,0 +1,43 @@
+compiledState state-209
+	shaderID 0x70000118
+
+	flags1 0x4
+	flags3 0x80000
+
+	vertexDescription -field_4 0x159c540
+		element position D3DDECLTYPE_FLOAT3
+		element normal D3DDECLTYPE_DEC3N
+		element color D3DDECLTYPE_D3DCOLOR
+		element texcoord1 D3DDECLTYPE_FLOAT2
+	end
+
+	statesGroup 0
+		renderState D3DRS_ZENABLE D3DZB_TRUE
+		renderState D3DRS_ZWRITEENABLE FALSE
+		renderState D3DRS_SRCBLEND D3DBLEND_SRCALPHA
+		renderState D3DRS_DESTBLEND D3DBLEND_ONE
+		renderState D3DRS_CULLMODE D3DCULL_NONE
+		renderState D3DRS_ALPHABLENDENABLE TRUE
+	end
+	statesGroup 5
+		renderState D3DRS_BLENDOP D3DBLENDOP_ADD
+	end
+
+	textureSlot 0
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+
+	textureSlot 1
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+end
+
+material solarPlanetaryRings_material -states state-209 -textures reggrid2 reggrid2

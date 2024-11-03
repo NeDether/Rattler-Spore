@@ -130,6 +130,12 @@
     <ClInclude Include="VaultPlanet.h">
       <Filter>RattlerSpore\Systems\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="WareDetours.h">
+      <Filter>RattlerSpore\Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="StartingScenarioDetours.h">
+      <Filter>RattlerSpore\Detours</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

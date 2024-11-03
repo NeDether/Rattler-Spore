@@ -2,7 +2,7 @@ key parent palette_config~!TemplateBrush.prop
 texts spaceToolDescription
 	"RattlerSPORE Spice Gyser Deposit"
 end
-key spaceToolImageID PlanetProps_PNGs!SpringPlant.png
+key spaceToolImageID gettyImages!denether_lowq.png
 float terraformBrushIntensityDefault 0.5
 vector2 terraformBrushIntensityRange (0.125, 5)
 float terraformBrushSizeDefault 1

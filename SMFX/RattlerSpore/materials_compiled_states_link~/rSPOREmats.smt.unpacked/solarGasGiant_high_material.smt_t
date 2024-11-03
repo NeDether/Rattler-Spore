@@ -1,0 +1,58 @@
+compiledState state-67
+	shaderID 0x7000011A
+
+	flags1 0x4
+	flags3 0x80000
+
+	vertexDescription -field_4 0x15b2410
+		element position D3DDECLTYPE_FLOAT3
+		element normal D3DDECLTYPE_DEC3N
+		element color D3DDECLTYPE_D3DCOLOR
+		element texcoord1 D3DDECLTYPE_FLOAT2
+	end
+
+	statesGroup 0
+		renderState D3DRS_ZENABLE D3DZB_TRUE
+		renderState D3DRS_ZWRITEENABLE TRUE
+		renderState D3DRS_SRCBLEND D3DBLEND_SRCALPHA
+		renderState D3DRS_DESTBLEND D3DBLEND_INVSRCALPHA
+		renderState D3DRS_ALPHABLENDENABLE TRUE
+	end
+	statesGroup 5
+		renderState D3DRS_BLENDOP D3DBLENDOP_ADD
+	end
+
+	textureSlot 0
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+
+	textureSlot 1
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+
+	textureSlot 2
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+
+	textureSlot 3
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_CLAMP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_CLAMP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+end
+
+material solarGasGiant_high_material -states state-67 -textures reggrid2 reggrid2 reggrid2 reggrid2

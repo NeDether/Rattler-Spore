@@ -28,6 +28,7 @@ int32s palettePagePartItemRows
 end
 keys palettePagePartItems
 	palette_config~!rspore_rubble
+	palette_config~!rspore_rubbledecal
 	palette_config~!rspore_spicegyser
 	palette_config~!rspore_ruinedcolony
 

@@ -24,6 +24,8 @@
 #include "VaultManager.h"
 #include "VaultPlanet.h"
 #include "VaultDetours.h"
+#include "WareDetours.h"
+#include "StartingScenarioDetours.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -129,6 +131,7 @@ void AttachDetours()
 {	
 	GenerateVaultDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
 	displayPlanetIconDetour::attach(GetAddress(Simulator::cPlanetRecord, GetTypeIconKey));
+	GenerateNPCStoreDetour::attach(GetAddress(Simulator::cSpaceTrading, GenerateNPCStore));
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 }
