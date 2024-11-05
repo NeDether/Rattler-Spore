@@ -132,6 +132,7 @@ void AttachDetours()
 	GenerateVaultDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
 	displayPlanetIconDetour::attach(GetAddress(Simulator::cPlanetRecord, GetTypeIconKey));
 	GenerateNPCStoreDetour::attach(GetAddress(Simulator::cSpaceTrading, GenerateNPCStore));
+	ReadSPUI_Detour::attach(GetAddress(UTFWin::UILayout, Load));
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 }

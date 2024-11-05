@@ -6,7 +6,7 @@ end
 float modelEffectRange 1000
 colorRGB modelPaintDecalColor (0.5, 0.5, 0.5)
 vector3 modelPaintDecalParams (25, 0, 0.75)
-key modelPaintDecalTexture denether.png
+key modelPaintDecalTexture theson.png
 bool modelUsesDeadColor false
 float obstacleBaseCollisionRadius 0
 float obstacleCanopyCollisionRadius 0
