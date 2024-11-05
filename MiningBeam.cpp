@@ -207,3 +207,14 @@ bool MiningBeam::OnSelect(Simulator::cSpaceToolData* pTool)
 	return false;
 }
 
+bool MiningBeam::Update(Simulator::cSpaceToolData* pTool, bool showErrors, const char16_t**)
+{
+    if (Simulator::GetCurrentContext() == Simulator::SpaceContext::Planet) {
+        if (VaultManagerA.isVaultPlanet(Simulator::GetActivePlanet()->mPlanetKey)) {
+            return false;
+        }
+        return true;
+    }
+    return false;
+}
+

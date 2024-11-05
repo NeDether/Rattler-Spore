@@ -15,7 +15,7 @@
 #include <Spore/Simulator/SubSystem/StarManager.h>
 #include <Spore/Simulator/cPlanetRecord.h>
 #include "AchievementSystem.h"
-
+#include "VaultManager.h"
 
 #define MiningBeamPtr intrusive_ptr<MiningBeam>
 
@@ -31,6 +31,7 @@ public:
 	bool OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position, Simulator::SpaceToolHit hitType, int) override;
 	void getPool(uint32_t seed, int k);
 	virtual bool OnSelect(Simulator::cSpaceToolData* pTool) override;
+	virtual bool Update(Simulator::cSpaceToolData* pTool, bool showErrors, const char16_t** = nullptr);
 private:
 
 	int power;

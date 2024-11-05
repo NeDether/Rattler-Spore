@@ -69,7 +69,7 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 		int i = 0;
 		bool generatedVault = false;
 		//set to 10 normally
-		int chmance = rand(8);
+		int chmance = rand(12);
 		if (chmance > 1) {
 			return false;
 		}
