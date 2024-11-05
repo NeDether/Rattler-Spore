@@ -38,6 +38,17 @@ end
 
 ####
 
+##############################
+#### RSPORE_VaultSetiAlt ####
+##############################
+state RSPORE_VaultSetiAlt
+
+    addActor "ufo" ufo
+    wait -secs .15
+    startEffect "detection" RSPORE_ufo_radar_incoming_ratal_galaxy -target "ufo" -attached -noWait
+    wait -secs .15
+end
+
 #########################
 #### RSPORE_VAULTCUT ####
 #########################

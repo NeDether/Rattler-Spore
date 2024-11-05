@@ -7,7 +7,7 @@
 #include <Spore/Simulator/StarID.h>
 #include <Spore/Simulator/SubSystem/StarManager.h>
 #include <Spore/Simulator/cPlanetRecord.h>
-
+#include "VaultManager.h"
 
 
 #define MiningScannerPtr intrusive_ptr<MiningScanner>

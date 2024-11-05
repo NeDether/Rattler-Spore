@@ -13,7 +13,7 @@ end
 float spaceToolDetectableRange 15
 bool spaceToolDisableOnHomeworld false
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0.5
+float spaceToolEnergyCost 0.0
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end

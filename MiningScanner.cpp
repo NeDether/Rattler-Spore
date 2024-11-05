@@ -29,7 +29,10 @@ bool MiningScanner::Update(cSpaceToolData* pTool, bool showErrors, const char16_
     }
 
 	if ((GetCurrentContext() == SpaceContext::Planet || GetCurrentContext() == SpaceContext::SolarSystem) && pTool->mRechargeTimer.IsRunning() == false && GetActivePlanetRecord() != nullptr) {
-		
+        if (VaultManagerA.isVaultPlanet(GetActivePlanet()->mPlanetKey) || GetActivePlanetRecord()->mType == PlanetType::GasGiant) {
+           
+            return false;
+        }
 		return true; 
 	
 	}

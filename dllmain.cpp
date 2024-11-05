@@ -90,7 +90,7 @@ void Initialize() {
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_dye.prop");
 	}
 	//Skond
-	SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
+	//SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
@@ -115,7 +115,7 @@ void Initialize() {
 	//CheatManager.AddCheat("viewCrafts", new ViewCrafts());
 	//CheatManager.AddCheat("SpawnStation", new SpawnStation());
 	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
-	CheatManager.AddCheat("SpawnBee", new SpawnBee());
+	//CheatManager.AddCheat("SpawnBee", new SpawnBee());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
 }

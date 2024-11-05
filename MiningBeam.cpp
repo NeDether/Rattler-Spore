@@ -18,26 +18,28 @@ bool MiningBeam::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position
         if (EffectsManager.CreateVisualEffect(0x03fd5261, 0, effect)) {        
             effect->SetRigidTransform(Transform()
                 .SetOffset(position)
-                .SetScale(1.1f));
+                .SetScale(1.3f));
             effect->Start();
         }
        
 
-        if (Math::rand(2) == 0) {
+        if (Math::rand(2) != 0) {
             return success;
         }
         //Loottable
         
         const Simulator::PlanetID mario = Simulator::GetActivePlanetRecord()->GetID();
         uint32_t greg = mario.internalValue;
+        
         RandomNumberGenerator rng(greg);
         int abudnacne = rng.RandomInt(7);
+        //abudnacne is the exclusive value on a planet that gives you more or less of a dirt type mineral
         for (int i = 0; i < power; i++) {
             if (inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) {
              //   App::ConsolePrintF("LOOOOOOL");
             
-            }
-            if (Math::rand(abudnacne) == 0 && ((inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner2"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner3"), 0, 0 })))) {
+            }//Sbiv is what TIER of rock you are gonna get
+            if (Math::rand(abudnacne+2) == 1 && ((inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner2"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner3"), 0, 0 })))) {
                 int sbiv = 1;
      //           App::ConsolePrintF("is this clled?");
                 if (inventory->HasTool({ id("mineral_scanner2"), 0, 0 })) {

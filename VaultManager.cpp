@@ -68,17 +68,32 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 	if (StrRecord->GetTechLevel() == TechLevel::Creature) {
 		int i = 0;
 		bool generatedVault = false;
-
+		//set to 10 normally
+		int chmance = rand(8);
+		if (chmance > 1) {
+			return false;
+		}
 		//seriously replace with for each it keeps crashing
 		while (!generatedVault || (i <= StrRecord->mPlanetCount-1)) {
 			//replace with foreach
+			if (StrRecord->GetPlanetRecord(i) == nullptr) {
+				return false;
+			}
 			int rando = rand(14);
 			App::ConsolePrintF("rand %d", rando);
 			App::ConsolePrintF("rand 2 %d", rando);
+			int pType = (int)StrRecord->GetPlanetRecord(i)->mType;
+			
 			//If T0 T1 T2 or T3 then generate vault, otherwise if gas giant or asteroid belt, skip.
-			if((int)StrRecord->GetPlanetRecord(i)->mType <= 2) {
+			if(pType >= 2 && pType <= 5) {
 				//If statement was here that checked the boolean, however it resulted in returning a nullptr and crashes the game.
-				CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
+				
+				if (!VaultManagerA.cutsceneSeti) {
+					CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
+					VaultManagerA.cutsceneSeti = true;
+				}
+
+				
 
 
 				auto vaultplanet = StrRecord->GetPlanetRecord(i)->GetID();
@@ -90,12 +105,13 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 				//rattlesnake //prop //planetTerrainScripts_artDirected~
 				//vaultScript = ResourceKey(0x98eeb4f9, 0x00B1B104, 0x4184a200);
 				//vaultTEST //prop //planetTerrainScriptsRSPORE
-				vaultScript = ResourceKey(0x56dc595e, 0x00B1B104, 0x8C2C3803);
+				vaultScript = ResourceKey(0xa395f2a9, 0x00B1B104, 0x8C2C3803);
 				StrRecord->GetPlanetRecord(i)->SetGeneratedTerrainKey(vaultScript);
 				StrRecord->GetPlanetRecord(i)->mCommodityNodes.clear();
-				StrRecord->GetPlanetRecord(i)->mFlags = 17480;
+				//StrRecord->GetPlanetRecord(i)->mFlags = 17480;
+				//StrRecord->GetPlanetRecord(i)->mType = PlanetType::T1;
 
-				StrRecord->GetPlanetRecord(i)->mSpiceGen = ResourceKey({ id(""),0,0 });
+				//StrRecord->GetPlanetRecord(i)->mSpiceGen = ResourceKey({ id(""),0,0 });
 
 				App::ConsolePrintF("A vault has generated on planet %d", i);
 				return true;
