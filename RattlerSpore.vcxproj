@@ -178,6 +178,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="StartingScenarioDetours.h" />
+    <ClInclude Include="StartingScenarioHandler.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="VaultDetours.h" />
@@ -288,6 +292,10 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="SpawnStation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="StartingScenarioHandler.cpp">
       <SubType>
       </SubType>
     </ClCompile>

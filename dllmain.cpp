@@ -26,6 +26,7 @@
 #include "VaultDetours.h"
 #include "WareDetours.h"
 #include "StartingScenarioDetours.h"
+#include "StartingScenarioHandler.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -108,6 +109,8 @@ void Initialize() {
 	SimulatorSystem.AddStrategy(new ScanMenu(), ScanMenu::NOUN_ID);
 	SimulatorSystem.AddStrategy(new AchievementSystem(), AchievementSystem::NOUN_ID);
 
+
+	App::AddUpdateFunction(new StartingScenarioHandler());
 
 	//Add System Subobjects
 	ClassManager.AddFactory(new VaultPlanetFactory());
