@@ -97,6 +97,7 @@ bool AchievementSystem::Achieve(string16 name, string16 desc, ImagePtr grug)
 		mpUIlayout->SetVisible(true);
 		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
 		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
+		
 		window->SetSize(1601.0F, 802.0F);
 		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
 		
@@ -109,6 +110,8 @@ bool AchievementSystem::Achieve(string16 name, string16 desc, ImagePtr grug)
 		UTFWin::ImageDrawable* drawable = new UTFWin::ImageDrawable();
 		drawable->SetImage(grug.get());
 		mpUIlayout->FindWindowByID(id("leIcon"), true)->SetDrawable(drawable);
+		mpUIlayout->FindWindowByID(0x06244C50)->SetVisible(true);
+		window->BringToFront(window);
 
 		//mpUIlayout->FindWindowByID(id("skibidiRizz"), true).
 		

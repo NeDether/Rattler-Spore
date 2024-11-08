@@ -125,6 +125,16 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 	return false;
 }
 
+bool VaultManager::OpenVault(cPlanetRecordPtr PlRecord)
+{
+	auto vaultplanet = PlRecord->GetID();
+	//replace with hash_map
+	ResourceKey vpkey;
+	vpkey.instanceID = vaultplanet.internalValue;
+	vaultplanets.emplace(vpkey, vaultplanet);
+	return false;
+}
+
 VaultManager* VaultManager::Get()
 {
 	return sInstance;

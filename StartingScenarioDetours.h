@@ -23,19 +23,16 @@ member_detour(ReadSPUI_Detour, UTFWin::UILayout, bool(const ResourceKey&, bool, 
         if (name.instanceID == id("GGENewGameFlowUIv1-EP1")) {
         //    ManualBreakpoint();
             //ResourceKey newGGE = ResourceKey(id("GGE_SpaceDesc"), name.typeID, name.groupID);
-                App::ConsolePrintF("RETARD ALERT");
             auto imageWindow = this->FindWindowByID(0x05941BB0, true);
   
  
             UTFWin::ImageDrawable::SetImageForWindow(imageWindow, { id("RSporeGGENewImage"),0x2F7D0004 ,0x74f5252c });
             UTFWin::IWindow* stageDesc = this->FindWindowByID(0x0668E2BB, true);
-            App::ConsolePrintF("%s", stageDesc->GetCaption());
             LocalizedString stageDescText;
            
             stageDescText.SetText(0x1082e1c6, 0x00000000, u"I AM THE RATTLERSPORE!");
           
             stageDesc->SetCaption(stageDescText.GetText());
-            App::ConsolePrintF("%s", stageDesc->GetCaption());
             //return original_function(this, newGGE, arg_4, arg_8);
 
         }

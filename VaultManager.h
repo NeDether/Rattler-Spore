@@ -31,7 +31,7 @@ public:
 
 
 	bool GenerateVault(cStarRecordPtr StrRecord);
-
+	bool OpenVault(cPlanetRecordPtr PlRecord);
 	static VaultManager* Get();
 
 
@@ -40,6 +40,10 @@ public:
 	bool isVaultPlanet(uint32_t PlanetID);
 	bool isGrobPlanet(uint32_t pID);
 	bool isSkondPlanet(uint32_t pID);
+
+
+
+
 	
 
 private:
@@ -47,6 +51,7 @@ private:
 	static VaultManager* sInstance;
 	bool cutsceneSeti;
 	hash_map<ResourceKey, Simulator::PlanetID> vaultplanets;
+	hash_map<ResourceKey, Simulator::PlanetID> openedVaults;
 	//
 	// You can add members here
 	//

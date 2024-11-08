@@ -1,0 +1,25 @@
+texts badgeCardDescription
+	"You need to fill out ~badge_left~ more skibidi. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	"You've killed ~badge_progress~ people."
+end
+uint32 badgeEffectID 0xf1d3b0dd
+texts badgeGroup
+	"Zurg"
+end
+texts badgeHintAction
+	"Experience the thrill on Dragon Ball Legends to earn the Zurg 1 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_hero_00.png
+texts badgeName
+	"Zurg 1"
+end
+int32 badgePointValue 1
+keys badgeRequirementList
+	badgeFlight101Complete
+end
+texts badgeUnlockString
+	"You've earned the Zurg 1 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_nearencounter_01.png

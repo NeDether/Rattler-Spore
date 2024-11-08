@@ -27,7 +27,7 @@ void StartingScenarioHandler::Update()
 	if (Simulator::GetGameModeID() == kGGEMode) {
 		if (WindowManager.GetMainWindow()->FindWindowByID(0x0668E2BB)) {
 			UTFWin::IWindow* stageDesc = WindowManager.GetMainWindow()->FindWindowByID(0x0668E2BB, true);
-			App::ConsolePrintF("%s", stageDesc->GetCaption());
+			
 			LocalizedString stageDescText;
 
 			stageDescText.SetText(0x1082e1c6, 0x00000000, u"Experience the Space Stage like never before. Exploit valueble resources. Fabricate new technologies. Subjegate or befriend your intergalactic peers. Will you be set on a path of creating new life, or destroying those who stand in your way?");
