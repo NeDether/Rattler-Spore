@@ -11,7 +11,7 @@ texts spaceToolDetailDescription
 	(rattlercargo!0x00000022) "PLACEHOLDER"
 end
 float spaceToolDetectableRange 15
-bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnHomeworld true
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0.0
 texts spaceToolLockedDescription

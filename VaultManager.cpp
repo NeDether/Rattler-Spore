@@ -106,6 +106,9 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 				//vaultScript = ResourceKey(0x98eeb4f9, 0x00B1B104, 0x4184a200);
 				//vaultTEST //prop //planetTerrainScriptsRSPORE
 				vaultScript = ResourceKey(0xa395f2a9, 0x00B1B104, 0x8C2C3803);
+				
+				
+				StrRecord->GetPlanetRecord(i)->GenerateTerrainKey();
 				StrRecord->GetPlanetRecord(i)->SetGeneratedTerrainKey(vaultScript);
 				StrRecord->GetPlanetRecord(i)->mCommodityNodes.clear();
 				//StrRecord->GetPlanetRecord(i)->mFlags = 17480;

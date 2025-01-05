@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "TriviteEmpire.h"
 
 
 using namespace ArgScript;
@@ -21,5 +22,22 @@ member_detour(GenerateNPCStoreDetour, Simulator::cSpaceTrading, void(cPlanetReco
 		//storeItems.back()->mNPCInventory.emplace_back(john.get());
 		//storeItems.back()->mSpiceID.emplace_back(ResourceKey{ id("spice6"),0, 0 });
 		original_function(this, planetRecord, dstSpiceText);
+	}
+};
+
+member_detour(spawnUFODetour, Simulator::cGameDataUFO, void(UfoType type,cEmpire* empire)) {
+	void detoured(UfoType type, cEmpire * empire) {
+
+
+		App::ConsolePrintF("Spawned A UFO.");
+		if (type == UfoType(11)) {
+			App::ConsolePrintF("Spawned A Trivite Drone.");
+			this->field_7E0 = u"Trivite Drone";
+			cEmpire* rizz = StarManager.GetEmpire(TriviteEmpireA.GetEmpireID());
+			empire = rizz;
+			original_function(this, type, empire);
+			return;
+		}
+		original_function(this, type, empire);
 	}
 };

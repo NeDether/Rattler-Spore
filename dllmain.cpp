@@ -27,6 +27,9 @@
 #include "WareDetours.h"
 #include "StartingScenarioDetours.h"
 #include "StartingScenarioHandler.h"
+#include "TriviteEmpire.h"
+#include "SpawnDrone.h"
+#include "ReadPirates.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -90,8 +93,9 @@ void Initialize() {
 		App::ConsolePrintF("RattlerSPORE: Spice Dyeing Addon Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_dye.prop");
 	}
-	//Skond
+	//Species
 	//SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
+	SimulatorSystem.AddStrategy(new TriviteEmpire(), TriviteEmpire::NOUN_ID);
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
@@ -114,11 +118,14 @@ void Initialize() {
 
 	//Add System Subobjects
 	ClassManager.AddFactory(new VaultPlanetFactory());
+
 	//Add New Cheats.
 	//CheatManager.AddCheat("viewCrafts", new ViewCrafts());
 	//CheatManager.AddCheat("SpawnStation", new SpawnStation());
 	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
+	CheatManager.AddCheat("ReadPirates", new ReadPirates());
 	//CheatManager.AddCheat("SpawnBee", new SpawnBee());
+	CheatManager.AddCheat("SpawnDrone", new SpawnDrone());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
 }
@@ -136,6 +143,7 @@ void AttachDetours()
 	displayPlanetIconDetour::attach(GetAddress(Simulator::cPlanetRecord, GetTypeIconKey));
 	GenerateNPCStoreDetour::attach(GetAddress(Simulator::cSpaceTrading, GenerateNPCStore));
 	ReadSPUI_Detour::attach(GetAddress(UTFWin::UILayout, Load));
+	spawnUFODetour::attach(GetAddress(Simulator::cGameDataUFO, Initialize));
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 }

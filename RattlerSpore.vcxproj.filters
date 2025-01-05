@@ -136,6 +136,16 @@
     <ClInclude Include="StartingScenarioDetours.h">
       <Filter>RattlerSpore\Detours</Filter>
     </ClInclude>
+    <ClInclude Include="StartingScenarioHandler.h" />
+    <ClInclude Include="TriviteEmpire.h">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnDrone.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadPirates.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -224,6 +234,16 @@
     </ClCompile>
     <ClCompile Include="VaultPlanet.cpp">
       <Filter>RattlerSpore\Systems\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="StartingScenarioHandler.cpp" />
+    <ClCompile Include="TriviteEmpire.cpp">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnDrone.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadPirates.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

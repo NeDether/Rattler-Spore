@@ -11,7 +11,7 @@ texts spaceToolDetailDescription
 	(rattlercargo!0x0000000C) "PLACEHOLDER"
 end
 float spaceToolDetectableRange 15
-bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnHomeworld true
 bool spaceToolDisableOnSaveGames true
 float spaceToolEnergyCost 0.0
 texts spaceToolLockedDescription
@@ -22,7 +22,7 @@ float spaceToolMaxDamage 10
 float spaceToolMaxRange 300
 float spaceToolMinDamage 5
 key spaceToolPanelKey TravelAbilityPanel
-bool spaceToolShowCollectedOrUnlockedText false
+bool spaceToolShowCollectedOrUnlockedText true
 key spaceToolStrategy mining_beam1
 key spaceToolType special
 int32 spaceToolUseCost 0
