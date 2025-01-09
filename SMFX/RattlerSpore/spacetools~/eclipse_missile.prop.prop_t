@@ -1,0 +1,51 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Eclipse Missile"
+int32 spaceToolAmmoUsedPerShot 0
+float spaceToolAutoFireRate 10
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 35
+texts spaceToolDescription
+	(spacegame_tools!0x84e3b697) "Anti-Matter Missile"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x12c6214e) "Fires a very powerful homing missile at its target, capable of destroying multiple aircrafts."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_combat_antimattermissle.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 1000000
+float spaceToolMaxRange 500
+float spaceToolMinDamage 900
+float spaceToolMinRange 10
+key spaceToolPanelKey CombatConsumablePanel
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+int32 spaceToolUseCost 15
+bool spaceToolUsesAmmo true
+bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xCE318FC6
+key toolHitGroundEffectID 0xCE318FC6
+key toolHitWaterEffectID 0xCE318FC6
+bool toolIsHoming true
+key toolMuzzleEffectID 0xAB52E80C
+float toolProjectileEccentricity 0.25
+key toolProjectileEffectID SG_antimatter_weapon
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 200
+float toolProjectileTimeOut 2.25
+float toolProjectileTurnRate 0.005
+int32s toolTargetFlags
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061af4b2) "This weapon can only be fired at spaceships and vehicles."
+end

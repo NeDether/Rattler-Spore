@@ -18,7 +18,7 @@ void SolSysResourcesCheat::ParseLine(const ArgScript::Line& line)
 
 	//CinematicManager.PlayCinematic("RSPORE_VaultDetector", 0, 0, 0, 0, 0);
 
-	//CinematicManager.PlayCinematic("RSPORE_VAULTCUT", 0, 0, 0, 0, 0);
+	CinematicManager.PlayCinematic("RSPORE_VAULTCUT", 0, 0, 0, 0, 0);
 	//This will not work until the SolarSystemResources is re-added to DLLMAIN
 	//SolarSystemResourcesA.OpenSysUI();
 	//SolarSystemResourcesA.LogSystem();

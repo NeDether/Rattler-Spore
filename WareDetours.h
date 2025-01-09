@@ -28,14 +28,25 @@ member_detour(GenerateNPCStoreDetour, Simulator::cSpaceTrading, void(cPlanetReco
 member_detour(spawnUFODetour, Simulator::cGameDataUFO, void(UfoType type,cEmpire* empire)) {
 	void detoured(UfoType type, cEmpire * empire) {
 
+		
+		
 
-		App::ConsolePrintF("Spawned A UFO.");
-		if (type == UfoType(11)) {
+		if (empire == nullptr) {
+		App::ConsolePrintF("Spawned A UFO | Empire Hash : has no empire :( ");
+		}
+		else {
+		App::ConsolePrintF("Spawned A UFO | Empire Hash : 0x%x", empire->GetEmpireID());
+		
+		}
+
+		if (type == UfoType::SecurityDrone) {
 			App::ConsolePrintF("Spawned A Trivite Drone.");
-			this->field_7E0 = u"Trivite Drone";
-			cEmpire* rizz = StarManager.GetEmpire(TriviteEmpireA.GetEmpireID());
-			empire = rizz;
+			
+			//this->field_7E0 = u"Trivite Drone";
+			//cEmpire* rizz = StarManager.GetEmpire(TriviteEmpireA.GetEmpireID());
+			//empire = rizz;
 			original_function(this, type, empire);
+			this->SetModelKey({ 0x2538FB35, TypeIDs::ufo, GroupIDs::UFOModels });
 			return;
 		}
 		original_function(this, type, empire);

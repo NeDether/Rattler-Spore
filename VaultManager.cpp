@@ -138,6 +138,12 @@ bool VaultManager::OpenVault(cPlanetRecordPtr PlRecord)
 	return false;
 }
 
+void VaultManager::GiveRandBadge()
+{
+	BadgeManager.AddToBadgeProgress(BadgeManagerEvent(0x97d26d2b), 10);
+
+}
+
 VaultManager* VaultManager::Get()
 {
 	return sInstance;

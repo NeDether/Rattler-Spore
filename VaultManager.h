@@ -32,6 +32,9 @@ public:
 
 	bool GenerateVault(cStarRecordPtr StrRecord);
 	bool OpenVault(cPlanetRecordPtr PlRecord);
+
+	void GiveRandBadge();
+
 	static VaultManager* Get();
 
 

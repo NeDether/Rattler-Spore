@@ -17,8 +17,10 @@ void ReadPirates::ParseLine(const ArgScript::Line& line)
 	auto ufos = GetData<cGameDataUFO>(); //Causing Error
 
 	for (auto thaUFO : ufos ) {
-		if (thaUFO->mUFOType == 8) {
+		if (thaUFO->mUFOType == (int) UfoType::Unk7) {
 			cGameDataUFO* readMe = thaUFO.get();
+			readMe->SetModelKey({ 0x2538FB35, TypeIDs::ufo, GroupIDs::UFOModels });
+
 		
 		}
 

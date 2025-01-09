@@ -95,7 +95,7 @@ void Initialize() {
 	}
 	//Species
 	//SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
-	SimulatorSystem.AddStrategy(new TriviteEmpire(), TriviteEmpire::NOUN_ID);
+	//SimulatorSystem.AddStrategy(new TriviteEmpire(), TriviteEmpire::NOUN_ID);
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
