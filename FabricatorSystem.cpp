@@ -111,6 +111,20 @@ bool FabricatorSystem::IsSecret(uint32_t resID)
 	return false;
 }
 
+bool FabricatorSystem::HasUnlocked(uint32_t resID)
+{	//If in creative mode, unlock items.
+	if (PropManager.HasPropertyList(id("creativeTools"), id("rattlerConfig"))) {
+		return true;
+	}
+
+	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+	if (inventory->GetTool({resID,0,0}) == nullptr) {
+		return false;
+	
+	}
+	return true;
+}
+
 bool FabricatorSystem::InCategory(uint32_t resID, uint32_t cat)
 {
 	if (Recipe& res = GetRecipe(resID)) {
@@ -468,7 +482,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 	{
 		//string error;
 		
-		if (!IsSecret(it.mpNode->mValue.second.CraftingID)) //Replace this with if secret later
+		if (!IsSecret(it.mpNode->mValue.second.CraftingID) && HasUnlocked(it.mpNode->mValue.second.mToolID)) //Replace this with if secret later
 		{	
 			if (InCategory(it.mpNode->mValue.second.CraftingID, cat)) {
 				validRecipes.push_back(it.mpNode->mValue.second);

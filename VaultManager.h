@@ -52,9 +52,15 @@ public:
 private:
 
 	static VaultManager* sInstance;
+	//Cutscene bools.
 	bool cutsceneSeti;
-	hash_map<ResourceKey, Simulator::PlanetID> vaultplanets;
-	hash_map<ResourceKey, Simulator::PlanetID> openedVaults;
+	bool cutsceneSysView;
+	bool cutscenePlanetView;
+
+	bool LoadPlanet; //Used for loading drones and vaults on planets.
+
+	hash_map<ResourceKey, uint32_t> vaultplanets;
+	hash_map<ResourceKey, uint32_t> openedVaults;
 	//
 	// You can add members here
 	//

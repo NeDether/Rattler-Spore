@@ -101,6 +101,7 @@ public:
 	bool InCategory(uint32_t resID, uint32_t cat);
 	bool SelectRecipe(Recipe ThatRecipe);
 	bool IsSecret(uint32_t resID);
+	bool HasUnlocked(uint32_t resID);
 	bool OpenFab(bool sex);
 	bool CloseFab(bool sex);
 	bool Fabricate(Recipe res);

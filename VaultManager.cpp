@@ -33,15 +33,27 @@ bool VaultManager::Read(Simulator::ISerializerStream* stream)
 using namespace Simulator;
 
 Simulator::Attribute VaultManager::ATTRIBUTES[] = {
+	SimAttribute(VaultManager,vaultplanets,1),
+	SimAttribute(VaultManager,openedVaults,1),
+	SimAttribute(VaultManager,cutsceneSeti,1),
+	SimAttribute(VaultManager,cutsceneSysView,1),
+	SimAttribute(VaultManager,cutscenePlanetView,1),
+
 	// Add more attributes here
+	// 
+	//
 	// This one must always be at the end
+
 	Simulator::Attribute()
 };
 
 void VaultManager::Initialize() {
 	App::ConsolePrintF("SKIBIDI");
-	cutsceneSeti = false;
+	cutsceneSeti = false; //Did the first cutscene in a save file?
+	cutsceneSysView = false; //Did the second cutscene in the solar system view?
+	cutscenePlanetView = false; //Did the third cutscene on the planet surface?
 	sInstance = this;
+	LoadPlanet = false;
 }
 
 	
@@ -50,6 +62,62 @@ void VaultManager::Dispose() {
 }
 
 void VaultManager::Update(int deltaTime, int deltaGameTime) {
+
+	if (GetCurrentGameMode() == GameModeIDs::kGameSpace) {
+	
+		if (GetCurrentContext() == SpaceContext::SolarSystem) {
+			LoadPlanet = false;
+			uint32_t pid = GetActivePlanetRecord()->GetID().internalValue;
+
+				if (isVaultPlanet(pid)) {
+					if (!cutsceneSysView) {
+						cutsceneSysView = true;
+						CinematicManager.PlayCinematic("RSPORE_VaultDetector", 0, 0, 0, 0, 0);
+					}
+
+				}
+		}
+		else if (GetCurrentContext() == SpaceContext::Planet) {
+			if (!LoadPlanet) {
+				uint32_t pid = GetActivePlanetRecord()->GetID().internalValue;
+				if (isVaultPlanet(pid)) {
+
+
+
+
+					//Summon the Eclipse Sentinel
+					App::ConsolePrintF("Spawned A Ra'tal Drone.");
+					cGameDataUFO* drone = CreateUFO(UfoType::SecurityDrone, nullptr);
+					//drone->SetModelKey({ 0x2538FB35, TypeIDs::ufo, GroupIDs::UFOModels});
+						drone->SetModelKey({ 0x25A8E66C, TypeIDs::ufo, GroupIDs::UFOModels });
+						drone->SetTarget(GetPlayerUFO());
+						drone->SetScale(5.0);
+						drone->SetDesiredSpeed(0.2, 1);
+						drone->mStandardSpeed = (0.3);
+						drone->mMaxHealthPoints = 20000;
+						drone->Heal(true);
+						ToolManager.LoadTool(ResourceKey({ 0x1a8de7dd, 0, 0 }), drone->mpNPCFarAirWeapon);
+						ToolManager.LoadTool(ResourceKey({ 0xfc22027a, 0, 0 }), drone->mpNPCMediumAirWeapon);
+
+					ToolManager.LoadTool(ResourceKey({ 0x3a8ad016, 0, 0 }), drone->mpNPCNearAirWeapon);
+					drone->SetPosition(Vector3(0, 1000, 0));
+					drone->mZoomAltitude = 1000;
+
+
+					//Play Vault intro cutscene when first land.
+					if (!cutscenePlanetView) {
+						cutscenePlanetView = true;
+						CinematicManager.PlayCinematic("RSPORE_VAULTCUT", 0, 0, 0, 0, 0);
+					}
+				}
+				LoadPlanet = true;
+
+				}
+			}
+		else {
+			LoadPlanet = false;
+		}
+	}
 	
 }
 
@@ -100,7 +168,7 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 				//replace with hash_map
 				ResourceKey vpkey;
 				vpkey.instanceID = vaultplanet.internalValue;
-				vaultplanets.emplace(vpkey,vaultplanet);
+				vaultplanets.emplace(vpkey,vaultplanet.internalValue);
 				ResourceKey vaultScript;
 				//rattlesnake //prop //planetTerrainScripts_artDirected~
 				//vaultScript = ResourceKey(0x98eeb4f9, 0x00B1B104, 0x4184a200);
@@ -134,7 +202,7 @@ bool VaultManager::OpenVault(cPlanetRecordPtr PlRecord)
 	//replace with hash_map
 	ResourceKey vpkey;
 	vpkey.instanceID = vaultplanet.internalValue;
-	vaultplanets.emplace(vpkey, vaultplanet);
+	vaultplanets.emplace(vpkey, vaultplanet.internalValue);
 	return false;
 }
 
