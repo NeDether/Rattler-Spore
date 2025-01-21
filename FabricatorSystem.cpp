@@ -118,6 +118,42 @@ bool FabricatorSystem::HasUnlocked(uint32_t resID)
 	}
 
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+
+	if (Recipe& res = GetRecipe(resID)) {
+
+		if (res.Starter) {
+
+			return true;
+		}
+
+		if (res.CargoType) {
+
+			return true;
+		}
+
+		if (res.UpgradeType) {
+			if (res.toolUpgrade != 0) {
+				if (inventory->GetTool({ resID,0,0 }) == nullptr && inventory->GetTool({ res.toolUpgrade,0,0 }) != nullptr) {
+					return true;
+
+				}
+				return false;
+			
+			}
+			else {
+				if (inventory->GetTool({ resID,0,0 }) == nullptr) {
+					return true;
+
+				}
+				return false;
+			
+			}
+
+		}
+
+	}
+
+	
 	if (inventory->GetTool({resID,0,0}) == nullptr) {
 		return false;
 	
@@ -312,6 +348,11 @@ bool FabricatorSystem::Fabricate(Recipe res)
 	if (!AbleToCraft(res)) {
 		return false;
 	}
+
+	if (!HasUnlocked(res.CraftingID)) {
+		return false;
+	}
+
 	int j = 0;
 	for each (uint32_t mat in res.Ingredients) {
 		if (!UseMaterial(mat, res.IngCount[j])) 
@@ -335,6 +376,7 @@ bool FabricatorSystem::Fabricate(Recipe res)
 			return false;
 		}
 	}
+	RenderRecipies(res.Cat);
 
 	AchievementSystemA.CraftCount += res.productAmount;
 
@@ -482,7 +524,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 	{
 		//string error;
 		
-		if (!IsSecret(it.mpNode->mValue.second.CraftingID) && HasUnlocked(it.mpNode->mValue.second.mToolID)) //Replace this with if secret later
+		if (!IsSecret(it.mpNode->mValue.second.CraftingID) && HasUnlocked(it.mpNode->mValue.second.CraftingID)) //Replace this with if secret later
 		{	
 			if (InCategory(it.mpNode->mValue.second.CraftingID, cat)) {
 				validRecipes.push_back(it.mpNode->mValue.second);
@@ -554,6 +596,8 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 										Color ColR = Color::Color(rColor);
 										icon->SetShadeColor(ColR);
 
+
+
 									}
 
 									icon->SetDrawable(drawable);
@@ -578,6 +622,10 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 								}
 							}
 						}
+					}
+
+					if (!AbleToCraft(zurg)) {
+						itemWindow->SetShadeColor(Color::RED);
 					}
 
 					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
@@ -776,9 +824,12 @@ Recipe::Recipe(uint32_t propID) {
 		CraftingID = 0;
 		mToolID = 0;
 		productAmount = 0;
+		toolUpgrade;
 		Cat = 0;
 		Secret = true;
 		CargoType = false;
+		Starter = false;
+		UpgradeType = false;
 		return;
 	}
 
@@ -794,11 +845,32 @@ Recipe::Recipe(uint32_t propID) {
 			string error = "Research property list " + to_string(propID) + " has no output amount!";
 			throw std::invalid_argument(error.c_str());
 		}
+
 		App::Property::GetBool(mpPropList.get(), id("SecretRecip"), Secret);
 		
 		if (!App::Property::GetBool(mpPropList.get(), id("CargoType"), CargoType)) {
 			CargoType = false;
 		};
+
+
+		if (!App::Property::GetBool(mpPropList.get(), id("Starter"), Starter)) {
+			Starter = false;
+		}
+
+		if (!App::Property::GetBool(mpPropList.get(), id("UpgradeType"), UpgradeType)) {
+			UpgradeType = false;
+		}
+		//If has a tool that it has upgraded from.
+		if (UpgradeType) {
+			if (!App::Property::GetUInt32(mpPropList.get(), id("toolUpgrade"), toolUpgrade))
+			{
+				toolUpgrade = 0;
+			}
+
+		
+		
+		}
+
 		App::Property::GetUInt32(mpPropList.get(), id("Catagory"), Cat);
 		size_t count;
 		uint32_t* ids;

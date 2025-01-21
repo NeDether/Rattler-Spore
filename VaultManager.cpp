@@ -44,7 +44,7 @@ Simulator::Attribute VaultManager::ATTRIBUTES[] = {
 	//
 	// This one must always be at the end
 
-	Simulator::Attribute()
+	Simulator::Attribute(),
 };
 
 void VaultManager::Initialize() {
@@ -88,17 +88,17 @@ void VaultManager::Update(int deltaTime, int deltaGameTime) {
 					//Summon the Eclipse Sentinel
 					App::ConsolePrintF("Spawned A Ra'tal Drone.");
 					cGameDataUFO* drone = CreateUFO(UfoType::SecurityDrone, nullptr);
-					//drone->SetModelKey({ 0x2538FB35, TypeIDs::ufo, GroupIDs::UFOModels});
-						drone->SetModelKey({ 0x25A8E66C, TypeIDs::ufo, GroupIDs::UFOModels });
-						drone->SetTarget(GetPlayerUFO());
-						drone->SetScale(5.0);
-						drone->SetDesiredSpeed(0.2, 1);
-						drone->mStandardSpeed = (0.3);
-						drone->mMaxHealthPoints = 20000;
-						drone->Heal(true);
-						ToolManager.LoadTool(ResourceKey({ 0x1a8de7dd, 0, 0 }), drone->mpNPCFarAirWeapon);
-						ToolManager.LoadTool(ResourceKey({ 0xfc22027a, 0, 0 }), drone->mpNPCMediumAirWeapon);
-
+					
+					drone->SetModelKey({ 0x25A8E66C, TypeIDs::ufo, GroupIDs::UFOModels });
+					drone->SetTarget(GetPlayerUFO());
+					drone->SetScale(5.0);
+					drone->SetDesiredSpeed(0.2, 1);
+					drone->mStandardSpeed = (0.3);
+					drone->mMaxHealthPoints = 20000;
+					drone->Heal(true);
+					//Give it weapons
+					ToolManager.LoadTool(ResourceKey({ 0x1a8de7dd, 0, 0 }), drone->mpNPCFarAirWeapon);
+					ToolManager.LoadTool(ResourceKey({ 0xfc22027a, 0, 0 }), drone->mpNPCMediumAirWeapon);
 					ToolManager.LoadTool(ResourceKey({ 0x3a8ad016, 0, 0 }), drone->mpNPCNearAirWeapon);
 					drone->SetPosition(Vector3(0, 1000, 0));
 					drone->mZoomAltitude = 1000;

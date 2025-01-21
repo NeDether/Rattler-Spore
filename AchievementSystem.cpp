@@ -38,7 +38,7 @@ Simulator::Attribute AchievementSystem::ATTRIBUTES[] = {
 	SimAttribute(AchievementSystem,CraftCount,1),
 	SimAttribute(AchievementSystem,Discoveries,1),
 	SimAttribute(AchievementSystem,MineCount,1),
-	Simulator::Attribute()
+	Simulator::Attribute(),
 };
 
 
@@ -49,6 +49,7 @@ void AchievementSystem::Initialize() {
 
 	counter = 0;
 	SecretPhrase = false;
+
 
 }
 
@@ -145,13 +146,13 @@ bool AchievementSystem::Achieve(string ied)
 			string16 achDesc;
 			achName.assign_convert(toolName.GetText());
 			achDesc.assign_convert(toolDesc.GetText());
-			//App::ConsolePrintF("sex");
+
 			if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 			{
 				ImagePtr img;
 				if (UTFWin::Image::GetImage(imgKey, img))
 				{
-					//	App::ConsolePrintF("autism");
+
 					Achieve(achName, achDesc, img);
 
 
@@ -171,40 +172,41 @@ bool AchievementSystem::Achieve(string ied)
 
 bool AchievementSystem::Close()
 {
-	//App::ConsolePrintF("mario");
+
 	if (mpUIlayout)
 	{
 
 
 		mpUIlayout->SetVisible(false);
-		//App::ConsolePrintF("le test");
+
 		WindowManager.GetMainWindow()->RemoveWindow(mpUIlayout->FindWindowByID(0xFFFFFFFF, false));
 		auto Delete(mpUIlayout);
 		mpUIlayout = nullptr;
 		return true;
 	}
-	//App::ConsolePrintF("brug");
+
 	return false;
 }
 
 bool AchievementSystem::Discover(string matname)
 {
 	if (std::find(Discoveries.begin(), Discoveries.end(), matname) != Discoveries.end()) {
+		App::ConsolePrintF("Total Discoveries: %d",Discoveries.size());
 		return true;
 	}
 	else {
-
+		App::ConsolePrintF("New Discovery! %s", matname);
 		Discoveries.emplace_back(matname);
 		/* v does not contain x */
 	}
 
-	if (Discoveries.size() == 6) {
+	if (Discoveries.size() == 5) {
 		Achieve("ach_core_geo1");
 	}
-	if (Discoveries.size() == 11) {
+	if (Discoveries.size() == 10) {
 		Achieve("ach_core_geo2");
 	}
-	if (Discoveries.size() == 21) {
+	if (Discoveries.size() == 20) {
 		Achieve("ach_core_geo3");
 	}
 	return false;

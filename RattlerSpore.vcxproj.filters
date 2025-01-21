@@ -55,9 +55,6 @@
     <ClInclude Include="Fabricator.h">
       <Filter>RattlerSpore\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="FabricatorSystem.h">
-      <Filter>RattlerSpore\Function</Filter>
-    </ClInclude>
     <ClInclude Include="xFabClose.h">
       <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
@@ -84,9 +81,6 @@
     </ClInclude>
     <ClInclude Include="ViewCrafts.h">
       <Filter>RattlerSpore\Cheats</Filter>
-    </ClInclude>
-    <ClInclude Include="AchievementSystem.h">
-      <Filter>RattlerSpore\Function</Filter>
     </ClInclude>
     <ClInclude Include="DestroySave.h">
       <Filter>RattlerSpore\Cheats</Filter>
@@ -146,6 +140,12 @@
     <ClInclude Include="ReadPirates.h">
       <Filter>RattlerSpore\Cheats</Filter>
     </ClInclude>
+    <ClInclude Include="FabricatorSystem.h">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementSystem.h">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -162,9 +162,6 @@
     </ClCompile>
     <ClCompile Include="Fabricator.cpp">
       <Filter>RattlerSpore\Tools</Filter>
-    </ClCompile>
-    <ClCompile Include="FabricatorSystem.cpp">
-      <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="xFabClose.cpp">
       <Filter>RattlerSpore\Function</Filter>
@@ -192,9 +189,6 @@
     </ClCompile>
     <ClCompile Include="ViewCrafts.cpp">
       <Filter>RattlerSpore\Cheats</Filter>
-    </ClCompile>
-    <ClCompile Include="AchievementSystem.cpp">
-      <Filter>RattlerSpore\Function</Filter>
     </ClCompile>
     <ClCompile Include="DestroySave.cpp">
       <Filter>RattlerSpore\Cheats</Filter>
@@ -244,6 +238,12 @@
     </ClCompile>
     <ClCompile Include="ReadPirates.cpp">
       <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="FabricatorSystem.cpp">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="AchievementSystem.cpp">
+      <Filter>RattlerSpore\Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
