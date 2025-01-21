@@ -34,10 +34,10 @@ using namespace Simulator;
 
 Simulator::Attribute VaultManager::ATTRIBUTES[] = {
 	SimAttribute(VaultManager,vaultplanets,1),
-	SimAttribute(VaultManager,openedVaults,1),
-	SimAttribute(VaultManager,cutsceneSeti,1),
-	SimAttribute(VaultManager,cutsceneSysView,1),
-	SimAttribute(VaultManager,cutscenePlanetView,1),
+	SimAttribute(VaultManager,openedVaults,2),
+	SimAttribute(VaultManager,cutsceneSeti,3),
+	SimAttribute(VaultManager,cutsceneSysView,4),
+	SimAttribute(VaultManager,cutscenePlanetView,5),
 
 	// Add more attributes here
 	// 
@@ -49,6 +49,8 @@ Simulator::Attribute VaultManager::ATTRIBUTES[] = {
 
 void VaultManager::Initialize() {
 	App::ConsolePrintF("SKIBIDI");
+	hash_map <ResourceKey, uint32_t> vaultplanets;
+	hash_map <ResourceKey, uint32_t> openedVaults;
 	cutsceneSeti = false; //Did the first cutscene in a save file?
 	cutsceneSysView = false; //Did the second cutscene in the solar system view?
 	cutscenePlanetView = false; //Did the third cutscene on the planet surface?
@@ -67,7 +69,8 @@ void VaultManager::Update(int deltaTime, int deltaGameTime) {
 	
 		if (GetCurrentContext() == SpaceContext::SolarSystem) {
 			LoadPlanet = false;
-			uint32_t pid = GetActivePlanetRecord()->GetID().internalValue;
+			if (GetActiveStarRecord()->GetType() != StarType::ProtoPlanetary && GetActiveStarRecord()->GetType() != StarType::BlackHole && GetActiveStarRecord()->GetType() != StarType::GalacticCore) {
+				uint32_t pid = GetActivePlanetRecord()->GetID().internalValue;
 
 				if (isVaultPlanet(pid)) {
 					if (!cutsceneSysView) {
@@ -76,6 +79,7 @@ void VaultManager::Update(int deltaTime, int deltaGameTime) {
 					}
 
 				}
+			}
 		}
 		else if (GetCurrentContext() == SpaceContext::Planet) {
 			if (!LoadPlanet) {

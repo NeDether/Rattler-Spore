@@ -38,11 +38,11 @@ public:
 	bool Achieve(string ied);
 	bool Close();
 
-	bool Discover(string matname);
+	bool Discover(ResourceKey matkey);
 
 	static Simulator::Attribute ATTRIBUTES[];
 	static AchievementSystem* Get();
-	vector <string> Discoveries;
+	hash_map <ResourceKey,uint32_t> Discoveries;
 	bool SecretPhrase;
 	int CraftCount = 0;
 	int MineCount = 0;

@@ -36,8 +36,8 @@ Simulator::Attribute AchievementSystem::ATTRIBUTES[] = {
 	// This one must always be at the end
 
 	SimAttribute(AchievementSystem,CraftCount,1),
-	SimAttribute(AchievementSystem,Discoveries,1),
-	SimAttribute(AchievementSystem,MineCount,1),
+	SimAttribute(AchievementSystem,Discoveries,2),
+	SimAttribute(AchievementSystem,MineCount,3),
 	Simulator::Attribute(),
 };
 
@@ -46,7 +46,9 @@ Simulator::Attribute AchievementSystem::ATTRIBUTES[] = {
 void AchievementSystem::Initialize() {
 	sInstance = this;
 	mpUIlayout = nullptr;
-
+	int CraftCount;
+	hash_map<ResourceKey,uint32_t> Discoveries;
+	int MineCount;
 	counter = 0;
 	SecretPhrase = false;
 
@@ -188,15 +190,16 @@ bool AchievementSystem::Close()
 	return false;
 }
 
-bool AchievementSystem::Discover(string matname)
+bool AchievementSystem::Discover(ResourceKey matkey)
 {
-	if (std::find(Discoveries.begin(), Discoveries.end(), matname) != Discoveries.end()) {
+
+	
+	if (Discoveries.find(matkey) != Discoveries.end()) {
 		App::ConsolePrintF("Total Discoveries: %d",Discoveries.size());
 		return true;
 	}
 	else {
-		App::ConsolePrintF("New Discovery! %s", matname);
-		Discoveries.emplace_back(matname);
+		Discoveries.emplace(matkey,matkey.instanceID);
 		/* v does not contain x */
 	}
 

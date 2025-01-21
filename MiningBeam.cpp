@@ -75,7 +75,7 @@ bool MiningBeam::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position
 
                 SpaceTrading.ObtainTradingObject({ id(john.c_str()), 0, 0 }, 1);
                 AchievementSystemA.MineCount++;
-                AchievementSystemA.Discover(john);
+                AchievementSystemA.Discover({ id(john.c_str()), 0, 0 });
 
 
             }
@@ -190,10 +190,10 @@ void MiningBeam::getPool(uint32_t seed, int k) {
 
 
     }
+    ResourceKey rekkey = { id(john.c_str()), 0, 0 };
 
-
-    SpaceTrading.ObtainTradingObject({ id(john.c_str()), 0, 0 }, 1);
-    AchievementSystemA.Discover(john);
+    SpaceTrading.ObtainTradingObject(rekkey, 1);
+    AchievementSystemA.Discover(rekkey);
 
 }
 
