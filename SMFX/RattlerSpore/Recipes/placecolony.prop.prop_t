@@ -16,4 +16,6 @@ end
 uint32 productAmount 1 #Amount of items this pops out.
 uint32 Catagory hash(colonization_category) #catagory in
 
+bool CargoType false
+bool Starter true
 bool SecretRecip false

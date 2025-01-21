@@ -7,6 +7,7 @@
 0x00000006 Assembler
 0x00000007 Cargo Silo
 0x00000008 Standardized Munitions
+0x00000009 Silicon Wafer
 0x00000010 Airtight hull made to widthstand the vacuum of space.
 0x00000011 Allows a ship's computer to measure the anglular position, velocity and acceleration within highly variable environments.
 0x00000012 Computers are incredibly useful devices that do highly repetitive or complex calculations within a short amount of time.
@@ -16,3 +17,4 @@
 0x00000016 Assemblers are mechanical arms that can be fine-tuned to precicely recreate an item over and over again.
 0x00000017 A cargo silo allows for matter to be stored in a space as efficiently as possible.
 0x00000018 These empty shells are retro-fit for every single possible type of cannon within the ~player_species~ fleet.
+0x00000019 These large disks of treated silicon make up a majority of microprocessors for every computer. Despite being completely opaque to visible light, they can be refactored into laser lenses as well.

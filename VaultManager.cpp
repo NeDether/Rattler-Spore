@@ -98,7 +98,7 @@ void VaultManager::Update(int deltaTime, int deltaGameTime) {
 					drone->SetScale(5.0);
 					drone->SetDesiredSpeed(0.2, 1);
 					drone->mStandardSpeed = (0.3);
-					drone->mMaxHealthPoints = 20000;
+					drone->mMaxHealthPoints = 75000;
 					drone->Heal(true);
 					//Give it weapons
 					ToolManager.LoadTool(ResourceKey({ 0x1a8de7dd, 0, 0 }), drone->mpNPCFarAirWeapon);

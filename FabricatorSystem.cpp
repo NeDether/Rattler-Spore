@@ -120,6 +120,27 @@ bool FabricatorSystem::HasUnlocked(uint32_t resID)
 	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
 
 	if (Recipe& res = GetRecipe(resID)) {
+		if (res.UpgradeType) {
+
+			if (res.toolUpgrade != 0) {
+				if (inventory->GetTool({ resID,0,0 }) == nullptr && inventory->GetTool({ res.toolUpgrade,0,0 }) != nullptr) {
+					return true;
+
+				}
+				return false;
+
+			}
+			else {
+				if (inventory->GetTool({ resID,0,0 }) == nullptr) {
+					return true;
+
+				}
+
+				return false;
+
+			}
+
+		}
 
 		if (res.Starter) {
 
@@ -131,25 +152,7 @@ bool FabricatorSystem::HasUnlocked(uint32_t resID)
 			return true;
 		}
 
-		if (res.UpgradeType) {
-			if (res.toolUpgrade != 0) {
-				if (inventory->GetTool({ resID,0,0 }) == nullptr && inventory->GetTool({ res.toolUpgrade,0,0 }) != nullptr) {
-					return true;
-
-				}
-				return false;
-			
-			}
-			else {
-				if (inventory->GetTool({ resID,0,0 }) == nullptr) {
-					return true;
-
-				}
-				return false;
-			
-			}
-
-		}
+		
 
 	}
 

@@ -38,7 +38,7 @@ key toolMuzzleEffectID 0xAB52E80C
 float toolProjectileEccentricity 0.25
 key toolProjectileEffectID SG_antimatter_weapon
 float toolProjectileExplosionExpansionRate 500
-float toolProjectileSpeed 200
+float toolProjectileSpeed 100
 float toolProjectileTimeOut 2.25
 float toolProjectileTurnRate 0.005
 int32s toolTargetFlags

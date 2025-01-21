@@ -13,6 +13,7 @@ uint32s spaceToolImageColors
 end
 key spaceToolImageID ufotools~!spg_silica.png
 float spaceTradingBaseCost 3376
+
 float spaceTradingChanceBlueEasy 0.0
 float spaceTradingChanceBlueHard 0.0
 float spaceTradingChanceRedEasy 0.0
