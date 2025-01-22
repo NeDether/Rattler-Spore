@@ -1,5 +1,7 @@
 animations~	0x0
 SpaceCapture
+action_mission_reject
+GO_blur_all_more~	0x3a3afa1
 auto_spacetrading~_rattler_forge
 auto_spacetools~_mineral_scanner1
 auto_Recipes_placeembassy
@@ -11,6 +13,8 @@ rspore-startingscenarios.loc
 rattlerspore_spacetools
 recip-categories
 rattlermenu
+sysbay
+auto_spacetools~_cat_wares
 auto_Recipes_planetbusterbomb
 GGETextEP1
 spg_sulphide
@@ -20,24 +24,31 @@ auto_Recipes_energymegapotion
 cat_name
 auto_spacetrading~_spice_mat_cobalt
 ware
+spaceevents~	0x2ae1a8e
 2
 materials_compiled_states_link~	0x40212000
 0
+trading~	0x2e9a2ca
+UIShortDesc_LeaveHomeSystem
 EP1_TB_Continents_Terra
 rspore-startingscenarios.loca
 eradicate
 spacerares_galacticObject
 planetTerrainScriptsRSPORE
 spg_serenidite
+spg_combat_antimattermissle
 SolarSystemResource
 spacerares_category
 SpaceT0A0Default
 spg_copper
+mission_assign
 fabricatorbackground
 Template
 genesisdevice
+spg_munitions
 tooliconDrillMK3
 tooliconDrillMK2
+Common
 tooliconDrillMK1
 placeloyaltybooster
 Recipes
@@ -51,23 +62,39 @@ r
 LP_Grob_Signature~	0x5cc09ad
 upgrade
 placehappinessbooster
+auto_spacetrading~_spice_ware_hplating
+defender_conversation_1
 sysUILayout
+defender_conversation_2
+defender_conversation_3
 plannerbudget
 rspore
 spice_mat_latticine
+auto_Recipes_massdrivermissile
+scanner_medium
 station
 store-mining
 spg_ice
+hplating
+dynamic_response_to_source_explore_ufo_wreck_planet
+GGE_SpaceDesc
+auto_Recipes_cheap_fireworks
+mission_incomplete_explore_ufo_wreck_planet
 RSPORE_ufo_radar_incoming_ratal
 turret
 zurgtastic
 skondstar
 planetScripts~	0x4084b000
+planetTerrainThemes_artDirected~	0x4284a200
 spg_uranium
 EP1_TB_BasicTools_LevelBrush
 GO_invert_all~	0x46160e4
 AssetBrowserGraphics
+DefaultProjectile
+auto_Recipes_ecap
+UIShortDesc_ExploreRuinPlanet
 rainoffire
+auto_spacetools~_massdrivermissile
 auto_spacetrading~_spice_mat_nvidium
 auto_AssetBrowserFeedItems_rspore_logs
 Ach0013
@@ -76,43 +103,60 @@ Ach0011
 EP1_TB_River_Serpentine
 catColonization
 Ach0010
+lens
+mission_incomplete_scan_ruins
+massdriversentinelgun
+mission_incomplete_scan_ufo_wreck
 power
 auto_spacetools~_mining_beam1
 auto_spacetools~_mining_beam2
 auto_spacetools~_mining_beam3
 EP1_TB_Continents_Blob
 spg_amethyst
+canonCrashsite
 auto_spacetools~_cat_colonization
+frame
 ui_space_mission_badge
 ui_space_ufo_master_badge
 repairpotion
+dynamic_response_to_source_explore_ruin_planet
 auto_spacetrading~_mineral_scanner1
 SolarSystemResourceDEBUG
 GP_squiggly_dunes~	0x43f2096
 auto_spacetrading~_mineral_scanner3
 auto_spacetrading~_mineral_scanner2
+UILongDesc_ScanWreck
 Orbbarholder
 repairmegapotion
+silo
 AssetBrowserFeedItems
 spg_alien_citywalls_destroyed_01
 spacetrading~	0x34d97fa
 rspore_core
 grobplanet
+auto_spacetrading~_spice_ware_lens
 auto_spacetrading~_spice_drt_sulphide
 ratt
 spice_mat_crude
 spg_crude
+story201
+auto_spacetools~_eclipse_missile
 placebioprotector
 spg_gold
 denether_op
 rollover
 theson
 EP1_TB_BasicTools_LowerBrush
+TerrainModelTemplate
+spice_ware_sysbay
 spice_mat_titanium
 planet
 bg
+scanner_minor
 RSPORE_vaulthalo
+auto_Recipes_lens
 auto_Recipes_placeuberturret
+crashsite
 EP1_TB_Oceans_Soft
 EP1_TB_River_Crystal
 spice_mat_nvidium
@@ -121,6 +165,7 @@ auto_Recipes_epicize
 auto_AssetBrowserFeedLists_rattlerspore_spacetools
 animal
 auto_spacetools~_cat_soc
+spg_silo
 AssetBrowserFeedCategories
 req
 placebiostabilizer
@@ -130,6 +175,8 @@ auto_spacetrading~_mining_beam3
 toolenergymegapotion
 auto_spacetrading~_mining_beam1
 Herbi
+auto_Recipes_scanner_minor
+lsp
 auto_Recipes_energypotion
 rare-galacticobject5
 Ach0001
@@ -163,9 +210,12 @@ rare-galacticobject8
 rattlerach
 config
 special
+weapon
 CreatureEdit
 auto_Recipes_repairpotion
 game_entry~	0x199b485
+cheap_fireworks
+event_log_return_for_rewards
 auto_AssetBrowserFeedCategories_rattlerspore_category
 rspore_logs
 auto_Recipes_asteroid
@@ -175,6 +225,7 @@ cat
 orbbardecor
 toolForge
 configRSPORE
+action_mission_complete
 spg_cargopas_mineral
 graphics_atlas~	0x31a44893
 antimattermissile
@@ -182,6 +233,7 @@ vaultTEST2
 GGE_NewSpaceStageDesc
 auto_spacetrading~_spice_mat_flesh
 vaultworldtest2
+rattlerwares
 sporemaster
 auto_spacetools~_cat_terra
 rat_achievement
@@ -192,11 +244,18 @@ spice_mat_lithium
 spice_mat_obsidian
 antimatterbomb
 countZ
+auto_RecipeCategories_wares_category
+spice_ware_ckit
+ckit
 spg_cobalt
 auto_spacetrading~_spice_mat_eg_rattlerore
+UIMediumDesc_ExploreUFOWreckPlanet
 dryice
+crashed_sentinel
+eclipse_missile
 solarGasGiant_med_material
 rare-relic10
+auto_Recipes_ckit
 cat_main
 auto_planetTerrainScriptsRSPORE_vault_outpost_01
 leDesc
@@ -205,15 +264,20 @@ auto_locale~_categories
 BR_SGZB_hills_dome_all~	0x3ab96cb
 BR_SGZB_hills_dome~	0x3ab96ca
 BR_lower_to_low_land~	0x3fc169e
+spice_ware_bombshell
 newline
 auto_spacetrading~_spice_mat_latticine
 auto_spacetools~_ach_core_beam
 auto_Recipes_dryice
 BR_dome_medium~	0x368060f
+massdriverbomb
 spice
 skibidiRizz
+spice_ware_silo
 graphics_misc_2~	0x354663b
 auto_Recipes_icecapseeder
+auto_Recipes_lsp
+auto_Recipes_massdriversentinelgun
 auto_spacetrading~_spice_drt_silica
 epicize
 auto_animations~_MaterialList
@@ -229,6 +293,7 @@ PlanetIcons
 auto_spacetrading~_spice_drt_kamacite
 ach_core_mine1
 auto_RecipeCategories_colonization_category
+auto_Recipes_massdriverbomb
 auto_Recipes_icecomet
 ach_core_mine5
 ach_core_mine4
@@ -243,10 +308,13 @@ BR_raise~	0x3fd5265
 BR_raise_to_mid_land~	0x3fc1666
 BR_lower~	0x3fd5261
 GO_medium_dense_variation~	0x48f3d12
+BR_beach_flattener~	0x383be1e
 world
 citizen
 rattle
 icecomet
+air
+BR_beach_detail~	0x383be2b
 colonyobject
 auto_Recipes_genesisdevice
 spice_drt_kamacite
@@ -254,18 +322,25 @@ spice_drt_ice
 sel
 auto_spacetrading~_spice_drt_ice
 auto_spacetrading~_spice_drt_carbon
+mission_tutorial_terraform
 SG_ufo_mind_erase_HitCombatant
+action_mission_accept
 feedlisticon_hammer
 atmospheregenerator
 rspore-startingscenarios.local
+UIShortDesc_Fulfilled
+auto_spacetrading~_spice_ware_ecap
 auto_Recipes_atmospheregenerator
 sex
+assembler
 CreatureCreate
 rattlerConfig
 spice_mat_gold
 crapingMat
 auto_layouts_atlas~_rat_achievement
 auto_spacetools~_ach_core_fab
+GGEZoomPanelV2
+spg_gyrocore
 spg_quartz
 rSPOREmats
 auto_spacetools~_cat_combat
@@ -289,12 +364,16 @@ cat_terra
 skondstar2
 tool
 catCombat
+auto_Recipes_scanner_medium
 configEP1
+auto_spacetrading~_spice_ware_gyrocore
 iconZ
 leTitle
+bombshell
 GGENewGameFlowUIv1-EP1
 cat_soc
 rare-scientistscroll08
+sentinel_diffuse
 rare-scientistscroll09
 rare-scientistscroll06
 building
@@ -303,16 +382,23 @@ rare-scientistscroll04
 locale~	0x2fabf01
 always
 rare-scientistscroll05
+auto_spaceevents~_TutorialStory201
 rare-scientistscroll02
 sp_rivers_07
 rare-scientistscroll03
+SG_antimatter_weapon
 rare-scientistscroll01
 spacerares_storybook
 empirecol
 spacerares_jewel
 spice_mat_cobalt
+auto_Adventure_roads~_spg_alien_ship_destroyed
+BR_dunes_random_high~	0x37ed97b
+auto_spacetrading~_spice_ware_lsp
+BR_dunes_random_low~	0x37ed976
 EP1_TB_Mountain_Ramps
 rare-scientistscroll10
+spg_ecap
 skibidi
 catSocial
 auto_RecipeCategories_tool_category
@@ -325,19 +411,27 @@ ach_core_geo2
 auto_Recipes_placespicestorage
 spg_flesh
 spice_mat_eg_steveore
+cat_wares
 auto_Recipes_droughtgenerator
 GO_invert_seabed~	0x368054e
+mission_accept
 GO_flatten_land~	0x3680542
+spice_ware_ecap
 exitRF
 droughtgenerator
 sg_rare_halo
+kCnvCommEvent~	0x2d5dcec
 cat_header_name
 recipetemplate
 employed
+sfx_ufo_remains_far
+UIShortDesc_ScanWreck
 auto_Recipes_recipetemplate
 GO_lower_all~	0x3680529
 french_resource_pile
+auto_spacetrading~_spice_ware_assembler
 spg_titanium
+GO_lower_seabed~	0x368052c
 layouts_atlas~	0x40464200
 ratalplanet
 skibididopdopdop
@@ -345,18 +439,26 @@ ach_core_fab
 auto_spacetools~_ach_core_cr1
 city
 auto_spacetools~_ach_core_cr3
+protonmissilelevel1
 auto_spacetools~_ach_core_cr2
 auto_spacetrading~_spice_mat_lithium
 auto_spacetools~_ach_core_cr4
+SG_ufo_fireworks_muzzle
 rare-relic6
 rare-relic7
 rare-relic4
 rare-relic5
+auto_Recipes_silo
 rspore_ach
 rare-relic2
+spg_hplating
+ufoModels_LOD1~	0x40656201
 rare-relic3
 spacerares_zealotScroll
+ufoModelsUFO~	0x40656200
+ufoModels_LOD3~	0x40656203
 rare-relic1
+ufoModels_LOD2~	0x40656202
 rattlerfor
 auto_RecipeCategories_combat_category
 auto_spacetools~_ach_core_sec
@@ -365,33 +467,51 @@ rare-relic8
 rare-relic9
 auto_Recipes_antimattermissile
 billclinton
+auto_spacetrading~_spice_ware_sysbay
 auto_spacetrading~_spice_mat_serenidite
 auto_planetTerrainScriptsRSPORE_vaultworldtest2
 GO_raise_all~	0x3680512
+auto_Recipes_bombshell
+BR_riftZone_small~	0x3a245dc
 spg_nvidium
+BR_CoastAddWater~	0x36805ea
+RSporeGGENewImage
+spg_lsp
+terrainScripts_specialUse~	0x4184af00
 auto_Recipes_aoe_repair
+BR_duneStamp~	0x36805ed
 auto_spacetrading~_spice_mat_uranium
 scripts3~	0x40890200
 ui_spg_generic_alert
 catslot
 denether_lowQ
 crafting
+gyrocore
 rspore-startingscenarios.
 monolith
 ach_core_sec
 _effect_editor
 auto_Recipes_volcano
 energymegapotion
+spice_ware_lsp
 sg_rare_geodes_08
+spice_ware_lens
+SG_ufo_fireworks_explosion
+action_try_mission
 energypotion
 auto_Recipes_rainoffire
+auto_Recipes_hplating
 rattl
 placeembassy
+TutorialStory201
 spg_feedicon_ufoeditor
 spg_obsidian
+ecap
 spg_silica
+BR_continent_small~	0x3cd9d76
 spacerares_warriorScroll
 ach_core_scan
+auto_spacetools~_massdriversentinelgun
 rattlerf
 vaultTEST
 EP1_TB_River_Delta
@@ -399,20 +519,29 @@ auto_Recipes_eradicate
 EP1_TB_River_Gorge
 auto_Recipes_placehappinessbooster
 achievement
+granite_largerock1_pile
 thaorb
 GO_raise_all_more~	0x3867156
 AchIcons
 auto_AssetBrowserFeedItems_rspore_core
 solarPlanetaryRings_material
+auto_terrainScripts_specialUse~_DestroyedAlienShip
+BR_dunes_random_all~	0x37981aa
+auto_spacetools~_massdriverbomb
+auto_spacetrading~_spice_ware_ckit
+spacedesc
+UIMediumDesc_ScanRuins
 rattler
 exit
 auto_Recipes_placecolony
 reggrid2
 rspore-startingscenarios.lo
+auto_spacetools~_cheap_fireworks
 auto_spacetrading~_spice_mat_zurg
 auto_Recipes_fireworks
 AchTemp
 auto_RecipeCategories_social_category
+UIMediumDesc_LeaveHomeSystem
 bugsmol
 mining_beam2
 mining_beam3
@@ -423,6 +552,7 @@ GO_lower_all_more~	0x3867172
 auto_AssetBrowserFeedItems_rspore_ach
 cat_combat
 rspore-cutscenes
+auto_Recipes_assembler
 EP1_TB_Oceans_Terra
 auto_RecipeCategories_tool
 Patch1_lopsided_filter~	0x6e729ee
@@ -432,9 +562,14 @@ auto_spacetrading~_spice_mat_quartz
 carni
 cat_colonization
 ui_space
+UILongDesc_Fulfilled
 SG_ufo_mind_erase_HitWater
+auto_spacetrading~_spice_ware_bombshell
+BR_oceans_soft_small~	0x36ab44c
 auto_spacetrading~_spice_mat_copper
 SG_mining_laser_beam
+UILongDesc_LeaveHomeSystem
+warecat
 spice_drt_silica
 ach_core_cr4
 ach_core_cr2
@@ -453,22 +588,30 @@ FabMenu
 auto_spacetools~_ach_core_mine2
 RsporeNewGameGGE
 spice_mat_flesh
+BR_canyon_sierra_medium~	0x3f694b4
 rattlerforge
 denether
 rat
 ToolTemplate
 auto_spacetrading~_spice_mat_obsidian
+BR_canyon_sierra_large~	0x3f694b1
 rattlerforg
 hi
 rattlerforge!0x00000000
+CombatConsumablePanel
 social_category
 spacerares_fossil
+UIMediumDesc_ScanWreck
 auto_Recipes_zoo
+UILongDesc_ExploreUFOWreckPlanet
 auto_planetTerrainScriptsRSPORE_vaultTEST
 ufotools~	0x3064cb38
 toolenergypotion
 spice_mat_zurg
+spice_ware_hplating
+dynamic_response_to_source_scan_ruins
 spacerares_shamanScroll
+UILongDesc_ScanRuins
 EP1_TB_Oceans_Landmass
 count
 auto_Recipes_monolith
@@ -478,9 +621,16 @@ auto_spacetrading~_spice_mat_crude
 spice_mat_serenidite
 Hoster
 fireworks
+seleccdificulty
+BR_mountain_sierra_small~	0x3f68c8e
+space_conversations~	0x55ada23
 GO_high_dense_variation~	0x42c9f51
 spice_mat_diamond
+UIMediumDesc_ExploreRuinPlanet
+BR_mountain_sierra_large~	0x3f68c88
 spg_kamacite
+interstellardrive
+SocialConsumablePanel
 auto_Recipes_Planetscan
 colonization_category
 EP1_Plaza_Old_02
@@ -491,17 +641,23 @@ spg_latticine
 planetTerrainThemes~	0x42840100
 spacerares_bardScroll
 ep1_effects_3~	0x408a4302
+UIShortDesc_ExploreUFOWreckPlanet
 RecipeCategories
 EP1_Bard_01
+spg_assembler
 auto_Recipes_antimatterbomb
 spice_mat_quartz
 cat_list
 leIcon
+wares_category
+DestroyedAlienShip
 vehicle
 auto_Recipes_placeloyaltybooster
 TravelAbilityPanel
 spacerares_statue
+spice_ware_assembler
 ach_core_beam
+auto_Recipes_sysbay
 catTerraforming
 ufo
 mineral_scanner1
@@ -512,28 +668,51 @@ mach-ranking
 tool_category
 auto_spacetrading~_spice_mat_gold
 categories
+sentinel_normal
+UILongDesc_ExploreRuinPlanet
+massdrivermissile
+dynamic_response_to_source_scan_ufo_wreck
+mission_tutorial_story_201
+SG_ufo_fireworks_projectile
+vaultUI
 auto_AssetBrowserFeedCategories_spacerares_category
 auto_spacetools~_ach_core_geo1
 auto_spacetools~_ach_core_geo2
 auto_spacetools~_ach_core_geo3
+seti
+sfx_ufo_remains_close_lp
 auto_Recipes_repairmegapotion
 auto_Recipes_CreatureCreate
 en-us
 placeuberturret
+screen
 rspore-startingscenarios.locale
+mission_incomplete_explore_ruin_planet
 Planetscan
 spacerares_traderScroll
 RsporeNewGameGGE_COPY
+auto_Recipes_gyrocore
+mission_complete
 spg_carbon
 billclinton2
+MissionTemplate
 planetbusterbomb
 spacerares_diplomatScroll
+spg_sysbay_empty
 spice_mat_amethyst
 auto_Recipes_placebioprotector
 sg_crate_spice_06
+spg_ckit
 spacerares_geode
+spice_ware_gyrocore
+auto_spacetrading~_spice_ware_silo
+mission_reject
 FBB5C6EC
 spg_zurg
+spg_alien_ship_destroyed
+UIMediumDesc_Fulfilled
 auto_spacetools~_cat_tools
+UIShortDesc_ScanRuins
 combat_category
 placespicestorage
+DestroyedShip

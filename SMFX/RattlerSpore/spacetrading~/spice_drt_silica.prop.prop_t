@@ -26,4 +26,6 @@ end
 texts spaceTradingNoNeed
 	(rattlercargo!0x00000004) "Please take a look at our fine goods available."
 end
+
+bool SS-UseSpiceOnHomeworld false
 key spaceTradingType ware

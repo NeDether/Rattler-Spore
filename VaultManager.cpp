@@ -51,9 +51,10 @@ void VaultManager::Initialize() {
 	App::ConsolePrintF("SKIBIDI");
 	hash_map <ResourceKey, uint32_t> vaultplanets;
 	hash_map <ResourceKey, uint32_t> openedVaults;
-	cutsceneSeti = false; //Did the first cutscene in a save file?
-	cutsceneSysView = false; //Did the second cutscene in the solar system view?
-	cutscenePlanetView = false; //Did the third cutscene on the planet surface?
+	bool cutsceneSeti = false; //Did the first cutscene in a save file?
+	bool cutsceneSysView = false; //Did the second cutscene in the solar system view?
+	bool cutscenePlanetView = false; //Did the third cutscene on the planet surface?
+	App::ConsolePrintF("bools %b %b %b ", cutsceneSeti, cutsceneSysView, cutscenePlanetView);
 	sInstance = this;
 	LoadPlanet = false;
 }
@@ -71,9 +72,10 @@ void VaultManager::Update(int deltaTime, int deltaGameTime) {
 			LoadPlanet = false;
 			if (GetActiveStarRecord()->GetType() != StarType::ProtoPlanetary && GetActiveStarRecord()->GetType() != StarType::BlackHole && GetActiveStarRecord()->GetType() != StarType::GalacticCore) {
 				uint32_t pid = GetActivePlanetRecord()->GetID().internalValue;
-
+				//When viewing a vault planet from the solar system view. If it is your first time encountering one, it shall play a cutscene when you hover over it.
 				if (isVaultPlanet(pid)) {
 					if (!cutsceneSysView) {
+						App::ConsolePrintF("Spawned A Ra'tal Drone.");
 						cutsceneSysView = true;
 						CinematicManager.PlayCinematic("RSPORE_VaultDetector", 0, 0, 0, 0, 0);
 					}
@@ -111,6 +113,8 @@ void VaultManager::Update(int deltaTime, int deltaGameTime) {
 					//Play Vault intro cutscene when first land.
 					if (!cutscenePlanetView) {
 						cutscenePlanetView = true;
+
+						App::ConsolePrintF("Vault Planet Cutscene should've played.");
 						CinematicManager.PlayCinematic("RSPORE_VAULTCUT", 0, 0, 0, 0, 0);
 					}
 				}
@@ -153,7 +157,6 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 			}
 			int rando = rand(14);
 			App::ConsolePrintF("rand %d", rando);
-			App::ConsolePrintF("rand 2 %d", rando);
 			int pType = (int)StrRecord->GetPlanetRecord(i)->mType;
 			
 			//If T0 T1 T2 or T3 then generate vault, otherwise if gas giant or asteroid belt, skip.
@@ -161,6 +164,7 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 				//If statement was here that checked the boolean, however it resulted in returning a nullptr and crashes the game.
 				
 				if (!VaultManagerA.cutsceneSeti) {
+					App::ConsolePrintF("The first vault cutscene should have played.");
 					CinematicManager.PlayCinematic("RSPORE_VAULTSETIWAIT", 0, 0, 0, 0, 0);
 					VaultManagerA.cutsceneSeti = true;
 				}
@@ -169,25 +173,33 @@ bool VaultManager::GenerateVault(cStarRecordPtr StrRecord)
 
 
 				auto vaultplanet = StrRecord->GetPlanetRecord(i)->GetID();
+				
+				
 				//replace with hash_map
 				ResourceKey vpkey;
 				vpkey.instanceID = vaultplanet.internalValue;
 				vaultplanets.emplace(vpkey,vaultplanet.internalValue);
 				ResourceKey vaultScript;
+				ResourceKey planetSource;
 				//rattlesnake //prop //planetTerrainScripts_artDirected~
 				//vaultScript = ResourceKey(0x98eeb4f9, 0x00B1B104, 0x4184a200);
 				//vaultTEST //prop //planetTerrainScriptsRSPORE
 				vaultScript = ResourceKey(0xa395f2a9, 0x00B1B104, 0x8C2C3803);
-				
-				
-				StrRecord->GetPlanetRecord(i)->GenerateTerrainKey();
+
+
+				planetSource = StrRecord->GetPlanetRecord(i)->GetTerrainScriptSource();
+				cPlanetRecord* recowd = StrRecord->GetPlanetRecord(i);
+
+				//cPlanetRecord::AssignTerrainT0(vaultplanet.GetRecord());
 				StrRecord->GetPlanetRecord(i)->SetGeneratedTerrainKey(vaultScript);
+				StrRecord->GetPlanetRecord(i)->GenerateTerrainKey();
+
 				StrRecord->GetPlanetRecord(i)->mCommodityNodes.clear();
 				//StrRecord->GetPlanetRecord(i)->mFlags = 17480;
 				//StrRecord->GetPlanetRecord(i)->mType = PlanetType::T1;
 
 				//StrRecord->GetPlanetRecord(i)->mSpiceGen = ResourceKey({ id(""),0,0 });
-
+				vaultplanet.GetRecord()->mPlanetObjects.clear();
 				App::ConsolePrintF("A vault has generated on planet %d", i);
 				return true;
 				
@@ -206,7 +218,14 @@ bool VaultManager::OpenVault(cPlanetRecordPtr PlRecord)
 	//replace with hash_map
 	ResourceKey vpkey;
 	vpkey.instanceID = vaultplanet.internalValue;
-	vaultplanets.emplace(vpkey, vaultplanet.internalValue);
+	openedVaults.emplace(vpkey, vaultplanet.internalValue);
+
+	UTFWin::UILayout* mpUIlayout;
+	mpUIlayout = new UTFWin::UILayout();
+	if (mpUIlayout->LoadByID(id("vaultui"))) {
+		mpUIlayout->SetVisible(true);
+	
+	}
 	return false;
 }
 

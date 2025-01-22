@@ -91,7 +91,8 @@ bool AchievementSystem::Achieve(string16 name, string16 desc, ImagePtr grug)
 	}
 	else {
 	
-		Close();
+		//Close();
+		return false;
 	}
 
 	if (mpUIlayout->LoadByID(id("rat_achievement")))
@@ -127,6 +128,7 @@ bool AchievementSystem::Achieve(string16 name, string16 desc, ImagePtr grug)
 
 bool AchievementSystem::Achieve(string ied)
 {
+
 	PropertyListPtr sillyPropList;
 	ResourceKey imgKey;
 	//Gets the achievment spacetool
