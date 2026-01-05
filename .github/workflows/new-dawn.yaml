@@ -101,6 +101,7 @@ jobs:
         with:
           repository: 'emd4600/SporeModder-FX'
           latest: false
+          tag: 'v2.2.24'
           fileName: ${{ env.SPORE_MODDER_FX_FILE }}
           tarBall: false
           zipBall: false
