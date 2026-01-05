@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="RattlerSpore">
+      <UniqueIdentifier>{3880d018-2395-4502-abfe-4b83e0817aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal">
+      <UniqueIdentifier>{d62ad12d-69d8-4933-8342-03043c9adc22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Tools">
+      <UniqueIdentifier>{586285c2-7c35-4c11-aa71-5a32450799ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Function">
+      <UniqueIdentifier>{e9a6d353-a286-4af2-a322-db1bb9d964a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Function\Fab Icons">
+      <UniqueIdentifier>{bcc87017-f119-4fb9-ba62-bbaa5ab65fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Cheats">
+      <UniqueIdentifier>{272066a0-c6b3-4deb-a5ed-50b19277cad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Function\Buildings">
+      <UniqueIdentifier>{d6fde435-9dc8-475f-8a1a-c7d3bea7737c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Empires">
+      <UniqueIdentifier>{e0a4545b-4413-4d74-8e35-8e320466fa74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Detours">
+      <UniqueIdentifier>{0ed385f3-b74a-4586-9da7-8849c7b67c07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Systems">
+      <UniqueIdentifier>{4701934b-4b87-4e75-b63d-b0696d512454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RattlerSpore\Systems\Classes">
+      <UniqueIdentifier>{1710da10-3e3b-4b70-bd5c-690df232f109}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="MiningBeam.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="MiningScanner.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Fabricator.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="xFabClose.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="xFabOpen.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="Craft.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="InjectCategories.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="ScanMenu.h">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="RecipeIcon.h">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceIcon.h">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="CategoryIcon.h">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewCrafts.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="DestroySave.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="DrillBuilding.h">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaceDrill.h">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryManager.h">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnBee.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="SkondEmpire.h">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnStation.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadPlanet.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="SolarSystemResources.h">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="SolarSystemResourceEntry.h">
+      <Filter>RattlerSpore\Systems\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SolSysResourcesCheat.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="VaultManager.h">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="VaultDetours.h">
+      <Filter>RattlerSpore\Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="VaultPlanet.h">
+      <Filter>RattlerSpore\Systems\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="WareDetours.h">
+      <Filter>RattlerSpore\Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="StartingScenarioDetours.h">
+      <Filter>RattlerSpore\Detours</Filter>
+    </ClInclude>
+    <ClInclude Include="StartingScenarioHandler.h" />
+    <ClInclude Include="TriviteEmpire.h">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnDrone.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadPirates.h">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="FabricatorSystem.h">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementSystem.h">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>RattlerSpore</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningBeam.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="MiningScanner.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Fabricator.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="xFabClose.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="xFabOpen.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="Craft.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="InjectCategories.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="ScanMenu.cpp">
+      <Filter>RattlerSpore\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="RecipeIcon.cpp">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceIcon.cpp">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="CategoryIcon.cpp">
+      <Filter>RattlerSpore\Function\Fab Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewCrafts.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="DestroySave.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="DrillBuilding.cpp">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaceDrill.cpp">
+      <Filter>RattlerSpore\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryManager.cpp">
+      <Filter>RattlerSpore\Function\Buildings</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnBee.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="SkondEmpire.cpp">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnStation.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadPlanet.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="SolarSystemResources.cpp">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="SolarSystemResourceEntry.cpp">
+      <Filter>RattlerSpore\Systems\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="SolSysResourcesCheat.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="VaultManager.cpp">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="VaultPlanet.cpp">
+      <Filter>RattlerSpore\Systems\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="StartingScenarioHandler.cpp" />
+    <ClCompile Include="TriviteEmpire.cpp">
+      <Filter>RattlerSpore\Empires</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnDrone.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadPirates.cpp">
+      <Filter>RattlerSpore\Cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="FabricatorSystem.cpp">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="AchievementSystem.cpp">
+      <Filter>RattlerSpore\Systems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SdkPathConfig.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Internal</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
