@@ -100,7 +100,7 @@ jobs:
         uses: robinraju/release-downloader@v1
         with:
           repository: 'emd4600/SporeModder-FX'
-          latest: true
+          latest: false
           fileName: ${{ env.SPORE_MODDER_FX_FILE }}
           tarBall: false
           zipBall: false
