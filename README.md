@@ -1,6 +1,8 @@
 <p align="center">
-<img src="https://github.com/user-attachments/assets/7a4a703a-461b-4f1d-92e2-8bff20a76336" width=115% height=115%>
+<img src="https://github.com/user-attachments/assets/73d4e199-54e8-4704-afef-127f8c15d923" width=115% height=115%>
 </p>
+
+
 This is a mod for SPORE that adds a whole new line of progression as well as new tools, resources and features that will make the Space Stage more enjoyable.
 
 ## Credits
