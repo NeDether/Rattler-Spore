@@ -1,0 +1,25 @@
+0x00000000 Exploit valuable resources and fabricate new technologies. Will you be set on a path of creating new life, or destroying those who stand in your way?
+0x00000001 Select your archetype.
+0x00000002 Wanderer
+0x00000003 Bard
+0x00000004 Diplomat
+0x00000005 Ecologist
+0x00000006 Knight
+0x00000007 Scientist
+0x00000008 Shaman
+0x00000009 Trader
+0x0000000A Warrior
+0x0000000B Zealot
+0x0000000D Pirate
+0x0000000E Select your starting scenario.
+0x0000000F Global Unification
+0x00000010 From the moment of inception, your species felt the warmth of the sun gazing down on the seas. Destiny awaits, a whole galaxy at their fingertips.
+0x00000011 Changes: A Crashed Ra’Tal ship lingers in your home system. Additional planets and moons are added to your system to guarantee normal progression.
+0x00000012 Lost Benefactors
+0x00000013 Prerequisites: Must be starting from the space stage.
+0x00000014 A strange radio frequency was detected from your homeworld, unlike anything your race had heard before. Millions tuned in to hear what sounded like chatter of an unknown language. Suddenly, an alien fleet descended down onto the planet's surface. The extraterrestrial visitors shook the hands of your world's leaders and after the culture shock settled,they offered a proposal. In exchange for your planet’s resources they provided your race with interstellar transportation and technologies beyond your race’s comprehension. 20 years ago, the race disappeared without a trace. With a few systems to your empire's name, and a single experimental craft they left behind, you take to the stars in hopes to reunite with your lost benefactors.
+0x00000015 Changes: Skips Core & RattlerSPORE tutorials by pre-providing you with an FTL drive, and 5-7 pre-owned industrialized systems. However, a Powerful Rival empire is spawned somewhere in the galaxy.
+0x00000016 Doomed Planet
+0x00000017 Prerequisites: None.
+0x00000018 Millenia ago, a supermassive black hole passed through countless systems consuming stars and planets alike. However, a single rock managed to latch onto its orbit. Spiraling into the unknown, the black hole’s event horizon shines brighter than ever. Because of this and against all odds, life begins to form on the straggling rock.
+0x00000019 Changes: Your starting world is orbiting a supermassive black hole similar to the one in the galactic core. A crashed Ra’Tal ship lingers on the moon with enough salvage to allow you to build a few stations and ships. You may not have any more planets in your system.

@@ -28,13 +28,15 @@ void SpawnBee::ParseLine(const ArgScript::Line& line)
 	StarRecord->mEmpireID = SkondEmpireA.Skond->GetEmpireID();
 	GetActivePlanetRecord()->mTechLevel = TechLevel::Empire;
 	GetActivePlanetRecord()->mNumDefenderUFOs = 25;
-	SkondEmpireA.Skond->mIDColorID = (int)IdentityColors::Pink;
+	auto skondcolor = ColorRGB(0.420, 0.0546, 0.414);
+	SkondEmpireA.Skond->mCachedColor = skondcolor;
 	//SkondEmpireA.Skond->UpdateAndGetColor();
+	//Detour it instead lmao
 	
 	//StarRecord->mTechLevel = (TechLevel::City);
 	//cPlanetRecord::FillPlanetDataForTechLevel(GetActivePlanetRecord(), TechLevel::Empire);
 	//GetActivePlanetRecord()->mTechLevel = (TechLevel)32;
-	//GetActivePlanetRecord()->mTechLevel = (TechLevel::City);
+	GetActivePlanetRecord()->mTechLevel = (TechLevel::City);
 	GetActivePlanetRecord()->mSpiceGen = ResourceKey({ id("spice6"),0,0 });
 	GetActivePlanetRecord()->mPlanetRing = 5;
 	//GetActivePlanetRecord()->field_10C = 1; //followers?

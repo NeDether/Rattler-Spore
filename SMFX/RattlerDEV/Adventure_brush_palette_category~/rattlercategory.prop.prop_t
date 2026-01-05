@@ -1,0 +1,7 @@
+key paletteCategoryIcon ufotools~!rspore.png
+key paletteCategoryLayoutFile SculptPaletteSubcategory
+texts paletteCategoryName
+	"RattlerSPORE Terrain Stamps"
+end
+key paletteCategoryParentCategory Adventure_brush_palette_category~!scenariomode_category_terraform.prop
+uint32 paletteCategorySequenceNumber 401

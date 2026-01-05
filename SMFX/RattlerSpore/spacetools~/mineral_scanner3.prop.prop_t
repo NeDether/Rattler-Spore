@@ -3,10 +3,10 @@ string16 description "Major Mineral Scanner"
 int32 spaceToolBuyCost 2
 key spaceToolContext always
 texts spaceToolDescription
-	(rattlercargo!0x0000001F) "PLACEHOLDER"
+	(rattlercargo!0x0000001F) "Major Mineral Scanner"
 end
 texts spaceToolDetailDescription
-	(rattlercargo!0x00000020) "PLACEHOLDER"
+	(rattlercargo!0x00000020) "Scans and allows harvest of crust, mantle, and core minerals."
 end
 bool spaceToolDisableOn201Ruins true
 bool spaceToolDisableOnHomeworld false
@@ -18,7 +18,7 @@ key spaceToolImageID ufotools~!toolScanIconMK3.png
 float spaceToolMaxRange -1
 key spaceToolPanelKey TravelAbilityPanel
 key spaceToolUpgradeFile mineral_scanner2.prop
-float spaceToolRechargeRate 0.5
+float spaceToolRechargeRate 3.0
 int32 spaceToolUseCost 0
 float spaceToolEnergyCost 0.5
 key spaceToolStrategy mineral_scanner3

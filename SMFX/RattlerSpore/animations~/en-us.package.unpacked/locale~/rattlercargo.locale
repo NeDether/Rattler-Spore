@@ -25,11 +25,11 @@
 0x00000019 RATTLER Fabricator
 0x0000001A Constructs tools and items using harvested resources.
 0x0000001B Medium Mineral Scanner
-0x0000001C Use this in space to geologically index the mineral composition of the selected planet's crust and mantle.
+0x0000001C Indexes and allows for harvest of crust, and mantle based minerals.
 0x0000001D Medium Mining Beam
 0x0000001E A beam that will harvest different resources on the planet at a faster and more efficient speed.
 0x0000001F Major Mineral Scanner
-0x00000020 A geologist's wet dream. Indexes crust, mantle, and core based minerals.
+0x00000020 Indexes and allows for harvest of crust, mantle, and core based minerals.
 0x00000021 Major Mining Beam
 0x00000022 Devastates the surface of the planet in order to return a massive bounty of all types of materials including crust mantle and core based minerals.
 0x00000023 Crude Oil
@@ -56,10 +56,10 @@
 0x00000038 The hardest known substance in the galaxy. The diamond. Or at least that's what the ~player_species~ kids these days think thanks to their "Cave Game"; But it is fairly accurate. Crystallized Carbon has a melting point of 45,000 degrees and can withstand plasma based weaponry.
 0x00000039 Antimatter, now refered to as Zurg, is an incredible substance that can inverse the polarity of any atom causing seemingly impossible properties to now exist in our universe. Once theorized to only form in the hearts of dying stars now turns out to exist within the cores of 20% of all planets. Who knew?
 0x0000003A In the bowels of some planets exists what is refered to as macrofauna. Unspeakably large creatures that only exist underground. Further research on the properties of their tissue should be investigated, and you should absolutely wipe down that cargo bay of yours after this.
-0x0000003B
-0x0000003C
-0x0000003D
-0x0000003E
+0x0000003B Trivittite
+0x0000003C A synthetic compound created by the lost creator race of the Trivite. It's otherworldly properties allow it to generate boundless amounts of energy.
+0x0000003D Rattallite
+0x0000003E A synthetic compound created by the lost destroyer race of the Ra'Tal. ~player_species~ scientists are perplexed by it's unreal property to behave like a black hole when charged.
 0x0000003F
 0x00000040
 0x00000041

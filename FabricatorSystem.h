@@ -54,9 +54,15 @@ public:
 	uint32_t productAmount;
 	uint32_t CraftingID;
 	uint32_t Cat;
+	uint32_t toolUpgrade; //The tool it upgrades from.
+
+	
 	//LocalizedString CName;
 	//LocalizedString CDesc;
 	bool Secret;
+	bool Starter;
+	bool UpgradeType; //If it's a permanent addition into your ship's toolbay.
+	
 	bool CargoType;
 };
 ///kamacite - ni - [0]
@@ -101,6 +107,7 @@ public:
 	bool InCategory(uint32_t resID, uint32_t cat);
 	bool SelectRecipe(Recipe ThatRecipe);
 	bool IsSecret(uint32_t resID);
+	bool HasUnlocked(uint32_t resID);
 	bool OpenFab(bool sex);
 	bool CloseFab(bool sex);
 	bool Fabricate(Recipe res);

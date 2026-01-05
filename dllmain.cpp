@@ -21,6 +21,15 @@
 #include "SolarSystemResources.h"
 #include "SolarSystemResourceEntry.h"
 #include "SolSysResourcesCheat.h"
+#include "VaultManager.h"
+#include "VaultPlanet.h"
+#include "VaultDetours.h"
+#include "WareDetours.h"
+#include "StartingScenarioDetours.h"
+#include "StartingScenarioHandler.h"
+#include "TriviteEmpire.h"
+#include "SpawnDrone.h"
+#include "ReadPirates.h"
 // This is in dllmain.cpp
 
 using namespace ArgScript;
@@ -32,7 +41,6 @@ void Initialize() {
 	//Inject Categories in the Space Stage Tool Menu.
 	InjectCategories::InjectHeader();
 	InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_core.prop");
-	App::ConsolePrintF("''We are Skond. We see you.''");
 	App::ConsolePrintF("RattlerSPORE: Core Enabled");
 	//May seem pointless but this is for copy and pasting config and stuff.
 
@@ -85,8 +93,9 @@ void Initialize() {
 		App::ConsolePrintF("RattlerSPORE: Spice Dyeing Addon Enabled");
 		InjectCategories::InjectCategory(u"AssetBrowserFeedItems!rspore_dye.prop");
 	}
-
-	SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
+	//Species
+	//SimulatorSystem.AddStrategy(new SkondEmpire(), SkondEmpire::NOUN_ID);
+	//SimulatorSystem.AddStrategy(new TriviteEmpire(), TriviteEmpire::NOUN_ID);
 
 	//Add the New Core Tools
     ToolManager.AddStrategy(new MiningBeam(1), id("mining_beam1"));
@@ -100,14 +109,23 @@ void Initialize() {
 
 	//Add The New Systems
 	SimulatorSystem.AddStrategy(new FabricatorSystem(), FabricatorSystem::NOUN_ID);
+	SimulatorSystem.AddStrategy(new VaultManager(), VaultManager::NOUN_ID);
 	SimulatorSystem.AddStrategy(new ScanMenu(), ScanMenu::NOUN_ID);
 	SimulatorSystem.AddStrategy(new AchievementSystem(), AchievementSystem::NOUN_ID);
 
+
+	App::AddUpdateFunction(new StartingScenarioHandler());
+
+	//Add System Subobjects
+	ClassManager.AddFactory(new VaultPlanetFactory());
+
 	//Add New Cheats.
-	CheatManager.AddCheat("viewCrafts", new ViewCrafts());
-	CheatManager.AddCheat("SpawnStation", new SpawnStation());
+	//CheatManager.AddCheat("viewCrafts", new ViewCrafts());
+	//CheatManager.AddCheat("SpawnStation", new SpawnStation());
 	CheatManager.AddCheat("ReadPlanet", new ReadPlanet());
-	CheatManager.AddCheat("SpawnBee", new SpawnBee());
+	CheatManager.AddCheat("ReadPirates", new ReadPirates());
+	//CheatManager.AddCheat("SpawnBee", new SpawnBee());
+	CheatManager.AddCheat("SpawnDrone", new SpawnDrone());
 	CheatManager.AddCheat("roomroot", new DestroySave());
 	CheatManager.AddCheat("doSys", new SolSysResourcesCheat());
 }
@@ -117,8 +135,15 @@ void Dispose()
 	// This method is called when the game is closing
 }
 
+
+
 void AttachDetours()
-{
+{	
+	GenerateVaultDetour::attach(GetAddress(Simulator::cStarManager, GeneratePlanetsForStar));
+	displayPlanetIconDetour::attach(GetAddress(Simulator::cPlanetRecord, GetTypeIconKey));
+	GenerateNPCStoreDetour::attach(GetAddress(Simulator::cSpaceTrading, GenerateNPCStore));
+	ReadSPUI_Detour::attach(GetAddress(UTFWin::UILayout, Load));
+	spawnUFODetour::attach(GetAddress(Simulator::cGameDataUFO, Initialize));
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 }

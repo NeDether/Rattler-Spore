@@ -1,0 +1,11 @@
+key parent palette_config~!TemplateBrush.prop
+texts spaceToolDescription
+	"RattlerSPORE Subsurface Pipes"
+end
+key spaceToolImageID denether.png
+float terraformBrushIntensityDefault 0.5
+vector2 terraformBrushIntensityRange (0.125, 1)
+float terraformBrushSizeDefault 0.2
+vector2 terraformBrushSizeRange (0.02, 5)
+key terraformMarkerModelID 0x079A8EE7!ep1_tericon_category_roads.prop
+key terraformModelID Adventure_roads~!rspore_grobcore

@@ -137,6 +137,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="ReadPirates.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ReadPlanet.h">
       <SubType>
       </SubType>
@@ -173,16 +177,36 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="SpawnDrone.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="SpawnStation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="StartingScenarioDetours.h" />
+    <ClInclude Include="StartingScenarioHandler.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TriviteEmpire.h" />
+    <ClInclude Include="VaultDetours.h" />
+    <ClInclude Include="VaultManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="VaultPlanet.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ViewCrafts.h">
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="WareDetours.h" />
     <ClInclude Include="xFabClose.h">
       <SubType>
       </SubType>
@@ -240,6 +264,10 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="ReadPirates.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ReadPlanet.cpp">
       <SubType>
       </SubType>
@@ -276,13 +304,30 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="SpawnDrone.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="SpawnStation.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="StartingScenarioHandler.cpp">
       <SubType>
       </SubType>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TriviteEmpire.cpp" />
+    <ClCompile Include="VaultManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="VaultPlanet.cpp">
+      <SubType>
+      </SubType>
     </ClCompile>
     <ClCompile Include="ViewCrafts.cpp">
       <SubType>

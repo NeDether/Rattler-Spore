@@ -1,0 +1,57 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Cheap Fireworks"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 100
+key spaceToolContext planet
+texts spaceToolDescription
+	(store-mining!0x00000031) "Party Poppers"
+end
+texts spaceToolDetailDescription
+	(store-mining!0x00000032) "Use near colonies to make them happier."
+end
+float spaceToolDetectableRange 500
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID ufotools~!denether.png
+int32 spaceToolInitialAmmoCount 0
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 999
+int32 spaceToolMaxDiscoveredAmmo 0
+int32 spaceToolMinDiscoveredAmmo 0
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 3
+key spaceToolStrategy DefaultProjectile
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool spaceToolUsesAmmo true
+bool toolCanPlayerLockOn false
+bool toolDeselectsAfterUse false
+key toolDiscoverableRarity Common
+key toolHitCombatantEffectID SG_ufo_fireworks_explosion
+key toolHitGroundEffectID SG_ufo_fireworks_explosion
+key toolHitWaterEffectID SG_ufo_fireworks_explosion
+key toolMuzzleEffectID SG_ufo_fireworks_muzzle
+bool toolPassThroughAll false
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_fireworks_projectile
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileLobAngle -30
+float toolProjectileSpeed 10
+float toolProjectileTimeOut 2
+float toolRelationshipDelta 0.5
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(air)
+end
+bool toolUseOnActivate false

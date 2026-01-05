@@ -60,7 +60,7 @@ void FabricatorSystem::Dispose() {
 void FabricatorSystem::Update(int deltaTime, int deltaGameTime) {
 	if (Simulator::IsSpaceGame()) //If we're in the space stage... (adventures do not count)
 	{
-		
+		//open animation refuses to play on smaller resolutions
 
 		if (mWindowOffset != 0 && mpUIlayout)
 		{
@@ -70,7 +70,7 @@ void FabricatorSystem::Update(int deltaTime, int deltaGameTime) {
 
 			UTFWin::IWindow* parentWindow = window->GetParent();
 			Math::Rectangle rec = parentWindow->GetArea();
-			window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
+			//window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
 		}
 	}
 	else
@@ -109,6 +109,59 @@ bool FabricatorSystem::IsSecret(uint32_t resID)
 	
 	}
 	return false;
+}
+
+bool FabricatorSystem::HasUnlocked(uint32_t resID)
+{	//If in creative mode, unlock items.
+	if (PropManager.HasPropertyList(id("creativeTools"), id("rattlerConfig"))) {
+		return true;
+	}
+
+	auto inventory = SimulatorSpaceGame.GetPlayerInventory();
+
+	if (Recipe& res = GetRecipe(resID)) {
+		if (res.UpgradeType) {
+
+			if (res.toolUpgrade != 0) {
+				if (inventory->GetTool({ resID,0,0 }) == nullptr && inventory->GetTool({ res.toolUpgrade,0,0 }) != nullptr) {
+					return true;
+
+				}
+				return false;
+
+			}
+			else {
+				if (inventory->GetTool({ resID,0,0 }) == nullptr) {
+					return true;
+
+				}
+
+				return false;
+
+			}
+
+		}
+
+		if (res.Starter) {
+
+			return true;
+		}
+
+		if (res.CargoType) {
+
+			return true;
+		}
+
+		
+
+	}
+
+	
+	if (inventory->GetTool({resID,0,0}) == nullptr) {
+		return false;
+	
+	}
+	return true;
 }
 
 bool FabricatorSystem::InCategory(uint32_t resID, uint32_t cat)
@@ -232,22 +285,24 @@ bool FabricatorSystem::OpenFab(bool sex){
 		//mpUIlayout->LoadByID(id("FabMenu"));
 		mpUIlayout->SetVisible(true);
 		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
+		auto glider = mpUIlayout->FindWindowByID(0x0755F180);
+		glider->SetVisible(true);
 		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
-		window->SetSize(1601.0F, 802.0F);
+		//window->SetSize(1601.0F, 802.0F);
 		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
 
 		Math::Rectangle rec = window->GetParent()->GetArea();
 
 		if (sex)
 		{
-			mWindowOffset = (rec.bottom / 2 + (902 / 2));
+			mWindowOffset = 0;
 		}
 		else
 		{
 			mWindowOffset = 0;
 		}
 
-		window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
+		//window->SetArea(Math::Rectangle(rec.right / 2 - (1601 / 2), (rec.bottom / 2 - (902 / 2)) + mWindowOffset, rec.right / 2 + (1601 / 2), (rec.bottom / 2 + (902 / 2)) + mWindowOffset));
 
 
 		auto closeButton = mpUIlayout->FindWindowByID(id("exitRF"));
@@ -273,10 +328,11 @@ bool FabricatorSystem::CloseFab(bool sex) {
 	//App::ConsolePrintF("mario");
 	if (mpUIlayout)
 	{
-
+		auto glider = mpUIlayout->FindWindowByID(0x0755F180);
+		glider->SetVisible(false);
 		
 		auto paws = GameTimeManager.Resume(Simulator::TimeManagerPause::CommScreen);
-		mpUIlayout->SetVisible(false);
+		//mpUIlayout->SetVisible(false);
 		//App::ConsolePrintF("le test");
 		WindowManager.GetMainWindow()->RemoveWindow(mpUIlayout->FindWindowByID(0xFFFFFFFF, false));
 		auto Delete(mpUIlayout);
@@ -295,6 +351,11 @@ bool FabricatorSystem::Fabricate(Recipe res)
 	if (!AbleToCraft(res)) {
 		return false;
 	}
+
+	if (!HasUnlocked(res.CraftingID)) {
+		return false;
+	}
+
 	int j = 0;
 	for each (uint32_t mat in res.Ingredients) {
 		if (!UseMaterial(mat, res.IngCount[j])) 
@@ -318,6 +379,7 @@ bool FabricatorSystem::Fabricate(Recipe res)
 			return false;
 		}
 	}
+	RenderRecipies(res.Cat);
 
 	AchievementSystemA.CraftCount += res.productAmount;
 
@@ -465,7 +527,7 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 	{
 		//string error;
 		
-		if (!IsSecret(it.mpNode->mValue.second.CraftingID)) //Replace this with if secret later
+		if (!IsSecret(it.mpNode->mValue.second.CraftingID) && HasUnlocked(it.mpNode->mValue.second.CraftingID)) //Replace this with if secret later
 		{	
 			if (InCategory(it.mpNode->mValue.second.CraftingID, cat)) {
 				validRecipes.push_back(it.mpNode->mValue.second);
@@ -517,13 +579,13 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 					PropertyListPtr sillyPropList;
 					//If is a cargotype, get info from spacetrading~ rather than spacetools~
 					if (zurg.CargoType) {
-						App::ConsolePrintF("Wahoo!");
+					
 						if (PropManager.GetPropertyList(zurg.mToolID, 0x034d97fa, sillyPropList))
 						{
 							ImagePtr img;
 							if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 							{
-								//App::ConsolePrintF("Wahoo!");
+					
 								ImagePtr img;
 								if (Image::GetImage(imgKey, img))
 								{
@@ -532,16 +594,15 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 									uint32_t rColor;
 
 									if (App::Property::GetUInt32(sillyPropList.get(), 0x058CBB75, rColor)) {
-										//App::ConsolePrintF("ZurgTastic!");
+							
 										rColor = rColor + 4278190080;
 										Color ColR = Color::Color(rColor);
 										icon->SetShadeColor(ColR);
-										//	LocalizedString westyorkshire;
-										//	App::Property::GetText(sillyPropList.get(), 0x3068D95D, westyorkshire);
-										//	itemWindow->FindWindowByID(0x03754e6c)->SetCaption(westyorkshire.GetText());
+
+
+
 									}
 
-									//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
 									icon->SetDrawable(drawable);
 								}
 							}
@@ -560,11 +621,14 @@ void FabricatorSystem::RenderRecipies(uint32_t cat)
 								{
 									ImageDrawable* drawable = new ImageDrawable();
 									drawable->SetImage(img.get());
-									//	icon->SetShadeColor(Color::RED); Use later when setting recipe node colors.
 									icon->SetDrawable(drawable);
 								}
 							}
 						}
+					}
+
+					if (!AbleToCraft(zurg)) {
+						itemWindow->SetShadeColor(Color::RED);
 					}
 
 					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
@@ -763,9 +827,12 @@ Recipe::Recipe(uint32_t propID) {
 		CraftingID = 0;
 		mToolID = 0;
 		productAmount = 0;
+		toolUpgrade;
 		Cat = 0;
 		Secret = true;
 		CargoType = false;
+		Starter = false;
+		UpgradeType = false;
 		return;
 	}
 
@@ -781,11 +848,32 @@ Recipe::Recipe(uint32_t propID) {
 			string error = "Research property list " + to_string(propID) + " has no output amount!";
 			throw std::invalid_argument(error.c_str());
 		}
+
 		App::Property::GetBool(mpPropList.get(), id("SecretRecip"), Secret);
 		
 		if (!App::Property::GetBool(mpPropList.get(), id("CargoType"), CargoType)) {
 			CargoType = false;
 		};
+
+
+		if (!App::Property::GetBool(mpPropList.get(), id("Starter"), Starter)) {
+			Starter = false;
+		}
+
+		if (!App::Property::GetBool(mpPropList.get(), id("UpgradeType"), UpgradeType)) {
+			UpgradeType = false;
+		}
+		//If has a tool that it has upgraded from.
+		if (UpgradeType) {
+			if (!App::Property::GetUInt32(mpPropList.get(), id("toolUpgrade"), toolUpgrade))
+			{
+				toolUpgrade = 0;
+			}
+
+		
+		
+		}
+
 		App::Property::GetUInt32(mpPropList.get(), id("Catagory"), Cat);
 		size_t count;
 		uint32_t* ids;

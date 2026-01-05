@@ -1,0 +1,24 @@
+key parent AssetBrowserFeedCategories!Template.prop
+texts feedListCategoryName
+	(ui_space!0x06038566) "Artifacts"
+end
+keys feedListItems
+	spacerares_bardScroll
+	spacerares_diplomatScroll
+	spacerares_ecologistScroll
+	spacerares_fossil
+	spacerares_galacticObject
+	spacerares_geode
+	spacerares_jewel
+	spacerares_relic
+	spacerares_scientistScroll
+	spacerares_shamanScroll
+	spacerares_statue
+	spacerares_storybook
+	spacerares_traderScroll
+	spacerares_warriorScroll
+	spacerares_zealotScroll
+	rspore_logs
+	
+	0x56624A99
+end

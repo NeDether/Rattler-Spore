@@ -52,25 +52,18 @@ void ScanMenu::Update(int deltaTime, int deltaGameTime) {
 		if (mWindowOffset != 0 && mpUIlayout)
 		{
 			auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
-			float offset2 = (((mWindowOffset * -1) + 1) / 8); //max((((windowOffset * -1) + 1) / 8), 1.0)
-			if (close) {
-				counter++;
-				if (counter == 100) {
-					mWindowOffset = -2;
-				}
-				if (counter > 100) {
-					offset2 = ((mWindowOffset) / 8); //max((((windowOffset * -1) + 1) / 8), 1.0)
-				}
-			}
+			float offset2 = (((mWindowOffset * -1) + 1) / 8);
 			
+
+			counter+=deltaTime;
+
 			mWindowOffset = mWindowOffset + offset2;
-			//TODO: FIX THIS CRAP!!!!!
+			//CRAP FIXXED!!!!!! 
 
 			UTFWin::IWindow* parentWindow = window->GetParent();
 			Math::Rectangle rec = parentWindow->GetArea();
-			//window->SetArea(Math::Rectangle(rec.right / 2 - (700 / 2), (rec.bottom / 2 - (400 / 2)) + mWindowOffset, rec.right / 2 + (700 / 2), (rec.bottom / 2 + (400 / 2)) + mWindowOffset));
-			window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2)) + (rec.right / 4), (rec.bottom / 2 - (400 / 2)) + mWindowOffset + rec.top - 400, (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + rec.top - 400));
-			if (mWindowOffset <= -600 && close) {
+			//If closing, delete the UI
+			if (counter >= 12 && close) {
 			
 				DeleteScan(true);
 			}
@@ -116,7 +109,7 @@ bool ScanMenu::AddResources(vector<uint32_t> resources)
 
 		for each (uint32_t zurg in resources)
 		{
-			App::ConsolePrintF("%d", zurg);
+			//App::ConsolePrintF("%d", zurg);
 			if (true)
 			{
 				UTFWin::UILayout* layout = new UTFWin::UILayout();
@@ -132,20 +125,20 @@ bool ScanMenu::AddResources(vector<uint32_t> resources)
 					PropertyListPtr sillyPropList;
 					if (PropManager.GetPropertyList(zurg, 0x034d97fa, sillyPropList))
 					{
-						App::ConsolePrintF("Yay!");
+					
 						if (App::Property::GetKey(sillyPropList.get(), 0x3068D95C, imgKey))
 						{
-							App::ConsolePrintF("Wahoo!");
+				
 							ImagePtr img;
 							if (Image::GetImage(imgKey, img))
 							{
-								App::ConsolePrintF("Yipee!");
+						
 								ImageDrawable* drawable = new ImageDrawable();
 								drawable->SetImage(img.get());
 								uint32_t rColor;
 
 								if (App::Property::GetUInt32(sillyPropList.get(), 0x058CBB75, rColor)) {
-									App::ConsolePrintF("ZurgTastic!");
+								
 									rColor = rColor + 4278190080;
 									Color ColR = Color::Color(rColor);
 									icon->SetShadeColor(ColR);
@@ -162,7 +155,7 @@ bool ScanMenu::AddResources(vector<uint32_t> resources)
 
 
 					itemWindow->SetFlag(UTFWin::WindowFlags::kWinFlagAlwaysInFront, true);
-					itemWindow->FindWindowByID(id("zurgtastic"))->AddWinProc(new ResourceIcon(itemWindow, zurg, 1));
+					itemWindow->FindWindowByID(id("zurgtastic"))->AddWinProc(new ResourceIcon(itemWindow, zurg, 0));
 					itemWindow->SetLayoutLocation((60 * (i % 6)) + (8 * ((i % 6) + 1)), div((i), 6).quot * 80);
 
 					mapUI.push_back(itemWindow);
@@ -189,28 +182,20 @@ bool ScanMenu::OpenScan(bool sex)
 	close = false;
 	if (mpUIlayout->LoadByID(id("ScanMenu")))
 	{
-		//mpUIlayout->LoadByID(id("FabMenu"));
-		mpUIlayout->SetVisible(true);
+	
+	
 		mpUIlayout->SetParentWindow(WindowManager.GetMainWindow());
 		auto window = mpUIlayout->FindWindowByID(0xFFFFFFFF, false);
-		window->SetSize(1601.0F, 802.0F);
+
 		WindowManager.GetMainWindow()->SendToBack(mpUIlayout->GetContainerWindow());
 
 		Math::Rectangle rec = window->GetParent()->GetArea();
-
-		if (sex)
-		{
-			mWindowOffset = (rec.top / 2 + (400 / 2) * -1);
-		}
-		else
-		{
-			mWindowOffset = 0;
-		}
-		window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2)) + (rec.right / 4), (rec.bottom  / 2 - (400 / 2)) + mWindowOffset + rec.top - 200, (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + rec.top - 200));
-
-		//window->SetArea(Math::Rectangle((rec.right / 2 - (700 / 2))+(rec.right/4), (rec.bottom / 2 - (400 / 2)) + mWindowOffset + (rec.bottom / 2), (rec.right / 2 + (700 / 2)) + (rec.right / 4), (rec.bottom / 2 + (400 / 2)) + mWindowOffset + (rec.bottom / 2)));
+		mpUIlayout->SetVisible(true);
 		auto menuWindow = mpUIlayout->FindWindowByID(id("ScanMenu"));
+		auto glider = mpUIlayout->FindWindowByID(0x0755F180);
+		glider->SetVisible(true);
 		layout.SetParentWindow(window);
+		
 		return true;
 	}
 	return false;
@@ -225,7 +210,8 @@ bool ScanMenu::CloseScan(bool sex) {
 	{
 		counter = 0;
 		close = true;
-		//mWindowOffset = -2;
+		auto glider = mpUIlayout->FindWindowByID(0x0755F180);
+		glider->SetVisible(false);
 		return true;
 	}
 	return false;

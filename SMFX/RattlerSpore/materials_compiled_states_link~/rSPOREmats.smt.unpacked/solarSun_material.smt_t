@@ -1,0 +1,31 @@
+compiledState state-419
+	shaderID 0x7000011D
+
+	flags1 0x4
+	flags3 0x80000
+
+	vertexDescription -field_4 0x159ef90
+		element position D3DDECLTYPE_FLOAT3
+		element normal D3DDECLTYPE_DEC3N
+		element color D3DDECLTYPE_D3DCOLOR
+		element texcoord1 D3DDECLTYPE_FLOAT2
+	end
+
+	textureSlot 0
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+
+	textureSlot 1
+		samplerState D3DSAMP_ADDRESSU D3DTADDRESS_WRAP
+		samplerState D3DSAMP_ADDRESSV D3DTADDRESS_WRAP
+		samplerState D3DSAMP_MAGFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MINFILTER D3DTEXF_LINEAR
+		samplerState D3DSAMP_MIPFILTER D3DTEXF_LINEAR
+	end
+end
+
+material solarSun_material -states state-419 -textures reggrid2 reggrid2

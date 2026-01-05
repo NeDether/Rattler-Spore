@@ -1,0 +1,25 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "TutorialStory201"
+int32 DelayScanCinematic1 5
+int32 DelayScanCinematic2 5
+float missionAccidentProneRewardMoney 0
+bool missionCanAbort false
+key missionConversation mission_tutorial_story_201
+float missionGenericRewardMoney 0
+keys missionGenericRewardUnlock
+	seti
+end
+int32 missionGenericRewardUnlockCount 1
+float missionGenerousRewardMoney 0
+bool missionIsTutorial true
+bool missionPickClosestStar true
+float missionRangeMax 6
+float missionRangeMin 0
+float missionStingyRewardMoney 0
+key missionType story201
+keys missionUnlockToolsSpecial
+	interstellardrive
+	protonmissilelevel1
+	mining_beam1
+	rattler_forge
+end

@@ -10,8 +10,13 @@ ResourceIcon::ResourceIcon(UTFWin::IWindow* window, uint32_t juh, uint32_t neede
 
 	string16 products;
 	products.assign_convert(to_string(needed));
+	
 	if (PropManager.HasPropertyList(id("creativeTools"), id("rattlerConfig"))) {
 		products = u" Free";
+	
+	}
+	else if(needed == 0) {
+		products = u" ";
 	
 	}
 	else {

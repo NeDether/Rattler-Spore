@@ -1,0 +1,27 @@
+key parent TerrainModelTemplate.prop
+string16 description "Destroyed Alien Ship"
+bboxs modelBoundingBox
+	(-5, -5, -5) (5, 5, 5)
+end
+float modelBoundingRadius 10
+keys modelEffect
+	canonCrashsite
+end
+float modelEffectRange 780
+floats modelLODDistances
+	200
+	1400
+	1500
+end
+vector3 modelLevelParams (40, 0, 1)
+key modelLevelTexture 0xB2A00ACD
+key modelMeshLOD0 crashed_sentinel
+key modelMeshLOD1 crashed_sentinel
+vector3 modelOffset (0, 0, 0)
+vector3 modelPaintDecalParams (32, 0, 0.5)
+key modelPaintDecalTexture 0x2B77BB42
+float modelPlacementSpacingRing 28
+vector3 modelStampParams (25, 0, 0.05)
+key modelStampTexture 0xBC91A119
+float obstacleObjectExclusionRadius 65
+float terraformClearFloraRadius 80

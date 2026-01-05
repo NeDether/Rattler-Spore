@@ -1,0 +1,20 @@
+0x00000000 Hermetic Plating
+0x00000001 Gyro Core
+0x00000002 Computer Kit
+0x00000003 System Bay
+0x00000004 Life Support
+0x00000005 Energy Capacitor
+0x00000006 Assembler
+0x00000007 Cargo Silo
+0x00000008 Standardized Munitions
+0x00000009 Silicon Wafer
+0x00000010 Airtight hull made to widthstand the vacuum of space.
+0x00000011 Allows a ship's computer to measure the anglular position, velocity and acceleration within highly variable environments.
+0x00000012 Computers are incredibly useful devices that do highly repetitive or complex calculations within a short amount of time.
+0x00000013 The system bay is used for using and deploying specialized tools within ships and stations.
+0x00000014 A life support system is a specialized device that simulates the conditions on the ~player_species~ homeworld, allowing them to survive in environments that would otherwise be deemed, uninhabitable.
+0x00000015 Every single machine, factory, ship, and station within the galaxy needs energy to function. Energy capcitors allow all machines to reserve power and use it whenever needed.
+0x00000016 Assemblers are mechanical arms that can be fine-tuned to precicely recreate an item over and over again.
+0x00000017 A cargo silo allows for matter to be stored in a space as efficiently as possible.
+0x00000018 These empty shells are retro-fit for every single possible type of cannon within the ~player_species~ fleet.
+0x00000019 These large disks of treated silicon make up a majority of microprocessors for every computer. Despite being completely opaque to visible light, they can be refactored into laser lenses as well.

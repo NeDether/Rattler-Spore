@@ -11,9 +11,9 @@ texts spaceToolDetailDescription
 	(rattlercargo!0x00000022) "PLACEHOLDER"
 end
 float spaceToolDetectableRange 15
-bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnHomeworld true
 bool spaceToolDisableOnSaveGames true
-float spaceToolEnergyCost 0.2
+float spaceToolEnergyCost 0.0
 texts spaceToolLockedDescription
 	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
 end

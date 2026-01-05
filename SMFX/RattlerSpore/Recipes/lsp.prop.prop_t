@@ -1,0 +1,21 @@
+uint32 Recipe hash(spice_ware_lsp)#Link to the spacetools~
+
+uint32s Blueprint #All of the required blueprints for this recipe.
+end
+
+uint32s Ingredients #A vector of each possible ingredient. 
+	hash(spice_drt_ice)
+	hash(spice_mat_gold)
+end
+
+uint32s IngCount #A vector Of the amount of materials it needs.
+	30
+	15
+end 
+
+uint32 productAmount 1 #Amount of items this pops out.
+uint32 Catagory hash(wares_category) #catagory in
+
+bool SecretRecip false
+bool CargoType true
+bool Starter true

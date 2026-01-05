@@ -1,0 +1,211 @@
+dialog mission_assign
+	text mission_tutorial_story_201!0x00000001
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!mission_accept.cnv
+		text mission_tutorial_story_201!0x00000018
+	end
+end
+dialog dynamic_response_to_source_explore_ruin_planet
+	text mission_tutorial_story_201!0x00000010
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!mission_incomplete_explore_ruin_planet.cnv
+		text mission_tutorial_story_201!0x00000011
+		text mission_tutorial_story_201!0x00000012
+		text mission_tutorial_story_201!0x00000013
+		text mission_tutorial_story_201!0x00000014
+	end
+	response
+		action kCnvCommEvent~ mission_tutorial_terraform!mission_reject.cnv
+		text mission_tutorial_terraform!0x00000029
+		text mission_tutorial_terraform!0x0000002A
+		text mission_tutorial_terraform!0x0000002B
+		text mission_tutorial_terraform!0x0000002C
+		text mission_tutorial_terraform!0x0000002D
+	end
+end
+dialog dynamic_response_to_source_explore_ufo_wreck_planet
+	text mission_tutorial_story_201!0x0000005B
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!mission_incomplete_explore_ufo_wreck_planet.cnv
+		text mission_tutorial_story_201!0x0000005C
+		text mission_tutorial_story_201!0x0000005D
+		text mission_tutorial_story_201!0x0000005E
+		text mission_tutorial_story_201!0x0000005F
+	end
+end
+dialog defender_conversation_3
+	showStatic true
+
+	text mission_tutorial_story_201!0x0000001F
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x00000020
+	end
+end
+dialog defender_conversation_2
+	showStatic true
+
+	text rspore-cutscenes!0x00000008
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!defender_conversation_3.cnv
+		text rspore-cutscenes!0x00000009
+	end
+end
+dialog defender_conversation_1
+	showStatic true
+
+	text rspore-cutscenes!0x00000006
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!defender_conversation_2.cnv
+		text rspore-cutscenes!0x00000007
+	end
+end
+dialog mission_reject
+	action action_mission_reject
+
+	text mission_tutorial_story_201!0x00000070
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x00000074
+	end
+end
+dialog mission_incomplete_scan_ufo_wreck
+	text mission_tutorial_story_201!0x00000002
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x00000004
+	end
+end
+dialog mission_complete
+	action action_mission_complete
+
+	text mission_tutorial_story_201!0x00000024
+
+	response
+		action action_try_mission
+		text mission_tutorial_story_201!0x0000002C
+	end
+end
+dialog mission_incomplete_explore_ruin_planet
+	text mission_tutorial_story_201!0x00000005
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x00000007
+	end
+end
+dialog dynamic_response_to_source_scan_ufo_wreck
+	text mission_tutorial_story_201!0x0000000B
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!mission_incomplete_scan_ufo_wreck.cnv
+		text mission_tutorial_story_201!0x0000000C
+		text mission_tutorial_story_201!0x0000000D
+		text mission_tutorial_story_201!0x0000000E
+		text mission_tutorial_story_201!0x0000000F
+	end
+end
+dialog mission_accept
+	action action_mission_accept
+
+	text mission_tutorial_story_201!0x00000039
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x0000003A
+	end
+end
+dialog mission_incomplete_explore_ufo_wreck_planet
+	text mission_tutorial_story_201!0x0000002D
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x0000002F
+	end
+end
+dialog dynamic_response_to_source_scan_ruins
+	text mission_tutorial_story_201!0x00000015
+
+	response
+		action kCnvCommEvent~ mission_tutorial_story_201!mission_incomplete_scan_ruins.cnv
+		text mission_tutorial_story_201!0x00000016
+		text mission_tutorial_story_201!0x00000017
+		text mission_tutorial_story_201!0x00000019
+		text mission_tutorial_story_201!0x0000001A
+	end
+end
+dialog mission_incomplete_scan_ruins
+	text mission_tutorial_story_201!0x00000008
+
+	response
+		action exit
+		text mission_tutorial_story_201!0x0000000A
+	end
+end
+
+eventlog UIMediumDesc_Fulfilled
+	text mission_tutorial_story_201!0x00000064
+end
+eventlog UIShortDesc_LeaveHomeSystem
+	text mission_tutorial_story_201!0x00000003
+end
+eventlog UIMediumDesc_ScanRuins
+	text mission_tutorial_story_201!0x00000028
+end
+eventlog event_log_return_for_rewards
+	text mission_tutorial_story_201!0x00000062
+end
+eventlog UIShortDesc_ScanRuins
+	text mission_tutorial_story_201!0x00000023
+end
+eventlog UIShortDesc_ExploreRuinPlanet
+	text mission_tutorial_story_201!0x00000022
+end
+eventlog UIMediumDesc_ExploreUFOWreckPlanet
+	text mission_tutorial_story_201!0x00000063
+end
+eventlog UILongDesc_Fulfilled
+	text mission_tutorial_story_201!0x00000031
+end
+eventlog UILongDesc_ScanWreck
+	text mission_tutorial_story_201!0x0000002A
+end
+eventlog UILongDesc_LeaveHomeSystem
+	text mission_tutorial_story_201!0x00000009
+end
+eventlog UIMediumDesc_ExploreRuinPlanet
+	text mission_tutorial_story_201!0x00000027
+end
+eventlog UILongDesc_ExploreUFOWreckPlanet
+	text mission_tutorial_story_201!0x00000029
+end
+eventlog UIMediumDesc_LeaveHomeSystem
+	text mission_tutorial_story_201!0x00000006
+end
+eventlog UIShortDesc_ExploreUFOWreckPlanet
+	text mission_tutorial_story_201!0x00000061
+end
+eventlog UILongDesc_ScanRuins
+	text mission_tutorial_story_201!0x00000030
+end
+eventlog UIMediumDesc_ScanWreck
+	text mission_tutorial_story_201!0x00000026
+end
+eventlog UILongDesc_ExploreRuinPlanet
+	text mission_tutorial_story_201!0x0000002B
+end
+eventlog UIShortDesc_Fulfilled
+	text mission_tutorial_story_201!0x00000025
+end
+eventlog UIShortDesc_ScanWreck
+	text mission_tutorial_story_201!0x00000021
+end
+

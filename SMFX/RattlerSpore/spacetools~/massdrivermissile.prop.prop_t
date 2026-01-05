@@ -1,0 +1,52 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Defense Missile"
+float spaceToolAutoFireRate 0.18
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 8
+texts spaceToolDescription
+	(store-mining!0x00000033) "Mass Driver Missile"
+end
+texts spaceToolDetailDescription
+	(store-mining!0x00000034) "Fires a small homing Proton Missile at its target.  Effective against enemy spaceships."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.0
+key spaceToolImageID ufotools~!denether.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 999
+float spaceToolMaxDamage 450
+float spaceToolMaxRange 350
+float spaceToolMinDamage 250
+float spaceToolMinRange 10
+key spaceToolPanelKey CombatConsumablePanel
+float spaceToolRechargeRate 0.18
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn true
+key toolHitCombatantEffectID 0xCE318FC6
+key toolHitGroundEffectID 0xC35BC5B8
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0xC35BC5B8
+bool spaceToolUsesAmmo true
+bool toolIsHoming true
+key toolMuzzleEffectID 0xA0020A0D
+float toolProjectileEccentricity 0.25
+key toolProjectileEffectID 0x72F9AE1B
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileSpeed 200
+float toolProjectileTimeOut 1.5
+float toolProjectileTurnRate 0.1
+int32s toolTargetFlags
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xb5f45e41) "Targeting capability of this weapon is limited to spaceships, turrets and vehicles."
+end

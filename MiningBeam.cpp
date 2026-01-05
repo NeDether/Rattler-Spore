@@ -18,26 +18,28 @@ bool MiningBeam::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position
         if (EffectsManager.CreateVisualEffect(0x03fd5261, 0, effect)) {        
             effect->SetRigidTransform(Transform()
                 .SetOffset(position)
-                .SetScale(1.1f));
+                .SetScale(1.3f));
             effect->Start();
         }
        
 
-        if (Math::rand(2) == 0) {
+        if (Math::rand(2) != 0) {
             return success;
         }
         //Loottable
         
         const Simulator::PlanetID mario = Simulator::GetActivePlanetRecord()->GetID();
         uint32_t greg = mario.internalValue;
+        
         RandomNumberGenerator rng(greg);
-        int abudnacne = rng.RandomInt(6)+1;
+        int abudnacne = rng.RandomInt(7);
+        //abudnacne is the exclusive value on a planet that gives you more or less of a dirt type mineral
         for (int i = 0; i < power; i++) {
             if (inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) {
              //   App::ConsolePrintF("LOOOOOOL");
             
-            }
-            if (Math::rand(abudnacne) == 0 && ((inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner2"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner3"), 0, 0 })))) {
+            }//Sbiv is what TIER of rock you are gonna get
+            if (Math::rand(abudnacne+2) == 1 && ((inventory->HasTool({ id("mineral_scanner1"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner2"), 0, 0 })) || (inventory->HasTool({ id("mineral_scanner3"), 0, 0 })))) {
                 int sbiv = 1;
      //           App::ConsolePrintF("is this clled?");
                 if (inventory->HasTool({ id("mineral_scanner2"), 0, 0 })) {
@@ -73,7 +75,7 @@ bool MiningBeam::OnHit(Simulator::cSpaceToolData* pTool, const Vector3& position
 
                 SpaceTrading.ObtainTradingObject({ id(john.c_str()), 0, 0 }, 1);
                 AchievementSystemA.MineCount++;
-                AchievementSystemA.Discover(john);
+                AchievementSystemA.Discover({ id(john.c_str()), 0, 0 });
 
 
             }
@@ -112,15 +114,15 @@ void MiningBeam::getPool(uint32_t seed, int k) {
     string john = "spice1";
     if (k == 0) {
 
-        int chud = rng.RandomInt(16);
+        int chud = rng.RandomInt(17);
 
-            if (chud >= 0 && chud <= 4) {
+            if (chud >= 0 && chud <= 5) {
                 john = "spice_mat_copper";
             }
-            else if (chud >= 5 && chud <= 8) {
+            else if (chud >= 6 && chud <= 10) {
                 john = "spice_mat_titanium";
             }
-            else if (chud >= 9 && chud <= 13) {
+            else if (chud >= 11 && chud <= 15) {
                 john = "spice_mat_gold";
             }
             else {
@@ -188,10 +190,10 @@ void MiningBeam::getPool(uint32_t seed, int k) {
 
 
     }
+    ResourceKey rekkey = { id(john.c_str()), 0, 0 };
 
-
-    SpaceTrading.ObtainTradingObject({ id(john.c_str()), 0, 0 }, 1);
-    AchievementSystemA.Discover(john);
+    SpaceTrading.ObtainTradingObject(rekkey, 1);
+    AchievementSystemA.Discover(rekkey);
 
 }
 
@@ -203,5 +205,16 @@ bool MiningBeam::OnSelect(Simulator::cSpaceToolData* pTool)
 	//App::ConsolePrintF("Selected!");
 	//SpaceTrading.ObtainTradingObject({ id("spice_mat_copper"), TypeIDs::prop, 0x034D97FA }, 1);
 	return false;
+}
+
+bool MiningBeam::Update(Simulator::cSpaceToolData* pTool, bool showErrors, const char16_t**)
+{
+    if (Simulator::GetCurrentContext() == Simulator::SpaceContext::Planet) {
+        if (VaultManagerA.isVaultPlanet(Simulator::GetActivePlanet()->mPlanetKey)) {
+            return false;
+        }
+        return true;
+    }
+    return false;
 }
 
